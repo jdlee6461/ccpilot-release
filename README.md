@@ -7,8 +7,8 @@ on request.
 
 ## Citing
 
-> [AUTHORS]. Calibrating Recall Across Operational Situations in Cross-Camera Target Search. [JOURNAL], [YEAR].
-> DOI: [PAPER-DOI].
+> J. Lee and J. Lee, "Calibrating Recall Across Operational Situations in Cross-Camera Target Search," manuscript
+> submitted to IEEE Access, 2026. [JOURNAL/YEAR/DOI to be updated on publication]
 
 Repository snapshot: https://doi.org/10.5281/zenodo.23934654 (reserved; resolves after publication).
 
@@ -42,6 +42,68 @@ manuscript revision; its cross-references to supplementary table and section num
 
 Links to internal pages in the frozen documents (for example the first line of `PLAN_confirm2.md`) are not publicly
 accessible; the frozen files are kept unchanged.
+
+## Top-level scripts
+
+The layout is that of the authors' working repository, kept unchanged so that the paths in `LOCK_confirm2.txt` and in
+the result files resolve.
+
+| Script | Role |
+|---|---|
+| `run_pilot.py` | Pipeline: data, events (hops and visibility sets) and evaluation for one configuration |
+| `select_primary.py` | Pre-registered selection rule of the primary method (`PREREGISTRATION.md`, section 3) |
+| `factor_analysis.py` | Factor analysis of misses on an exploratory period |
+| `confirm2_lock_prep.py` | Lock preparation of confirmation experiment 2: data hashes and duplicate-trip exclusion counts |
+| `confirm2_lock.py` | Writes `LOCK_confirm2.txt` from the staged lock commit (plan §11.2) |
+| `confirm2_addendum.py` | Writes `LOCK_confirm2_addendum.txt` (camera-hash correction, `DEVIATIONS.md` D4) |
+| `confirm2_taxi_map.py` | TAXI_ID per trip for the confirmation period (`DEVIATIONS.md` D5) |
+| `confirm2_attributes.py` | Per-hop attributes of the alternative partitions (plan §8.1) |
+| `confirm2_execute.py` | Executes confirmation experiment 2: data and events checked against the lock, then the 50 runs |
+| `confirm2_run.py` | One evaluation run (configuration, target, evaluation seed) |
+| `confirm2_analysis.py` | Analysis of confirmation experiment 2 (locked): shortfalls, cluster bootstrap, comparisons, verdicts, hindsight references, costs |
+| `confirm2_h3_sensitivity.py` | Cost ratio to H3 with H3 refitted in every bootstrap replicate (plan §6.3) |
+| `confirm2_figures.py` | Figures F1–F3 of the plan from the analysis output |
+| `confirm2_numbers.py` | Number macros from the analysis output (plan §11.4) |
+| `confirm2_report.py` | `results/porto_cctv_confirm2/REPORT.md`: numbers and verdicts from the result files |
+| `heldout_reanalysis_execute.py` | Re-analysis runs of the earlier held-out period (plan §12) |
+| `heldout_repro_check.py` | Reproduction check of that re-analysis |
+| `posthoc_regrade.py` | Regrades the earlier confirmation run under the pre-registered group definitions |
+| `posthoc_seeds.py` | Post hoc: evaluation-seed repetition of the earlier confirmation run |
+| `posthoc_sensitivity.py` | Post hoc: sensitivity analyses of the earlier confirmation run (feedback share and other settings) |
+| `posthoc_frontier.py` | Post hoc: cost-matched comparison (cost against worst-group recall) |
+| `posthoc_cluster.py` | Post hoc: cluster bootstrap of group recall on the earlier held-out period |
+| `posthoc_geometry.py` | Post hoc: sensitivity to the observation radius and the horizon T_max |
+| `posthoc_group_oracle.py` | Post hoc: hindsight references that satisfy the group condition |
+| `posthoc_scale_ablation.py` | Post hoc: ablation of `mvp_log` on the exploratory periods |
+| `posthoc_qrogd_bound.py` | Post hoc: realized values of the `qr_ogd` inequality on the earlier held-out period |
+| `posthoc_taumin_nature.py` | Post hoc: what the lower threshold tau_min is |
+| `posthoc_v_trajectory.py` | Post hoc: whether negative ledger values accumulated during saturation cause later over-search |
+| `posthoc_outage.py` | Post hoc stress test: camera outage |
+| `posthoc_outage_aware.py` | Post hoc: outage-aware predictor under camera outage |
+| `posthoc_outage_ceiling.py` | Post hoc: per-hop analysis of the outage-aware runs |
+| `posthoc_outage_diag.py` | Post hoc: diagnosis of adaptation lag under camera outage |
+| `posthoc_outage_suite.py` | Post hoc: outage suite across periods |
+| `posthoc_outage_suite_report.py` | Post hoc: summary of the outage-suite runs |
+| `posthoc_exit_split.py` | Post hoc: split of the hop loss under camera outage |
+| `posthoc_region_diag.py` | Post hoc: diagnosis of groups below the bar under a region outage |
+| `posthoc_oa_oracle_groups.py` | Post hoc: cost of outage-aware `mvp_log` relative to the hindsight oracle after an outage |
+| `posthoc_custody_confirm2.py` | Post hoc: track custody on the confirmation runs |
+| `posthoc_custody_decomp_confirm2.py` | Post hoc: decomposition of track custody by how a chain starts |
+| `posthoc_review_common.py` | Post hoc (`REVIEW_PLAN.md`): shared helpers |
+| `posthoc_review_p0.py` | Post hoc (`REVIEW_PLAN.md`) step P0: recomputed calibration scores and cost lookups, reproduction check |
+| `posthoc_review_methods.py` | Post hoc (`REVIEW_PLAN.md`): per-run thresholds of the added methods (parts A, B without refits, C) |
+| `posthoc_review_labels.py` | Post hoc (`REVIEW_PLAN.md`): label sets (iii) and (iv) |
+| `posthoc_review_refit.py` | Post hoc (`REVIEW_PLAN.md`): daily-refitted group quantile regression under censored feedback, and the C refit |
+| `posthoc_review_summary.py` | Post hoc (`REVIEW_PLAN.md`): estimates and cluster-bootstrap intervals for per-hop outcomes |
+| `posthoc_review_report.py` | Post hoc (`REVIEW_PLAN.md`): estimates and intervals per part, and their collection |
+| `posthoc_review_tables.py` | Post hoc (`REVIEW_PLAN.md`): aggregate tables, macros and the mechanical consequence check |
+| `posthoc_review_lookups.py` | Post hoc (`REVIEW_PLAN.md`): look-ups and macros from stored results |
+| `posthoc_review_b7.py` | Post hoc (`REVIEW_PLAN.md` appendix B7): consequences of label set (v) |
+| `posthoc_review_diag03.py` | Post hoc (`REVIEW_PLAN.md`): diagnosis of the negative cost ratios of label set (iii) |
+| `posthoc_review_diag04.py` | Post hoc (`REVIEW_PLAN.md`): sign check of the stored hop costs |
+| `posthoc_review_prereapproval.py` | Post hoc (`REVIEW_PLAN.md`): inventory of the runs made before the plan's re-approval (deviation R1) |
+| `posthoc_review_runs02.py` | Post hoc (`REVIEW_PLAN.md`): run table and cache manifest |
+| `posthoc_review_runsR3.py` | Post hoc (`REVIEW_PLAN.md`): run table of the reruns of deviation R3 |
 
 ## Frozen documents
 
@@ -129,3 +191,5 @@ frozen results of the earlier confirmation experiment. Analyses of that period u
    note string in Korean and English (H3NOTE, also written to the `note` column of `cost_ratios.csv`), and lines
    676–677 hold the three verdict words of statement S2, "나타난다" (appears), "반대였다" (was the opposite) and
    "검출되지 않았다" (was not detected), which appear in `results/porto_cctv_confirm2/analysis/claims_10_8.csv`.
+   The table generator (`manuscript_generators/scripts/make_confirm2_tables.py`) reads this verdict word as a
+   dictionary key.

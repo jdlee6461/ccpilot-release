@@ -686,8 +686,10 @@ def main():
         f"work/cctv_check12/current.geojson (current portal GeoJSON, SHA-256 {_hl.sha256(CUR.read_bytes()).hexdigest()}; not "
         f"tracked) against {cam['geojson']}: objectids not in the snapshot ({', '.join(map(str, new_ids))}); removed 0, moved "
         f"(> 1e-7 degrees) 0; spelled out; = portalCamerasCurrent - numCamerasRaw", cam["geojson"])
-    add("repoURL", r"\url{https://github.com/[snapshot-repository]}", "placeholder",
-        "placeholder for the snapshot repository URL (verdict 16 C(b)); not a result", None)
+    add("repoURL", r"\url{https://github.com/jdlee6461/ccpilot-release}", "https://github.com/jdlee6461/ccpilot-release",
+        "snapshot repository (instruction 29 §3; created private 2026-11-03, public after JD approval); not a result", None)
+    add("repoAccessDate", "[date]", "placeholder",
+        "placeholder for the access date of the repository = date it is made public (instruction 29 §3); not a result", None)
     add("repoDOI", r"\url{https://doi.org/10.5281/zenodo.23934654}", "10.5281/zenodo.23934654",
         "Zenodo DOI reserved by JD on 2026-11-03 (verdict 35, instruction 28 §1); resolves only after publication; not a result",
         None)
