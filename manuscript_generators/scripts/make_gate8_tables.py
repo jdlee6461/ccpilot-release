@@ -245,11 +245,14 @@ def tab_intersections_merged():
          "qr_groups from intersections.csv, qr_groups + I1-I6 from exploratory/intersections_q (review A_intersections.csv); "
          "n = hops (pooled).",
          r"\setlength{\tabcolsep}{3.0pt}",
+         # panel headings above each panel's rules, as in Tables S9 and S11 (JD memo v12-1 Y7, instruction 31 §1)
+         r"\emph{(a) Alternative partitions: largest shortfall minus \Dbar{} on the 25 groups}\par\smallskip",
          r"\begin{tabular}{@{}ll" + "r" * T + "@{}}", r"\toprule",
-         rf"\multicolumn{{{2 + T}}}{{@{{}}l}}{{\emph{{(a) Alternative partitions: largest shortfall minus \Dbar{{}} on the 25 groups}}}} \\",
          r"Method & Partition & " + " & ".join(f"{t:.2f}" for t in TARGETS) + r" \\", r"\midrule"]
     L += ra
-    L += [r"\midrule", rf"\multicolumn{{{2 + T}}}{{@{{}}l}}{{\emph{{(b) Intersections I1--I6: shortfall}}}} \\",
+    L += [r"\bottomrule", r"\end{tabular}", r"\par\medskip",
+          r"\emph{(b) Intersections I1--I6: shortfall}\par\smallskip",
+          r"\begin{tabular}{@{}ll" + "r" * T + "@{}}", r"\toprule",
           r"Intersection (hops) & Target & " + " & ".join(lab for _, lab in M) + r" \\", r"\midrule"]
     for k, c in enumerate(["I1", "I2", "I3", "I4", "I5", "I6"]):
         if k:

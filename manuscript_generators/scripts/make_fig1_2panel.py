@@ -6,7 +6,7 @@ Origin: ccpilot work/paper_builds/09-0/make_fig1_2panel.py (trial typesetting, r
 work/paper_builds/12/make_fig_ticks.py (report 12); moved here by verdict 14 A2 so that the paper repository builds Fig. 1.
 Calls the locked ccpilot confirm2_figures.f1/f2 unchanged on the frozen analysis directory; inside this process only the
 module method list and subplot grid (Fig. 1) and the ticks just before saving are replaced, and the suptitle is dropped
-(captions are in LaTeX).
+(captions are in LaTeX). Fig. 1 and S1: legend in the lower right of the mvp_log panel (instruction 31 §2, Y6).
 Ticks (verdict 15 A1, replacing the 45-degree labels of report 13): x axis of the calibration figures at the five
 targets, labelled .90 .93 .95 .97 .98, horizontal; y axis of all three figures at steps of 0.05 in the same form (.85 .90
 .95; 1.00 keeps its leading digit). Fig. 2 keeps the locked log cost axis. Legend label of hopkind 2 = ch6lib.POSTGAP_LABEL
@@ -53,6 +53,22 @@ def ticks(save, xtargets):
     return wrapped
 
 
+def legend_right(save):
+    """Fig. 1 and Fig. S1: the legend of the locked f1 (first panel, lower right, where it touched the post-gap band in
+    S1) moved to the lower right of the mvp_log panel (the right panel of Fig. 1), with the same entries and text size
+    (JD memo v12-1 Y6, instruction 31 §2)."""
+    def wrapped(fig, path):
+        first = fig.axes[0]
+        target = next(ax for ax in fig.axes if ax.get_title() == "mvp_log")
+        old = first.get_legend()
+        h, lab = first.get_legend_handles_labels()
+        size = old.get_texts()[0].get_fontsize()
+        old.remove()
+        target.legend(h, lab, loc="lower right", frameon=False, fontsize=size)
+        return save(fig, path)
+    return wrapped
+
+
 def stacked(save):
     """Fig. 2 in one column: y label on both stacked panels, x label only on the lower one."""
     def wrapped(fig, path):
@@ -70,9 +86,10 @@ def main():
     try:
         with tempfile.TemporaryDirectory() as td:
             td = Path(td)
-            C2F.save = ticks(keep_save, True)                                   # Fig. S1: nine panels
+            C2F.save = legend_right(ticks(keep_save, True))                     # Fig. S1: nine panels
             shutil.copyfile(C2F.f1(AN, "combined", td / "s1", "confirm2"), OUT / "fig_c2_calibration.pdf")
             C2F.F1_METHODS = ["static", "mvp_log"]                              # Fig. 1: two panels
+            C2F.save = legend_right(ticks(keep_save, True))
             C2F.plt.subplots = lambda *a, **k: keep_sub(1, 2, figsize=(3.5, 2.1), sharex=True, sharey=True, squeeze=False)
             shutil.copyfile(C2F.f1(AN, "combined", td / "f1", "confirm2"), OUT / "fig_c2_calibration_2panel.pdf")
             C2F.F1_METHODS, C2F.plt.subplots = keep_m, keep_sub

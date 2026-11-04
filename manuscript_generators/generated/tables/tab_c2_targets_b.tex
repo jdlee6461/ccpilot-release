@@ -6,7 +6,7 @@
 Method & Recall & Cost/H1 & Cost/H4 & Isolation Q4 $d$ \\
 \midrule
 \texttt{mvp\_log} & 0.950 & 1.17 & 0.81 & 0.2 [0.1, 0.4] \\
-\texttt{qr\_ogd} & 0.950 & 1.19 & 0.83 & $-$0.0 [$-$0.1, 0.1] \\
+\texttt{qr\_ogd} & 0.950 & 1.19 & 0.83 & 0.0 [$-$0.1, 0.1] \\
 \addlinespace
 \texttt{static} & 0.950 & 1.01 & 0.70 & 2.5 [2.3, 2.7] \\
 ACI & 0.950 & 1.08 & 0.74 & 2.5 [2.3, 2.7] \\
@@ -18,8 +18,10 @@ CityTrac-style & 0.965 & 2.48 & 1.71 & $-$1.0 [$-$1.3, $-$0.8] \\
 Spatula-style & 0.909 & 1.60 & 1.11 & 6.7 [6.4, 7.1] \\
 \addlinespace
 H1 & 0.950 & & & 2.5$^\dagger$ \\
-H2 & 0.909--0.965 & & & n/a \\
+H2$^{a}$ & 0.909--0.965 & & & --- \\
 H3 & 0.950 & & & 0.0$^\dagger$ \\
-H4 & 0.964 & & & $-$0.0$^\dagger$ \\
+H4 & 0.964 & & & 0.0$^\dagger$ \\
 \bottomrule
 \end{tabular}
+
+\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed), so it has no shortfall of its own; its mean cost ranges from \ctwoHTwoCostMin{} to \ctwoHTwoCostMax{} over the ten methods.}

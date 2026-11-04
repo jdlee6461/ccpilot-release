@@ -160,8 +160,9 @@ The run files are `configs/confirm2/`, the runs write `results/porto_cctv_confir
 
 **Numbers, tables and figures of the paper**: in `manuscript_generators/`, with this repository as `CCPILOT_REPO`,
 `python scripts/make_numbers.py`, `make_confirm2_numbers.py`, `make_confirm2_tables.py`, `make_confirm2_appendix.py`,
-`make_confirm2_appendixB.py`, `make_gate8_tables.py`, `make_fig1_2panel.py`. `make_numbers.py` also reads
-`data/porto/train.csv` and the camera file.
+`make_confirm2_appendixB.py`, `make_gate8_tables.py`, `make_fig1_2panel.py`, and last `unsigned_zero.py`, which prints a
+value that rounds to zero without a sign (also in the copies of the review tables and macros). `make_numbers.py` also
+reads `data/porto/train.csv` and the camera file.
 
 Do not run `run_pilot.py` with `configs/porto_cctv_confirm.yaml`: it overwrites `results/porto_cctv_confirm/`, the
 frozen results of the earlier confirmation experiment. Analyses of that period use the `posthoc_*.py` scripts.

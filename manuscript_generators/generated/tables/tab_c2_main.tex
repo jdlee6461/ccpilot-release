@@ -8,7 +8,7 @@
 Method & Post-gap $d$ & Isolation Q4 $d$ & \Dbar{} & $D^s$, seeds & Cost & H2 & H3 \\
 \midrule
 \texttt{mvp\_log} & 1.0 [0.2, 1.9] & 0.2 & 1.0 [0.5, 1.9] & 0.5--1.4 & 313 & 1.18 & 0.98 \\
-\texttt{qr\_ogd} & 0.6 [$-$0.2, 1.5] & $-$0.0 & 0.7 [0.2, 1.5] & 0.2--1.2 & 319 & 1.20 & 1.00 \\
+\texttt{qr\_ogd} & 0.6 [$-$0.2, 1.5] & 0.0 & 0.7 [0.2, 1.5] & 0.2--1.2 & 319 & 1.20 & 1.00 \\
 \addlinespace
 \texttt{static} & 6.0 [4.9, 7.2] & 2.5 & 6.0 [4.9, 7.2] & 6.0 & 269 & 1.00 & 0.84 \\
 ACI & 5.7 [4.7, 6.8] & 2.5 & 5.7 [4.7, 6.8] & 5.6--5.9 & 288 & 1.08 & 0.90 \\
@@ -20,10 +20,10 @@ CityTrac-style & 2.4 [1.5, 3.4] & $-$1.0 & 2.4 [1.5, 3.4] & 2.4 & 663 & 1.66 & 2
 Spatula-style & 13.6 [12.1, 15.1] & 6.7 & 13.6 [12.1, 15.1] & 13.6 & 428 & 2.98 & 1.34 \\
 \addlinespace
 H1 & 6.0$^\dagger$ & 2.5$^\dagger$ & 6.0 [4.9, 7.1] & & 267 &  & \\
-H2$^{a}$ & n/a & n/a & n/a & & 144--398 &  & \\
+H2$^{a}$ & --- & --- & --- & & 144--398 &  & \\
 H3 & 0.0$^\dagger$ & 0.0$^\dagger$ & 0.0 [0.0, 0.8] & & 319 &  & \\
-H4 & $-$0.0$^\dagger$ & $-$0.0$^\dagger$ & $-$0.0 [$-$0.0, $-$0.0] & & 387 &  & \\
+H4 & 0.0$^\dagger$ & 0.0$^\dagger$ & 0.0 [0.0, 0.0] & & 387 &  & \\
 \bottomrule
 \end{tabular}
 
-\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed); the row gives the range over the ten methods of the seed-mean cost. $^\dagger$Additional analysis; point estimate, no interval. n/a: not computed.}
+\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed), so it has no shortfall of its own; its mean cost ranges from \ctwoHTwoCostMin{} to \ctwoHTwoCostMax{} over the ten methods. $^\dagger$Additional analysis; point estimate, no interval.}

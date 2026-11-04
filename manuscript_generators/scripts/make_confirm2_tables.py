@@ -138,7 +138,7 @@ def tab_main(t=0.95, name="tab_c2_main", full=False):
             hh = H[H.reference == "H2"].groupby("method")[["cost_mean", "recall_all"]].mean()
             hh = hh.loc[[m for m, _ in ONLINE + COMPARATORS + OTHERS]]
             rec = f"{hh.recall_all.min():.3f}--{hh.recall_all.max():.3f} & " if full else ""
-            L.append(rf"H2$^{{a}}$ & n/a & n/a & n/a & & {rec}"
+            L.append(rf"H2$^{{a}}$ & --- & --- & --- & & {rec}"         # no shortfall of its own (instruction 31 §2, Y4)
                      rf"{hh.cost_mean.min():.0f}--{hh.cost_mean.max():.0f}{blank}\\")
             continue
         p, hr = P.loc[h], H[H.reference == h].iloc[0]
@@ -147,10 +147,13 @@ def tab_main(t=0.95, name="tab_c2_main", full=False):
                  rf"{pp(t - p.worst_recall)} [{pp(t - p.worst_hi)}, {pp(t - p.worst_lo)}] & & "
                  rf"{rec}{hr.cost_mean:.0f}{blank}\\")
     L += [r"\bottomrule", r"\end{tabular}", "",
-          r"\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed); "
+          # Y4 (JD memo v12-1, instruction 31 §2): wording of Sean; the compact table (target 0.95) names the cost range
+          # by macro; the full tables (targets 0.90-0.98, S4) keep the range sentence of David 23 (c)
+          r"\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed), "
+          r"so it has no shortfall of its own; "
           + (r"the row gives the range over the ten methods of the seed-mean recall and cost. " if full else
-             r"the row gives the range over the ten methods of the seed-mean cost. ")      # David 23 (c)
-          + r"$^\dagger$Additional analysis; point estimate, no interval. n/a: not computed.}"]
+             r"its mean cost ranges from \ctwoHTwoCostMin{} to \ctwoHTwoCostMax{} over the ten methods. ")
+          + r"$^\dagger$Additional analysis; point estimate, no interval.}"]
     (PAPER / "generated" / "tables" / f"{name}.tex").write_text("\n".join(L) + "\n")
 
 

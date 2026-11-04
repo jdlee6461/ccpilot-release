@@ -507,6 +507,18 @@ def main():
         # instruction 24 §4 (verdict 28 C): extra search over H2 in percent, (ratio - 1) x 100 rounded to an integer
         add(f"ctwoHTwoQRFamilyExtraPct{agg}", f"{round(100 * (v - 1)):d}", 100 * (v - 1),
             f"{A}/cost_ratios.csv: as ctwoHTwoQRFamily{agg}; (ratio - 1) x 100, rounded to an integer, %", f"{A}/cost_ratios.csv")
+    # instruction 31 §2 (Y4): footnote a of Table 3, range of the seed-mean H2 cost over the ten methods at 0.95 (the
+    # H2 row of Table 3, make_confirm2_tables.tab_main)
+    from make_confirm2_tables import COMPARATORS as T_COMP, ONLINE as T_ONLINE, OTHERS as T_OTHERS  # noqa: E402
+    ten = [m for m, _ in T_ONLINE + T_COMP + T_OTHERS]
+    h2 = pd.read_csv(REPO / HS).query("scope == 'combined' and target == 0.95 and reference == 'H2'")
+    h2 = h2.groupby("method").cost_mean.mean().loc[ten]
+    for agg in ("Min", "Max"):
+        v = h2.min() if agg == "Min" else h2.max()
+        add(f"ctwoHTwoCost{agg}", f"{v:.0f}", v,
+            f"{HS}: scope=combined, target=0.95, reference=H2, method in the ten methods of Table 3; seed mean of "
+            f"cost_mean per method, {agg.lower()} over the methods (attained by {h2.idxmin() if agg == 'Min' else h2.idxmax()}), "
+            f"camera-seconds per hop, integer", HS)
     # instruction 24 §4: worst-group shortfall of the two online methods under label set (iv), target 0.95, one integer
     RVB = "results/porto_cctv_confirm2_posthoc/review/B_aci_estimates.csv"
     bv = pd.read_csv(REPO / RVB).query("scope == 'combined' and target == 0.95 and estimand == 'D' "

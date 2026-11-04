@@ -8,22 +8,22 @@
 Method & Post-gap $d$ & Isolation Q4 $d$ & \Dbar{} & $D^s$, seeds & Recall & Cost & H1 & H2 & H3 & H4 \\
 \midrule
 \texttt{mvp\_log} & 0.9 [0.3, 1.4] & 0.2 [0.1, 0.3] & 0.9 [0.4, 1.4] & 0.6--1.1 & 0.980 & 773 & 1.07 & 1.07 & 0.99 & 0.80 \\
-\texttt{qr\_ogd} & 0.2 [$-$0.2, 0.7] & $-$0.0 [$-$0.1, 0.0] & 0.4 [0.2, 0.8] & 0.1--1.0 & 0.980 & 787 & 1.08 & 1.09 & 1.01 & 0.81 \\
+\texttt{qr\_ogd} & 0.2 [$-$0.2, 0.7] & 0.0 [$-$0.1, 0.0] & 0.4 [0.2, 0.8] & 0.1--1.0 & 0.980 & 787 & 1.08 & 1.09 & 1.01 & 0.81 \\
 \addlinespace
 \texttt{static} & 3.1 [2.3, 4.0] & 1.1 [1.0, 1.2] & 3.1 [2.3, 4.0] & 3.1 & 0.980 & 735 & 1.01 & 1.00 & 0.94 & 0.76 \\
 ACI & 3.0 [2.3, 3.7] & 1.1 [1.0, 1.2] & 3.0 [2.3, 3.7] & 2.9--3.1 & 0.980 & 786 & 1.08 & 1.08 & 1.01 & 0.81 \\
 Mondrian & 1.8 [1.2, 2.5] & 1.1 [1.0, 1.2] & 1.8 [1.2, 2.5] & 1.8 & 0.980 & 755 & 1.04 & 1.03 & 0.97 & 0.78 \\
 \texttt{qr\_groups} & 0.2 [$-$0.2, 0.7] & $-$0.1 [$-$0.1, 0.0] & 0.4 [0.3, 0.8] & 0.2--1.0 & 0.980 & 788 & 1.09 & 1.09 & 1.01 & 0.81 \\
 \texttt{qr\_groups\_refit} & 0.1 [$-$0.3, 0.6] & 0.0 [$-$0.1, 0.1] & 0.2 [0.1, 0.6] & 0.1--0.3 & 0.980 & 780 & 1.07 & 1.08 & 1.00 & 0.81 \\
-\texttt{qr\_groups\_refit7} & 0.3 [$-$0.1, 0.8] & 0.0 [$-$0.0, 0.1] & 0.3 [0.1, 0.8] & 0.1--0.6 & 0.980 & 776 & 1.07 & 1.09 & 0.99 & 0.80 \\
+\texttt{qr\_groups\_refit7} & 0.3 [$-$0.1, 0.8] & 0.0 [0.0, 0.1] & 0.3 [0.1, 0.8] & 0.1--0.6 & 0.980 & 776 & 1.07 & 1.09 & 0.99 & 0.80 \\
 CityTrac-style & 3.3 [2.4, 4.2] & 0.9 [0.7, 1.2] & 3.3 [2.5, 4.2] & 3.3 & 0.976 & 2025 & 2.79 & 3.34 & 2.59 & 2.09 \\
 Spatula-style & 16.6 [15.1, 18.1] & 9.7 [9.4, 10.1] & 16.6 [15.1, 18.1] & 16.6 & 0.909 & 428 & 0.59 & 2.98 & 0.55 & 0.44 \\
 \addlinespace
 H1 & 3.1$^\dagger$ & 1.2$^\dagger$ & 3.1 [2.3, 4.0] & & 0.980 & 726 &  &  &  & \\
-H2$^{a}$ & n/a & n/a & n/a & & 0.909--0.980 & 144--735 &  &  &  & \\
-H3 & 0.0$^\dagger$ & $-$0.0$^\dagger$ & 0.0 [0.0, 0.5] & & 0.980 & 781 &  &  &  & \\
-H4 & $-$0.0$^\dagger$ & $-$0.0$^\dagger$ & $-$0.0 [$-$0.0, $-$0.0] & & 0.986 & 968 &  &  &  & \\
+H2$^{a}$ & --- & --- & --- & & 0.909--0.980 & 144--735 &  &  &  & \\
+H3 & 0.0$^\dagger$ & 0.0$^\dagger$ & 0.0 [0.0, 0.5] & & 0.980 & 781 &  &  &  & \\
+H4 & 0.0$^\dagger$ & 0.0$^\dagger$ & 0.0 [0.0, 0.0] & & 0.986 & 968 &  &  &  & \\
 \bottomrule
 \end{tabular}
 
-\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed); the row gives the range over the ten methods of the seed-mean recall and cost. $^\dagger$Additional analysis; point estimate, no interval. n/a: not computed.}
+\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed), so it has no shortfall of its own; the row gives the range over the ten methods of the seed-mean recall and cost. $^\dagger$Additional analysis; point estimate, no interval.}
