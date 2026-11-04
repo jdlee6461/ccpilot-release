@@ -1,0 +1,46 @@
+|--- entropy_bin_3 <= 0.50
+|   |--- entropy_bin_0 <= 0.50
+|   |   |--- density_bin_0 <= 0.50
+|   |   |   |--- speed_bin_3 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- speed_bin_3 >  0.50
+|   |   |   |   |--- class: 0
+|   |   |--- density_bin_0 >  0.50
+|   |   |   |--- speed_bin_0 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- speed_bin_0 >  0.50
+|   |   |   |   |--- class: 0
+|   |--- entropy_bin_0 >  0.50
+|   |   |--- center_bin_0 <= 0.50
+|   |   |   |--- speed_bin_0 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- speed_bin_0 >  0.50
+|   |   |   |   |--- class: 0
+|   |   |--- center_bin_0 >  0.50
+|   |   |   |--- zone_1 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- zone_1 >  0.50
+|   |   |   |   |--- class: 0
+|--- entropy_bin_3 >  0.50
+|   |--- nn_bin_3 <= 0.50
+|   |   |--- center_bin_0 <= 0.50
+|   |   |   |--- zone_0 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- zone_0 >  0.50
+|   |   |   |   |--- class: 0
+|   |   |--- center_bin_0 >  0.50
+|   |   |   |--- zone_1 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- zone_1 >  0.50
+|   |   |   |   |--- class: 0
+|   |--- nn_bin_3 >  0.50
+|   |   |--- prevratio_1 <= 0.50
+|   |   |   |--- center_bin_3 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- center_bin_3 >  0.50
+|   |   |   |   |--- class: 0
+|   |   |--- prevratio_1 >  0.50
+|   |   |   |--- dwell_bin_0 <= 0.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- dwell_bin_0 >  0.50
+|   |   |   |   |--- class: 0

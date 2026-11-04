@@ -1,0 +1,2 @@
+period,seed,target,load_s,eval_s,test_hops,n_predictors,n_method_rows,methods,host,python
+exploratory 1 (porto_cctv.yaml),0,0.95,0.11528944969177246,767.4484314918518,601903,7,18,aci_g0005;aci_g001;aci_hophour_g001f;fixed;mondrian_hop;mondrian_hour;mondrian_hour_hop;mondrian_hour_hop_speed;mondrian_speed;mvp_global;mvp_groups;mvp_log;oracle(post-hoc);qr_groups;qr_ogd;static;target095;target099,LAPTOP-9FGU8M5J,3.11.16

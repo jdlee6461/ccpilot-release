@@ -1,0 +1,3 @@
+block,taxis_eval,hops_per_taxi_median,hops_per_taxi_max,hops_per_taxi_min,taxis_with_reacq,reacq_per_taxi_median,reacq_per_taxi_max,taxis_block_all_splits
+block1,427,1153.0,3843,6,370,3.0,47,430
+block2,426,1480.5,4002,19,410,4.0,68,429

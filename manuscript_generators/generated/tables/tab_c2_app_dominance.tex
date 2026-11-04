@@ -1,0 +1,22 @@
+% source: results/porto_cctv_confirm2/analysis/dominance.csv @ 1a806b3
+% columns method_dominates_pairs, comparator_dominates_pairs (interval dominance, 95%, plan 10.5; pairs of target points), same_cost_sentence_allowed.
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{\texttt{mvp\_log}} & \multicolumn{2}{c}{\texttt{qr\_ogd}} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+Comparator & dominates & dominated & dominates & dominated \\
+\midrule
+\texttt{static} & 2 & 0 & 3 & 0 \\
+ACI & 2 & 0 & 3 & 0 \\
+Mondrian & 0 & 0 & 0 & 0 \\
+\texttt{qr\_groups} & 0 & 0 & 0 & 0 \\
+\texttt{qr\_groups\_refit} & 0 & 0 & 0 & 0 \\
+\texttt{qr\_groups\_refit7} & 0 & 0 & 0 & 0 \\
+Spatula-style & 15 & 0 & 15 & 0 \\
+CityTrac-style & 6 & 0 & 9 & 0 \\
+H1 & 2 & 0 & 4 & 0 \\
+H3 & 0 & 0 & 0 & 0 \\
+H4 & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}

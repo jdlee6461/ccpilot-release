@@ -1,0 +1,13 @@
+source,block,target,seeds,hops,tau_min,tau_max,n_tau_gt_1p5,n_tau_gt_2,n_cost_neg,lookup_p_max
+confirm2_analysis H3 tau3,block1,0.9,all (the fit does not read the method runs),534713,0.0014493981766343417,0.4152560330025634,0,0,0,0.9535044431686401
+confirm2_analysis H3 tau3,block1,0.93,all (the fit does not read the method runs),534713,0.00038913740259908624,0.35639473381252984,0,0,0,0.9535044431686401
+confirm2_analysis H3 tau3,block1,0.95,all (the fit does not read the method runs),534713,6.119074974003523e-05,0.25978083530319024,0,0,0,0.9535044431686401
+confirm2_analysis H3 tau3,block1,0.97,all (the fit does not read the method runs),534713,1.5535815051740926e-06,0.13912197139141452,0,0,0,0.9535044431686401
+confirm2_analysis H3 tau3,block1,0.98,all (the fit does not read the method runs),534713,6.964279765468214e-08,0.08974661362693832,0,0,0,0.9535044431686401
+confirm2_analysis H3 tau3,block2,0.9,all (the fit does not read the method runs),667972,0.0007016794145979104,0.4159003706277556,0,0,0,0.9623961448669434
+confirm2_analysis H3 tau3,block2,0.93,all (the fit does not read the method runs),667972,9.402672699217932e-05,0.3422427589136277,0,0,0,0.9623961448669434
+confirm2_analysis H3 tau3,block2,0.95,all (the fit does not read the method runs),667972,9.420426650410271e-06,0.2658084529747278,0,0,0,0.9623961448669434
+confirm2_analysis H3 tau3,block2,0.97,all (the fit does not read the method runs),667972,1.9711098548520408e-07,0.19167434432283195,0,0,0,0.9623961448669434
+confirm2_analysis H3 tau3,block2,0.98,all (the fit does not read the method runs),667972,2.4826983949437105e-09,0.11015969506180134,0,0,0,0.9623961448669434
+h3_sensitivity wqr_tau (full sample),block1,0.95,all (the fit does not read the method runs),534713,6.119074974003523e-05,0.25978083530319024,0,0,0,0.9535044431686401
+h3_sensitivity wqr_tau (full sample),block2,0.95,all (the fit does not read the method runs),667972,9.420426650410271e-06,0.2658084529747278,0,0,0,0.9623961448669434

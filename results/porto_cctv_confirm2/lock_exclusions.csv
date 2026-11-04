@@ -1,0 +1,7 @@
+block,split,non_exit_hops_without_rule,non_exit_hops_with_rule,removed,reacquired_without_rule,reacquired_with_rule
+block1,train,603224,603188,36,1938,1938
+block1,cal,141001,141001,0,453,453
+block1,eval,534713,534713,0,1779,1779
+block2,train,657993,657981,12,2224,2224
+block2,cal,173080,173080,0,684,684
+block2,eval,668001,667972,29,2611,2611

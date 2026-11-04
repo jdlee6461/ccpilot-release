@@ -1,0 +1,13 @@
+method,statement,status,detail
+mvp_log,S1 core,keep,"static improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0223 to 0.0712 | ACI improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0215 to 0.0709"
+mvp_log,S1 mechanism clause,keep,targets where the 95% lower bound of (group cost / static group cost) > 1 in both re-acquired and isolation Q4: 5
+mvp_log,S1 addition (offline group calibration),add,qr_groups: opposite
+mvp_log,S2,반대였다,"refit: improvement 0, worsening 5; refit7: improvement 0, worsening 5 (of 5 targets)"
+mvp_log,S3,always reported (ratios with 95% intervals),"t=0.9 H2 1.191 [1.184, 1.197]; t=0.9 H3 1.003 [0.994, 1.011]; t=0.93 H2 1.203 [1.193, 1.211]; t=0.93 H3 0.984 [0.973, 0.995]; t=0.95 H2 1.179 [1.168, 1.188]; t=0.95 H3 0.983 [0.971, 0.994]; t=0.97 H2 1.087 [1.075, 1.099]; t=0.97 H3 0.975 [0.964, 0.986]; t=0.98 H2 1.070 [1.061, 1.080]; t=0.98 H3 0.990 [0.977, 1.003]"
+mvp_log,S4,remains,"t=0.9 d 0.0097 [-0.0011, 0.0215]; t=0.93 d 0.0117 [0.0017, 0.0227]; t=0.95 d 0.0101 [0.0020, 0.0190]; t=0.97 d 0.0099 [0.0035, 0.0172]; t=0.98 d 0.0087 [0.0035, 0.0142]"
+qr_ogd,S1 core,keep,"static improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0288 to 0.0752 | ACI improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0280 to 0.0749"
+qr_ogd,S1 mechanism clause,keep,targets where the 95% lower bound of (group cost / static group cost) > 1 in both re-acquired and isolation Q4: 5
+qr_ogd,S1 addition (offline group calibration),add,qr_groups: not distinguishable
+qr_ogd,S2,반대였다,"refit: improvement 0, worsening 3; refit7: improvement 1, worsening 0 (of 5 targets)"
+qr_ogd,S3,always reported (ratios with 95% intervals),"t=0.9 H2 1.194 [1.186, 1.201]; t=0.9 H3 1.011 [0.997, 1.026]; t=0.93 H2 1.216 [1.204, 1.224]; t=0.93 H3 1.004 [0.990, 1.018]; t=0.95 H2 1.197 [1.183, 1.208]; t=0.95 H3 1.001 [0.989, 1.015]; t=0.97 H2 1.110 [1.094, 1.125]; t=0.97 H3 1.001 [0.991, 1.012]; t=0.98 H2 1.088 [1.077, 1.098]; t=0.98 H3 1.008 [0.999, 1.017]"
+qr_ogd,S4,restrict (previous evaluation ...),"t=0.9 d 0.0057 [-0.0052, 0.0178]; t=0.93 d 0.0074 [-0.0022, 0.0183]; t=0.95 d 0.0058 [-0.0022, 0.0150]; t=0.97 d 0.0011 [-0.0040, 0.0065]; t=0.98 d 0.0022 [-0.0022, 0.0068]"

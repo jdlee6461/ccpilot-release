@@ -1,0 +1,68 @@
+label_set         method        run_name  target  n_groups   worst_group  worst_deficit  worst_lo  worst_hi  second_group  second_deficit  reacq_deficit  D_estimates
+     full            ACI       aci_g0005    0.90        25     hopkind=2         0.0805    0.0677    0.0938 entropy_bin=3          0.0750         0.0805       0.0805
+     full            ACI       aci_g0005    0.93        25     hopkind=2         0.0664    0.0552    0.0777 entropy_bin=3          0.0485         0.0664       0.0664
+     full            ACI       aci_g0005    0.95        25     hopkind=2         0.0575    0.0473    0.0678 entropy_bin=3          0.0315         0.0575       0.0575
+     full            ACI       aci_g0005    0.97        25     hopkind=2         0.0422    0.0335    0.0516 entropy_bin=3          0.0172         0.0422       0.0422
+     full            ACI       aci_g0005    0.98        25     hopkind=2         0.0302    0.0234    0.0374      nn_bin=3          0.0112         0.0302       0.0302
+     full group-wise ACI   A2_aci_groups    0.90        25 entropy_bin=3         0.0001   -0.0021    0.0022      nn_bin=3         -0.0002        -0.0047       0.0004
+     full group-wise ACI   A2_aci_groups    0.93        25 entropy_bin=3         0.0002   -0.0017    0.0021      nn_bin=3          0.0002        -0.0008       0.0010
+     full group-wise ACI   A2_aci_groups    0.95        25 entropy_bin=3         0.0003   -0.0012    0.0016      nn_bin=3          0.0001        -0.0007       0.0011
+     full group-wise ACI   A2_aci_groups    0.97        25 entropy_bin=3         0.0001   -0.0009    0.0011      nn_bin=3          0.0000        -0.0010       0.0004
+     full group-wise ACI   A2_aci_groups    0.98        25     hopkind=2         0.0002   -0.0044    0.0049 entropy_bin=3          0.0000         0.0002       0.0007
+     full        mvp_log         mvp_log    0.90        25     hopkind=2         0.0097   -0.0011    0.0215      hgroup=1          0.0055         0.0097       0.0097
+     full        mvp_log         mvp_log    0.93        25     hopkind=2         0.0117    0.0017    0.0227      hgroup=1          0.0055         0.0117       0.0117
+     full        mvp_log         mvp_log    0.95        25     hopkind=2         0.0101    0.0020    0.0190      hgroup=1          0.0052         0.0101       0.0101
+     full        mvp_log         mvp_log    0.97        25     hopkind=2         0.0099    0.0035    0.0172      hgroup=1          0.0035         0.0099       0.0099
+     full        mvp_log         mvp_log    0.98        25     hopkind=2         0.0087    0.0035    0.0142   speed_bin=0          0.0021         0.0087       0.0087
+     full         qr_ogd          qr_ogd    0.90        25     hopkind=2         0.0057   -0.0052    0.0178 entropy_bin=3          0.0007         0.0057       0.0066
+     full         qr_ogd          qr_ogd    0.93        25     hopkind=2         0.0074   -0.0022    0.0183      hgroup=0          0.0017         0.0074       0.0087
+     full         qr_ogd          qr_ogd    0.95        25     hopkind=2         0.0058   -0.0022    0.0150      hgroup=0          0.0018         0.0058       0.0069
+     full         qr_ogd          qr_ogd    0.97        25      hgroup=0         0.0016    0.0001    0.0031     hopkind=2          0.0011         0.0011       0.0037
+     full         qr_ogd          qr_ogd    0.98        25     hopkind=2         0.0022   -0.0022    0.0068      hgroup=0          0.0013         0.0022       0.0038
+     full          refit qr_groups_refit    0.93        25      hgroup=0         0.0033    0.0010    0.0058     hopkind=2          0.0031         0.0031       0.0041
+     full          refit qr_groups_refit    0.95        25      hgroup=0         0.0026    0.0007    0.0045      hgroup=1          0.0025         0.0016       0.0030
+     (iv)            ACI          iv_aci    0.90        25 entropy_bin=3         0.5847    0.5761    0.5925      nn_bin=3          0.4794         0.4664       0.5847
+     (iv)            ACI          iv_aci    0.93        25 entropy_bin=3         0.4987    0.4899    0.5064     hopkind=2          0.3974         0.3974       0.4987
+     (iv)            ACI          iv_aci    0.95        25 entropy_bin=3         0.4053    0.3971    0.4127     hopkind=2          0.3315         0.3315       0.4053
+     (iv)            ACI          iv_aci    0.97        25 entropy_bin=3         0.2764    0.2699    0.2826     hopkind=2          0.2431         0.2431       0.2764
+     (iv)            ACI          iv_aci    0.98        25 entropy_bin=3         0.1940    0.1888    0.1993     hopkind=2          0.1884         0.1884       0.1940
+     (iv) group-wise ACI   iv_aci_groups    0.90        25 entropy_bin=3         0.3242    0.3078    0.3379 entropy_bin=2          0.3113         0.0436       0.3242
+     (iv) group-wise ACI   iv_aci_groups    0.93        25 entropy_bin=3         0.2623    0.2485    0.2739 entropy_bin=2          0.2526         0.0298       0.2623
+     (iv) group-wise ACI   iv_aci_groups    0.95        25 entropy_bin=3         0.2081    0.1962    0.2183 entropy_bin=2          0.2017         0.0263       0.2081
+     (iv) group-wise ACI   iv_aci_groups    0.97        25 entropy_bin=3         0.1395    0.1311    0.1471 entropy_bin=2          0.1325         0.0153       0.1395
+     (iv) group-wise ACI   iv_aci_groups    0.98        25 entropy_bin=3         0.0990    0.0927    0.1049      nn_bin=3          0.0944         0.0095       0.0990
+     (iv)        mvp_log      iv_mvp_log    0.90        25      nn_bin=3         0.3345    0.3163    0.3480        zone=1          0.3328         0.1716       0.3363
+     (iv)        mvp_log      iv_mvp_log    0.93        25      nn_bin=3         0.2722    0.2547    0.2857        zone=1          0.2718         0.1831       0.2746
+     (iv)        mvp_log      iv_mvp_log    0.95        25 entropy_bin=3         0.2197    0.2048    0.2332      hgroup=1          0.2172         0.1721       0.2231
+     (iv)        mvp_log      iv_mvp_log    0.97        25     hopkind=2         0.1779    0.1585    0.1967   speed_bin=0          0.1470         0.1779       0.1804
+     (iv)        mvp_log      iv_mvp_log    0.98        25     hopkind=2         0.1442    0.1266    0.1612      nn_bin=3          0.1041         0.1442       0.1442
+     (iv)         qr_ogd       iv_qr_ogd    0.90        25 entropy_bin=0         0.3365    0.3301    0.3447   speed_bin=3          0.3290         0.1340       0.3365
+     (iv)         qr_ogd       iv_qr_ogd    0.93        25 entropy_bin=0         0.2734    0.2678    0.2800   speed_bin=3          0.2688         0.0987       0.2739
+     (iv)         qr_ogd       iv_qr_ogd    0.95        25 entropy_bin=0         0.2171    0.2115    0.2239   speed_bin=3          0.2166         0.0621       0.2182
+     (iv)         qr_ogd       iv_qr_ogd    0.97        25      nn_bin=0         0.1503    0.1433    0.1557   speed_bin=3          0.1500         0.0314       0.1509
+     (iv)         qr_ogd       iv_qr_ogd    0.98        25      nn_bin=0         0.1108    0.1041    0.1164   speed_bin=3          0.1085         0.0258       0.1108
+     (iv)          refit     Bii_refit_a    0.93        25      hgroup=1         0.0261    0.0217    0.0307      hgroup=0          0.0260         0.0257       0.0271
+     (iv)          refit     Bii_refit_a    0.95        25      hgroup=0         0.0206    0.0163    0.0249      hgroup=1          0.0200         0.0187       0.0213
+	Command being timed: "python exploratory/feedback_iv_worst/feedback_iv_worst.py"
+	User time (seconds): 1.62
+	System time (seconds): 0.11
+	Percent of CPU this job got: 239%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.72
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 127616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 19544
+	Voluntary context switches: 31
+	Involuntary context switches: 271
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

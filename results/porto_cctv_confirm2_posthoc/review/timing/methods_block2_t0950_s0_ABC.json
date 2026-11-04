@@ -1,0 +1,20 @@
+{
+ "A1": 1.093947410583496,
+ "A2": 40.51072597503662,
+ "A3": 314.1061508655548,
+ "B_aci_copy_bitwise": true,
+ "B_aci": 47.87377882003784,
+ "B_online": 389.9701910018921,
+ "n_audit": 33410,
+ "n_audit_outside_fb": 23345,
+ "C_src": 385.1939215660095,
+ "C_src_zone": 403.87859773635864,
+ "C_src_zone_hour": 415.7262942790985,
+ "C_qr_ogd_copy_bitwise": true,
+ "cost_lookup_static_bitwise|src": true,
+ "cost_lookup_static_bitwise|src_zone": true,
+ "cost_lookup_static_bitwise|src_zone_hour": true,
+ "cost_lookup_static_bitwise|src_zone_speed": true,
+ "cost_lookup_static_bitwise|src_zone_hour_speed": true,
+ "seconds_total": 2366.641366004944
+}

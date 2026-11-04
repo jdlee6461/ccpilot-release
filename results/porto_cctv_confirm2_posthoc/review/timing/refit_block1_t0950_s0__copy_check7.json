@@ -1,0 +1,10 @@
+{
+ "label": "copy_check7",
+ "block": "block1",
+ "target": 0.95,
+ "seed": 0,
+ "predictor": "src_zone_hour_speed",
+ "bitwise_vs_stored": true,
+ "window_days": 7.0,
+ "seconds": 2367.8699610233307
+}

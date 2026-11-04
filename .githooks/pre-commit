@@ -1,0 +1,72 @@
+#!/bin/sh
+# Blocks commits that would change frozen pre-registration artifacts.
+# Install once per clone:  git config core.hooksPath .githooks
+# Never bypass with --no-verify.
+
+TAG=prereg-v3
+FROZEN_FILES="PREREGISTRATION.md configs/porto_cctv_confirm.yaml"
+FROZEN_DIRS="results/porto_cctv_confirm/ results/porto_cctv_confirm2/"
+
+fail=0
+staged=$(git diff --cached --name-only --diff-filter=ACMRDT)
+
+# 1) frozen files must not be staged (added, modified, renamed, deleted)
+for f in $FROZEN_FILES; do
+  if printf '%s\n' "$staged" | grep -qx "$f"; then
+    echo "BLOCKED: '$f' is frozen at tag $TAG and must not be changed."
+    fail=1
+  fi
+done
+
+# 2) the confirmation results directory is frozen once committed
+for d in $FROZEN_DIRS; do
+  if git ls-tree -r --name-only HEAD -- "$d" 2>/dev/null | grep -q .; then
+    if printf '%s\n' "$staged" | grep -q "^$d"; then
+      echo "BLOCKED: files under '$d' (confirmation run results) are frozen."
+      echo "         Post-hoc outputs belong in *_posthoc/ or *_regrade/ directories."
+      fail=1
+    fi
+  fi
+done
+
+# 3) working tree copies of frozen files must equal the tag
+if git rev-parse -q --verify "refs/tags/$TAG" >/dev/null; then
+  for f in $FROZEN_FILES; do
+    if ! git diff --quiet "$TAG" -- "$f"; then
+      echo "BLOCKED: working copy of '$f' differs from $TAG."
+      echo "         Restore it with:  git checkout $TAG -- $f"
+      fail=1
+    fi
+  done
+else
+  echo "WARNING: tag $TAG not found; frozen-file comparison skipped."
+fi
+
+# 4) confirm2 lock (plan notes/instructions/PLAN_confirm2.md §11.2): once tag confirm2-plan exists, these files are
+#    frozen at that tag (the lock commit itself adds them before the tag exists)
+TAG2=confirm2-plan
+FROZEN2_FILES="notes/instructions/PLAN_confirm2.md configs/porto_cctv_confirm2.yaml
+configs/confirm2/porto_cctv_confirm2_block1_t0900.yaml configs/confirm2/porto_cctv_confirm2_block1_t0930.yaml
+configs/confirm2/porto_cctv_confirm2_block1_t0950.yaml configs/confirm2/porto_cctv_confirm2_block1_t0970.yaml
+configs/confirm2/porto_cctv_confirm2_block1_t0980.yaml configs/confirm2/porto_cctv_confirm2_block2_t0900.yaml
+configs/confirm2/porto_cctv_confirm2_block2_t0930.yaml configs/confirm2/porto_cctv_confirm2_block2_t0950.yaml
+configs/confirm2/porto_cctv_confirm2_block2_t0970.yaml configs/confirm2/porto_cctv_confirm2_block2_t0980.yaml
+configs/confirm2/generate.py configs/confirm2_analysis.yaml configs/porto_cctv_heldout_reanalysis.yaml LOCK_confirm2.txt"
+if git rev-parse -q --verify "refs/tags/$TAG2" >/dev/null; then
+  for f in $FROZEN2_FILES; do
+    if printf '%s\n' "$staged" | grep -qx "$f"; then
+      echo "BLOCKED: '$f' is frozen at tag $TAG2 (confirm2 lock) and must not be changed."
+      fail=1
+    fi
+    if ! git diff --quiet "$TAG2" -- "$f"; then
+      echo "BLOCKED: working copy of '$f' differs from $TAG2."
+      fail=1
+    fi
+  done
+fi
+
+if [ "$fail" -ne 0 ]; then
+  echo "Commit aborted by .githooks/pre-commit. See CLAUDE.md (Frozen artifacts)."
+  exit 1
+fi
+exit 0

@@ -1,0 +1,14 @@
+% source: results/porto_cctv_confirm2_posthoc/review/B_refit_b_estimates.csv @ 128e4b2; results/porto_cctv_confirm2_posthoc/review/refit_logs/block1_t0950_s0__Bi_refit_b_k0005.csv @ b0fa668; results/porto_cctv_confirm2_posthoc/review/refit_logs/block1_t0950_s0__Bi_refit_b_k002.csv @ 128e4b2
+% POST HOC (added during revision (internal review); Gate 8, instruction 18).
+% label set (i), scope block1 (block 2 not run), evaluation seed 0, target 0.95; D and post-gap d (reacq_d) in pp, cost / H2, conservative 95% interval (taxi and day cluster bootstraps, B=2000); kappa k0005: refits 27, feedback hops resolved at the last refit 154671, kept in step 2 1365 (0.9%), in step 3 49623 (32.1%); kappa k002: refits 27, feedback hops resolved at the last refit 154671, kept in step 2 0 (0.0%), in step 3 55733 (36.0%).
+\begin{tabular}{@{}llccc@{}}
+\toprule
+Label set & Method & \Dbar{} & Post-gap $d$ & Cost / H2 \\
+\midrule
+(i), block 1, seed 0 & refit & 2.6 [2.1, 4.5] & 2.6 [0.9, 4.5] & 1.19 [1.17, 1.20] \\
+ & left-censored QR, $\kappa=0.005$ & 0.8 [0.5, 1.5] & 0.3 [$-$0.8, 1.5] & 1.17 [1.15, 1.18] \\
+ & left-censored QR, $\kappa=0.02$ & 1.2 [0.7, 2.5] & 1.2 [$-$0.1, 2.5] & 1.16 [1.15, 1.17] \\
+ & \texttt{mvp\_log} & 1.2 [0.4, 2.4] & 1.2 [0.0, 2.4] & 1.16 [1.15, 1.17] \\
+ & \texttt{qr\_ogd} & 1.7 [0.5, 3.0] & 1.7 [0.5, 3.0] & 1.17 [1.17, 1.19] \\
+\bottomrule
+\end{tabular}

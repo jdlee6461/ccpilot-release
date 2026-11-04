@@ -1,0 +1,12 @@
+# POST HOC (instruction 07 §1 F4): A_differences.csv rows cost_ratio_H2_diff, label A, scope combined; Delta = comparator - reference; hi = conservative 95% upper bound
+comparator,reference,target,point,lo,hi,hi_lt_0
+A1_mondrian_small,qr_groups,0.9,-0.0427576429086436,-0.047441767695463,-0.0378241060647362,True
+A1_mondrian_small,qr_groups,0.93,-0.0662044119575857,-0.0725472327718867,-0.0596227838706844,True
+A1_mondrian_small,qr_groups,0.95,-0.0626096126775569,-0.0703763364987674,-0.0544245174938547,True
+A1_mondrian_small,qr_groups,0.97,-0.0279077285759669,-0.0376728226815209,-0.0186861520000617,True
+A1_mondrian_small,qr_groups,0.98,-0.0385641656908242,-0.0458724992154288,-0.0302566127151599,True
+A1_mondrian_small,qr_groups_refit,0.9,-0.0413970898644679,-0.0461600598231109,-0.0367424313494461,True
+A1_mondrian_small,qr_groups_refit,0.93,-0.0699855633002254,-0.0757384801128181,-0.0625113211029929,True
+A1_mondrian_small,qr_groups_refit,0.95,-0.0669217034844913,-0.0754839174582514,-0.0581852612342459,True
+A1_mondrian_small,qr_groups_refit,0.97,-0.0295981085921794,-0.0386756182883365,-0.0211012340702614,True
+A1_mondrian_small,qr_groups_refit,0.98,-0.0284168102543134,-0.036045576030071,-0.0192996687281313,True

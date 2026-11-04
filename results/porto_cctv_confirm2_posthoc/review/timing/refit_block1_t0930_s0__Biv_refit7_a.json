@@ -1,0 +1,9 @@
+{
+ "label": "Biv_refit7_a",
+ "block": "block1",
+ "target": 0.93,
+ "seed": 0,
+ "predictor": "src_zone_hour_speed",
+ "window_days": 7.0,
+ "seconds": 2454.7158126831055
+}

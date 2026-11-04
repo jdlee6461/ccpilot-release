@@ -1,0 +1,27 @@
+# class: main | source: ccpilot/evaluate.py @ 6bf4ebd; ccpilot/events.py @ 729b651; configs/porto_cctv_confirm.yaml @ 729b651 | note: definitions: hgroup edges [0,6,10,16,20,24] h (config); hopkind 0 later / 1 first hop of a trip / 2 first hop after re-acquisition (evaluate.py); zone 0=E 1=N 2=W 3=S sector of the exit point (events.py); speed_bin, entropy_bin (branching), nn_bin (distance to nearest camera = isolation) are training-period quartiles
+order,dim,group,key,attribute,label
+1,grp_all,0,grp_all=0,All,All hops
+2,hgroup,0,hgroup=0,Time of day,00-06 h
+3,hgroup,1,hgroup=1,Time of day,06-10 h
+4,hgroup,2,hgroup=2,Time of day,10-16 h
+5,hgroup,3,hgroup=3,Time of day,16-20 h
+6,hgroup,4,hgroup=4,Time of day,20-24 h
+7,hopkind,0,hopkind=0,Track state,Later
+8,hopkind,1,hopkind=1,Track state,Initiated
+9,hopkind,2,hopkind=2,Track state,Re-acquired
+10,speed_bin,0,speed_bin=0,Exit speed,Speed Q1 (slow)
+11,speed_bin,1,speed_bin=1,Exit speed,Speed Q2
+12,speed_bin,2,speed_bin=2,Exit speed,Speed Q3
+13,speed_bin,3,speed_bin=3,Exit speed,Speed Q4 (fast)
+14,zone,0,zone=0,Exit zone,Exit east
+15,zone,1,zone=1,Exit zone,Exit north
+16,zone,2,zone=2,Exit zone,Exit west
+17,zone,3,zone=3,Exit zone,Exit south
+18,entropy_bin,0,entropy_bin=0,Branching,Branching Q1 (low)
+19,entropy_bin,1,entropy_bin=1,Branching,Branching Q2
+20,entropy_bin,2,entropy_bin=2,Branching,Branching Q3
+21,entropy_bin,3,entropy_bin=3,Branching,Branching Q4 (high)
+22,nn_bin,0,nn_bin=0,Isolation,Isolation Q1 (low)
+23,nn_bin,1,nn_bin=1,Isolation,Isolation Q2
+24,nn_bin,2,nn_bin=2,Isolation,Isolation Q3
+25,nn_bin,3,nn_bin=3,Isolation,Isolation Q4 (high)

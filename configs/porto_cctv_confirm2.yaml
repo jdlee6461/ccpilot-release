@@ -1,0 +1,89 @@
+# CONFIRMATION 2 BASE CONFIGURATION (plan notes/instructions/PLAN_confirm2.md, rev 72, §3).
+# Copy of the frozen configs/porto_cctv_confirm.yaml (sha256 0606a4a2...e9eb). Differences: the period (porto dates,
+# eval.splits = block 1; the generated block/target files set the block and the target), work_dir / out_dir, and the
+# duplicate-TRIP_ID rule of §2 (porto.drop_duplicate_trip_id). Diff: results/porto_cctv_confirm2/config_diff.txt.
+# Run files: configs/confirm2/*.yaml (configs/confirm2/generate.py). Frozen at tag confirm2-plan.
+dataset: porto
+timezone: Europe/Lisbon
+work_dir: work/porto_cctv_confirm2
+out_dir: results/porto_cctv_confirm2
+
+porto:
+  csv_path: data/porto/train.csv
+  start_date: "2013-07-01"
+  end_date: "2013-11-04"
+  proj_center: [-8.61, 41.15]        # lon0, lat0 for local metric projection
+  bbox: [-8.70, 41.10, -8.55, 41.20] # keep trips touching central Porto (adjust)
+  gps_interval_s: 15
+  max_speed_mps: 50
+  chunksize: 100000
+  max_trips: null                     # e.g. 20000 for a quick first run
+  reuse_trajectories: null
+  drop_duplicate_trip_id: both        # plan §2: every record whose TRIP_ID occurs more than once in the period
+
+cameras:
+  geojson: data/porto/porto_cctv.json   # Porto traffic-management CCTV (2025 snapshot, Wayback Machine)
+  merge_radius_m: 50                    # cameras within 50 m (complete linkage) -> one site
+  exclude_tunnel: true
+
+events:
+  camera_radius_m: 50
+  interp_step_s: 1.0
+  max_overlap: 4
+  t_max_s: 600
+  bin_s: 5
+  hour_group_edges: [0, 6, 10, 16, 20, 24]
+
+eval:
+  seed: 0
+  target_recall: 0.95
+  candidate_radius_m: 2500
+  predictors:            # name -> conditioning levels (hierarchical, coarse -> fine)
+    src: [src]
+    src_zone: [src, zone]
+    src_zone_hour: [src, zone, hgroup]
+    src_zone_speed: [src, zone, speed_bin]
+    src_zone_hour_speed: [src, zone, hgroup, speed_bin]
+  confound_predictor: src_zone
+  model: {lam: 20.0, eps: 1.0e-4, sigma_bins: 1.0}
+  spatula: {s_thresh: 0.05, t_quantile: 0.98}
+  # conditional (Mondrian) calibration: name -> columns defining groups
+  mondrian:
+    mondrian_hour: [hgroup]
+    mondrian_hop: [hopfirst]
+    mondrian_hour_hop: [hgroup, hopfirst]
+    mondrian_speed: [speed_bin]
+    mondrian_hour_hop_speed: [hgroup, hopfirst, speed_bin]   # 40 cells: partition approach at its limit
+  min_group_n: 200                      # groups smaller than this fall back to global tau
+  aci:
+    window: 2000
+    feedback_fraction: 0.3
+  # adaptive variants; alpha_floor: number or "alpha/k"; -0.5 = effectively no floor
+  aci_variants:
+    - {name: aci_g001,          gamma: 0.001,  alpha_floor: -0.5}
+    - {name: aci_g0005,         gamma: 0.0005, alpha_floor: -0.5}
+    - {name: aci_hophour_g001f, gamma: 0.001,  alpha_floor: "alpha/5", groups: [hgroup, hopfirst]}
+  # overlapping-group calibration (no cell products): MVP (online) and group QR (offline)
+  multigroup:
+    predictors: [src_zone_speed, src_zone_hour_speed]
+    dims: [hgroup, hopkind, speed_bin, zone, entropy_bin, nn_bin]   # 25 overlapping groups
+    mvp_variants:
+      - {name: mvp_groups, scale: quantile, m: 40}             # previous version (uniform buckets)
+      - {name: mvp_log,    scale: log, m: 40, a_min: 0.002}    # log-scale buckets + capped extreme
+      - {name: mvp_global, scale: quantile, m: 40, global_only: true}
+    qr_max_n: 80000
+    qr_ogd: {gamma: 0.005, clip: 3.0}                          # QR start + online group updates
+  # strata for conditional / worst-group coverage
+  strata: [hgroup, hopfirst, hopkind, zone, speed_bin, entropy_bin, nn_bin]
+  n_spatial_bins: 4
+  group_bar: 0.94                       # worst-group bar used for 'n_groups_sig_below_bar'
+  n_speed_bins: 4
+  dip_margin: 0.05                      # frac_below = share of rolling windows below target - margin
+  plot_methods: [static, mondrian_hour_hop_speed, aci_g0005, mvp_groups, mvp_log, qr_groups, qr_ogd]
+  splits:
+    train: ["2013-07-01", "2013-07-29"]
+    cal:   ["2013-07-29", "2013-08-05"]
+    test:
+      - {name: block1_eval, range: ["2013-08-05", "2013-09-02"]}
+  max_hops: 10
+  rolling_window: 1000

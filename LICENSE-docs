@@ -1,0 +1,20 @@
+Documents, analysis plans and result files
+
+Copyright (c) 2026 Jongdeog Lee and Jongkwan Lee
+
+The documents, analysis plans, deviation records, translations and result files
+of this repository are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). To view a copy of this license, visit
+https://creativecommons.org/licenses/by/4.0/
+
+Scope (see README.md, "License"): the Markdown and text documents (README.md,
+PREREGISTRATION.md, DEVIATIONS.md, POSTHOC.md, LOCK_confirm2*.txt, notes/,
+docs/, and the *_en.md translations), everything under results/ and figures/,
+and the generated tables, figures and number files under
+manuscript_generators/generated/ and manuscript_generators/supplementary_tables/.
+The code (all .py and .sh files and the configuration files) is licensed under
+the MIT License in LICENSE.
+
+Third-party data keep their own licenses: data/porto/porto_cctv.json (Porto
+traffic-camera positions, CC0 1.0) is not covered by this license (see
+README.md, "Data").

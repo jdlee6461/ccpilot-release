@@ -1,0 +1,19 @@
+{
+ "target": 0.95,
+ "B": 100,
+ "taxi_clusters": 428,
+ "workers": 5,
+ "hops": 601903,
+ "full_fit_seconds": 333.97994780540466,
+ "bootstrap_seconds": 14688.925859928131,
+ "seconds_per_replicate_per_worker": 734.4462929964066
+}
+ target                  method blocks cluster   B  point_fixed_fit  lo_refit  hi_refit  lo_fixed  hi_fixed                                                                                               note
+   0.95                 mvp_log  expl1    taxi 100           1.0027    0.9749    1.0284    1.0004    1.0047 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95                  qr_ogd  expl1    taxi 100           1.0116    0.9834    1.0379    1.0101    1.0132 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95                  static  expl1    taxi 100           0.7918    0.7688    0.8148    0.7870    0.7966 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95               aci_g0005  expl1    taxi 100           0.9257    0.9012    0.9516    0.9194    0.9322 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95 mondrian_hour_hop_speed  expl1    taxi 100           0.8502    0.8265    0.8752    0.8453    0.8564 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95               qr_groups  expl1    taxi 100           0.9404    0.9144    0.9651    0.9383    0.9426 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95         qr_groups_refit  expl1    taxi 100           0.9581    0.9315    0.9829    0.9569    0.9596 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95        qr_groups_refit7  expl1    taxi 100           1.0082    0.9799    1.0343    1.0073    1.0093 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3

@@ -1,0 +1,11 @@
+config,data_start,data_end_excl,overlaps_candidate
+porto.yaml,2013-11-04,2014-01-06,False
+porto_cctv.yaml,2013-11-04,2014-01-06,False
+porto_cctv_confirm.yaml,2014-05-05,2014-07-01,False
+porto_cctv_confirm_geom_r30.yaml,2014-05-05,2014-07-01,False
+porto_cctv_confirm_geom_r75.yaml,2014-05-05,2014-07-01,False
+porto_cctv_confirm_geom_tmax300.yaml,2014-05-05,2014-07-01,False
+porto_cctv_confirm_geom_tmax900.yaml,2014-05-05,2014-07-01,False
+porto_cctv_replication.yaml,2014-02-03,2014-04-28,False
+porto_confirm.yaml,2014-05-05,2014-07-01,False
+porto_replication.yaml,2014-02-03,2014-04-28,False

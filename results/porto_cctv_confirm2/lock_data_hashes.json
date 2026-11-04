@@ -1,0 +1,49 @@
+{
+ "base_config": "configs/porto_cctv_confirm2.yaml",
+ "hash_method": "frame_sha256: per column name, dtype, values bytes (numpy, C order)",
+ "raw_csv": {
+  "path": "data/porto/train.csv",
+  "sha256": "2891d03ea99ce0fc203daedd434848a1a8baa7a8fb6da10f8d7ff26559efff6d"
+ },
+ "trip_table": {
+  "trips": 535843,
+  "points": 26063896,
+  "columns": [
+   "trip_id",
+   "t",
+   "x",
+   "y"
+  ],
+  "sha256": "5040261e6803a64748d7d2a07468e411a0151d667d1f2fe25072b12b4d389531"
+ },
+ "cameras": {
+  "sites": 176,
+  "sha256": "5bbd88e9ebf0369d71daa08a05db0fc32cfd172d55f7cabd9f274280d95a44e1"
+ },
+ "hop_table_all": {
+  "rows": 3302407,
+  "sha256": "53c32863c646270ceded08f6b138d23f7d2a0511973bd20c66c87f8e55dcd295"
+ },
+ "hop_table_block1": {
+  "rows": 1521280,
+  "range": [
+   "2013-07-01",
+   "2013-09-02"
+  ],
+  "sha256": "1152b32277a3680a5d9868eba9a551718d9d0f07d8ae4f3d83d7fa37b2d35c1f"
+ },
+ "hop_table_block2": {
+  "rows": 1781105,
+  "range": [
+   "2013-09-02",
+   "2013-11-04"
+  ],
+  "sha256": "a58deb3c61ce498a2e4f75c7e9ed5daa796aa5e1d9d3581ff32c83dfb1ee1098"
+ },
+ "exclusion": {
+  "trips_without_rule": 535857,
+  "trips_with_rule": 535843,
+  "transitions_without_rule": 3302496,
+  "transitions_with_rule": 3302407
+ }
+}

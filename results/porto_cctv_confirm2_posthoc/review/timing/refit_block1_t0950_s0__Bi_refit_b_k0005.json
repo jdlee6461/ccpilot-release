@@ -1,0 +1,10 @@
+{
+ "label": "Bi_refit_b_k0005",
+ "block": "block1",
+ "target": 0.95,
+ "seed": 0,
+ "predictor": "src_zone_hour_speed",
+ "kappa": 0.005,
+ "delta": 0.0,
+ "seconds": 12329.477257966995
+}

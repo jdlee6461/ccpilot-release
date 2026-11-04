@@ -1,0 +1,7 @@
+{
+ "config": "configs/confirm2/porto_cctv_confirm2_block1_t0970.yaml",
+ "target": 0.97,
+ "seed": 2,
+ "eval_seconds": 9927.061829805374,
+ "started": "2026-10-16T00:10:44-0400"
+}

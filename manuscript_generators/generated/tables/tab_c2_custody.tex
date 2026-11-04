@@ -1,0 +1,34 @@
+% source: results/porto_cctv_confirm2_posthoc/custody/custody.csv @ ea77e49; results/porto_cctv_confirm2/analysis/costs.csv @ 1a806b3; results/porto_cctv_confirm2_posthoc/custody/custody_diffs.csv @ ea77e49
+% POST HOC (decided after the confirm2 results); custody_table definition; scope=combined; seed means; k=5 at t=0.95 with the conservative 95% interval (taxi and day cluster bootstraps, B=2000); cost = costs.csv cost_mean; last column: custody(method) - custody(static) at k=5, t=0.95, pp two decimals, conservative 95% paired interval (custody_diffs.csv; seven methods, -- = not listed).
+\setlength{\tabcolsep}{3.6pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+ & \multicolumn{5}{c}{Target 0.95, $k$ hops} & \multicolumn{2}{c}{$k=5$} & Cost & $k=5$, $-$\,\texttt{static} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-8}
+Method & 1 & 2 & 3 & 4 & 5 [95\% interval] & 0.90 & 0.98 & (0.95) & pp [95\% interval] \\
+\midrule
+\multicolumn{10}{@{}l}{\emph{All chains} (208{,}988 chains at $k=1$, 118{,}883 at $k=5$)} \\
+\texttt{mvp\_log} & 0.947 & 0.903 & 0.872 & 0.842 & 0.819 [0.815, 0.823] & 0.651 & 0.924 & 313 & $-$0.49 [$-$0.74, $-$0.23] \\
+\texttt{qr\_ogd} & 0.949 & 0.905 & 0.875 & 0.845 & 0.821 [0.817, 0.825] & 0.657 & 0.925 & 319 & $-$0.26 [$-$0.58, 0.06] \\
+\texttt{static} & 0.931 & 0.892 & 0.868 & 0.845 & 0.824 [0.819, 0.828] & 0.663 & 0.927 & 269 & -- \\
+ACI & 0.931 & 0.892 & 0.867 & 0.844 & 0.823 [0.818, 0.827] & 0.657 & 0.927 & 288 & $-$0.09 [$-$0.50, 0.36] \\
+Mondrian & 0.950 & 0.904 & 0.875 & 0.847 & 0.823 [0.819, 0.828] & 0.665 & 0.927 & 290 & $-$0.05 [$-$0.17, 0.08] \\
+\texttt{qr\_groups} & 0.950 & 0.906 & 0.876 & 0.846 & 0.822 [0.818, 0.827] & 0.664 & 0.924 & 319 & $-$0.12 [$-$0.35, 0.11] \\
+\texttt{qr\_groups\_refit} & 0.949 & 0.905 & 0.875 & 0.845 & 0.821 [0.817, 0.825] & 0.661 & 0.924 & 317 & $-$0.25 [$-$0.47, $-$0.02] \\
+\texttt{qr\_groups\_refit7} & 0.949 & 0.905 & 0.874 & 0.844 & 0.820 [0.816, 0.825] & 0.657 & 0.924 & 317 & $-$0.33 [$-$0.54, $-$0.11] \\
+CityTrac-style & 0.956 & 0.930 & 0.907 & 0.886 & 0.866 [0.860, 0.873] & 0.794 & 0.904 & 663 & -- \\
+Spatula-style & 0.871 & 0.811 & 0.771 & 0.734 & 0.704 [0.698, 0.709] & 0.704 & 0.704 & 428 & -- \\
+\midrule
+\multicolumn{10}{@{}l}{\emph{Chains starting with a post-gap hop} (4{,}390 chains at $k=1$, 1{,}925 at $k=5$)} \\
+\texttt{mvp\_log} & 0.940 & 0.858 & 0.817 & 0.777 & 0.727 [0.706, 0.748] & 0.556 & 0.859 & 313 & 1.25 [$-$0.07, 2.54] \\
+\texttt{qr\_ogd} & 0.944 & 0.859 & 0.813 & 0.771 & 0.716 [0.695, 0.738] & 0.552 & 0.867 & 319 & 0.19 [$-$1.25, 1.60] \\
+\texttt{static} & 0.890 & 0.823 & 0.789 & 0.756 & 0.714 [0.693, 0.736] & 0.548 & 0.855 & 269 & -- \\
+ACI & 0.893 & 0.826 & 0.793 & 0.760 & 0.719 [0.701, 0.739] & 0.550 & 0.857 & 288 & 0.51 [$-$0.34, 1.41] \\
+Mondrian & 0.917 & 0.839 & 0.800 & 0.758 & 0.717 [0.697, 0.740] & 0.537 & 0.844 & 290 & 0.31 [$-$0.59, 1.24] \\
+\texttt{qr\_groups} & 0.944 & 0.862 & 0.818 & 0.774 & 0.722 [0.701, 0.745] & 0.557 & 0.866 & 319 & 0.78 [$-$0.56, 2.14] \\
+\texttt{qr\_groups\_refit} & 0.948 & 0.864 & 0.820 & 0.776 & 0.724 [0.703, 0.745] & 0.559 & 0.868 & 317 & 0.92 [$-$0.54, 2.38] \\
+\texttt{qr\_groups\_refit7} & 0.948 & 0.861 & 0.815 & 0.771 & 0.718 [0.697, 0.739] & 0.554 & 0.866 & 317 & 0.32 [$-$1.15, 1.75] \\
+CityTrac-style & 0.926 & 0.880 & 0.844 & 0.816 & 0.779 [0.756, 0.800] & 0.683 & 0.834 & 663 & -- \\
+Spatula-style & 0.814 & 0.713 & 0.664 & 0.615 & 0.566 [0.538, 0.594] & 0.566 & 0.566 & 428 & -- \\
+\bottomrule
+\end{tabular}

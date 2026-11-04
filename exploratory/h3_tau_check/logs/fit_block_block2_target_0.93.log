@@ -1,0 +1,24 @@
+block2 0.93 667972 0.3422427589136277 401.67568254470825
+	Command being timed: "python exploratory/h3_tau_check/h3_tau_check.py fit --block block2 --target 0.93"
+	User time (seconds): 410.41
+	System time (seconds): 8.65
+	Percent of CPU this job got: 102%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:48.08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8456716
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3780338
+	Voluntary context switches: 3010
+	Involuntary context switches: 996
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 10448
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,16 @@
+% source: results/porto_cctv_confirm2_posthoc/custody/custody_diffs.csv @ ea77e49
+% POST HOC (added during revision (internal review); Gate 8, instruction 18).
+% target=0.95, scope=combined, h=5; custody(method) - custody(static) in pp (two decimals) with the conservative 95% paired interval (taxi and day cluster bootstraps, B=2000, same weights for every method; the stored pair a-b is turned into method - static). Start: all chains; chains whose first hop is a post-gap hop (start=reacquired).
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Method & All chains & Chains starting post-gap \\
+\midrule
+\texttt{mvp\_log} & $-$0.49 [$-$0.74, $-$0.23] & 1.25 [$-$0.07, 2.54] \\
+\texttt{qr\_ogd} & $-$0.26 [$-$0.58, 0.06] & 0.19 [$-$1.25, 1.60] \\
+\texttt{qr\_groups} & $-$0.12 [$-$0.35, 0.11] & 0.78 [$-$0.56, 2.14] \\
+\texttt{qr\_groups\_refit} & $-$0.25 [$-$0.47, $-$0.02] & 0.92 [$-$0.54, 2.38] \\
+\texttt{qr\_groups\_refit7} & $-$0.33 [$-$0.54, $-$0.11] & 0.32 [$-$1.15, 1.75] \\
+ACI & $-$0.09 [$-$0.50, 0.36] & 0.51 [$-$0.34, 1.41] \\
+Mondrian & $-$0.05 [$-$0.17, 0.08] & 0.31 [$-$0.59, 1.24] \\
+\bottomrule
+\end{tabular}

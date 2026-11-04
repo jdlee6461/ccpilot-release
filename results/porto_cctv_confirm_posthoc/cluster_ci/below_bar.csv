@@ -1,0 +1,13 @@
+method,wilson_A,wilson_B,taxi_A,taxi_B,day_A,day_B
+static,6,8,6,7,6,5
+aci,4,5,4,5,5,5
+mondrian,3,6,3,6,3,4
+spatula,23,23,23,23,23,23
+citytrac095,0,0,0,0,0,0
+citytrac099,0,0,0,0,0,0
+qr_groups,0,3,0,3,0,1
+mvp_groups,0,0,0,0,0,0
+mvp_global,6,5,6,5,6,5
+qr_ogd,0,1,0,1,0,0
+mvp_log,0,0,0,0,0,0
+oracle,6,5,5,5,4,4

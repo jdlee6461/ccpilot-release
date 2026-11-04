@@ -1,0 +1,14 @@
+% verdict 26 C: panel (b) of tab_c2_diagnostics.tex (rows copied verbatim, panel letter dropped)
+% source: results/porto_cctv_confirm2/analysis/seed_range.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/group_recall.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/deficits.csv @ 1a806b3; results/porto_cctv_confirm2/runs/<block>/t<target>/s<seed>/summary.csv @ untracked; results/porto_cctv_confirm2/analysis/a_min_reach.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/reachable_bound.csv @ 1a806b3
+% (a) Dbar: seed_range.csv D_seed_min-D_seed_max (seed_range_over_ci_width); re-acquisition: min-max over seeds of group_recall.csv deficit (hopkind=2), ratio = range / (hi - lo) of deficits.csv; (b) ACI variants: run summaries (coverage, as-run worst group, cost; seed means per block; no interval); (c) a_min_reach.csv target 0.98; (d) reachable_bound.csv U_G.
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Method & Quantity & 0.90 & 0.93 & 0.95 & 0.97 & 0.98 \\
+\midrule
+\multicolumn{7}{@{}l}{\emph{ACI variants (mean over seeds and the two blocks; no interval): recall / worst group / cost}} \\
+ACI $\gamma=0.0005$ (main) & recall / worst / cost & 0.900 / 0.819 / 135 & 0.930 / 0.863 / 195 & 0.950 / 0.891 / 284 & 0.970 / 0.927 / 509 & 0.980 / 0.949 / 774 \\
+ACI $\gamma=0.001$ & recall / worst / cost & 0.900 / 0.818 / 136 & 0.930 / 0.863 / 197 & 0.950 / 0.893 / 289 & 0.970 / 0.927 / 516 & 0.980 / 0.949 / 800 \\
+ACI per time of day $\times$ first hop & recall / worst / cost & 0.900 / 0.822 / 135 & 0.930 / 0.880 / 196 & 0.950 / 0.914 / 283 & 0.970 / 0.944 / 496 & 0.980 / 0.962 / 767 \\
+\bottomrule
+\end{tabular}

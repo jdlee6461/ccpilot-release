@@ -1,0 +1,17 @@
+% source: results/porto_cctv_confirm2/analysis/main_estimands.csv @ 1a806b3
+% scope=combined, estimand=reacq_deficit_diff (D_comparator - D_method), column class (99% simultaneous over the five targets, B=10000, conservative bound of the taxi and day clusters): + improvement, = undetermined, - worsening.
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}lccccc@{\hspace{6pt}}ccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{\texttt{mvp\_log}} & \multicolumn{5}{c}{\texttt{qr\_ogd}} \\
+\cmidrule(r){2-6}\cmidrule(l){7-11}
+Comparator & .90 & .93 & .95 & .97 & .98 & .90 & .93 & .95 & .97 & .98 \\
+\midrule
+\texttt{static} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ACI & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+Mondrian & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\texttt{qr\_groups} & $=$ & $=$ & $-$ & $-$ & $-$ & $=$ & $=$ & $=$ & $=$ & $=$ \\
+\texttt{qr\_groups\_refit} & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ \\
+\texttt{qr\_groups\_refit7} & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $=$ & $+$ & $=$ \\
+\bottomrule
+\end{tabular}

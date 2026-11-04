@@ -1,0 +1,13 @@
+leaf,n,miss_rate,path
+20,938,0.232409381663113,entropy_bin_3 AND NOT prevratio_1 AND NOT daytype_1 AND dwell_bin_3
+19,1353,0.14855875831485588,entropy_bin_3 AND NOT prevratio_1 AND NOT daytype_1 AND NOT dwell_bin_3
+4,3813,0.13296616837136113,NOT entropy_bin_3 AND NOT zone_1 AND NOT entropy_bin_0 AND NOT daytype_1
+8,813,0.07749077490774908,NOT entropy_bin_3 AND NOT zone_1 AND entropy_bin_0 AND speed_bin_0
+21,685,0.07591240875912408,entropy_bin_3 AND NOT prevratio_1 AND daytype_1
+22,865,0.06820809248554913,entropy_bin_3 AND prevratio_1
+12,511,0.05870841487279843,NOT entropy_bin_3 AND zone_1 AND NOT center_bin_1 AND speed_bin_0
+5,1163,0.049011177987962166,NOT entropy_bin_3 AND NOT zone_1 AND NOT entropy_bin_0 AND daytype_1
+11,912,0.03508771929824561,NOT entropy_bin_3 AND zone_1 AND NOT center_bin_1 AND NOT speed_bin_0
+15,539,0.03339517625231911,NOT entropy_bin_3 AND zone_1 AND center_bin_1 AND daytype_1
+7,2298,0.028720626631853787,NOT entropy_bin_3 AND NOT zone_1 AND entropy_bin_0 AND NOT speed_bin_0
+14,998,0.011022044088176353,NOT entropy_bin_3 AND zone_1 AND center_bin_1 AND NOT daytype_1

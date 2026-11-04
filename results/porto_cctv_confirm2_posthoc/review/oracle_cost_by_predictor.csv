@@ -1,0 +1,11 @@
+block,target,seed,src,src_zone,src_zone_hour,src_zone_speed,src_zone_hour_speed,order_low_to_high,primary_lowest
+block1,0.9,0,276.33000319797725,136.73450056385389,127.6120086850329,119.86356232221772,116.1410139645006,src_zone_hour_speed < src_zone_speed < src_zone_hour < src_zone < src,True
+block1,0.93,0,376.1324766744029,188.31195426331507,175.5168660571185,166.87132162487163,161.94341637476552,src_zone_hour_speed < src_zone_speed < src_zone_hour < src_zone < src,True
+block1,0.95,0,508.7365839244604,259.9683381552347,241.00544591210613,229.61191330676456,228.03351517543052,src_zone_hour_speed < src_zone_speed < src_zone_hour < src_zone < src,True
+block1,0.97,0,792.1457959690525,422.3926573694674,409.1620084045086,380.755526796618,399.9328331273038,src_zone_speed < src_zone_hour_speed < src_zone_hour < src_zone < src,False
+block1,0.98,0,1099.365884128495,634.825457768934,643.622597542981,597.3810249610539,621.602280101662,src_zone_speed < src_zone_hour_speed < src_zone < src_zone_hour < src,False
+block2,0.9,0,353.40929709628546,177.93051205739164,155.58430592899103,154.54852898025666,143.15511728036503,src_zone_hour_speed < src_zone_speed < src_zone_hour < src_zone < src,True
+block2,0.93,0,501.38905522985993,252.5515515620415,221.48706832022896,220.69178049379315,205.8399528722761,src_zone_hour_speed < src_zone_speed < src_zone_hour < src_zone < src,True
+block2,0.95,0,695.2542322133263,354.60541010701047,313.17535016437813,308.96872922817124,299.0262690651704,src_zone_hour_speed < src_zone_speed < src_zone_hour < src_zone < src,True
+block2,0.97,0,1078.900021258376,574.7284242453277,540.1166141694562,517.5595309384225,540.5775391782889,src_zone_speed < src_zone_hour < src_zone_hour_speed < src_zone < src,False
+block2,0.98,0,1506.5507087123412,849.7778574551029,857.3777942788021,810.4070155635267,809.6490571461079,src_zone_hour_speed < src_zone_speed < src_zone < src_zone_hour < src,True

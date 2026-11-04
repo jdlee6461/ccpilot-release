@@ -1,0 +1,3 @@
+predictor,method,n_refits,fit_rows_min,fit_rows_max,seconds
+src_zone_hour_speed,qr_groups_refit,22,80000,80000,4608.630727291107
+src_zone_hour_speed,qr_groups_refit7,22,46342,80000,2451.2730531692505

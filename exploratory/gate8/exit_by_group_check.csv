@@ -1,0 +1,4 @@
+# 사후 분석(확증 2 결과를 본 뒤; exploratory, 저장된 결과 읽기만; 지시문 17)
+block,hits_rows,matched,nonexit_eval,group_columns_equal
+block1,534713,534713,534713,True
+block2,667972,667972,667972,True

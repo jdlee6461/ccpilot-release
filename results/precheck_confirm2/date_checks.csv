@@ -1,0 +1,2 @@
+days_expected,days_present,days_missing,hours_without_trip_start,hours_without_trip_start_list,days_below_half_median,days_above_1.5x_median,weekday_ratio_min,weekday_ratio_min_date,weekday_ratio_max,weekday_ratio_max_date,dup_trip_id_kept,dup_taxi_and_start_kept,trips_kept
+126,126,,1,2013-07-01 00:00:00+01:00,,,0.6776705076300218,2013-08-23,1.2778971313029193,2013-09-15,1,1,535857

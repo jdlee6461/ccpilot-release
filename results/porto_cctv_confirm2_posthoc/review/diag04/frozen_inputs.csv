@@ -1,0 +1,3 @@
+block,predictor,runs,hops_per_run,score_min,score_max,taumin_min,taumin_max,lookup_p_max,hops_all_runs,neg_cost|mvp_log,neg_cost|qr_ogd,neg_cost|static,neg_cost|aci_g0005,neg_cost|mondrian_hour_hop_speed,neg_cost|qr_groups,neg_cost|qr_groups_refit,neg_cost|qr_groups_refit7
+block1,src_zone_hour_speed,25,534713,0.0,0.9535044431686401,2.210095995103245e-10,2.210095995103245e-10,0.9535044431686401,13367825,0,0,0,0,0,0,0,0
+block2,src_zone_hour_speed,25,667972,0.0,0.9623961448669434,1.2460434073435778e-10,1.2460434073435778e-10,0.9623961448669434,16699300,0,0,0,0,0,0,0,0

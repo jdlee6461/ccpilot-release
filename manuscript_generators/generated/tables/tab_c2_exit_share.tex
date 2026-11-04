@@ -1,0 +1,43 @@
+% source: exploratory/gate8/exit_by_group.csv @ c077417
+% POST HOC (added during revision (internal review); Gate 8, instruction 18).
+% evaluation transitions (t_exit in the block's evaluation range) of each group, exits included; exit share = n_exit / n_transitions in %, one decimal; groups rebuilt with ccpilot.evaluate._add_strata/_add_spatial on the block's run configuration (equal to hits.parquet for the non-exit hops; exploratory/gate8/exit_by_group_check.csv).
+\setlength{\tabcolsep}{3.4pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Group & Transitions & \multicolumn{3}{c}{Exit share (\%)} \\
+\cmidrule(l){3-5}
+ & (pooled) & Pooled & Block~1 & Block~2 \\
+\midrule
+All hops & 1{,}428{,}887 & 15.8 & 15.8 & 15.8 \\
+\addlinespace
+00-06 h & 264{,}797 & 15.1 & 15.2 & 15.1 \\
+06-10 h & 198{,}199 & 16.4 & 16.2 & 16.6 \\
+10-16 h & 446{,}471 & 16.1 & 16.4 & 16.0 \\
+16-20 h & 286{,}913 & 16.1 & 16.0 & 16.2 \\
+20-24 h & 232{,}507 & 15.2 & 15.1 & 15.3 \\
+\addlinespace
+Later & 1{,}202{,}682 & 17.4 & 17.4 & 17.4 \\
+Initiated & 220{,}743 & 7.3 & 7.3 & 7.4 \\
+Post-gap & 5{,}462 & 19.6 & 17.4 & 21.1 \\
+\addlinespace
+Speed Q1 (slow) & 360{,}122 & 22.2 & 22.2 & 22.2 \\
+Speed Q2 & 361{,}096 & 14.6 & 14.3 & 14.8 \\
+Speed Q3 & 356{,}741 & 13.4 & 13.4 & 13.5 \\
+Speed Q4 (fast) & 350{,}928 & 13.0 & 13.4 & 12.7 \\
+\addlinespace
+Exit east & 378{,}750 & 13.7 & 13.4 & 13.9 \\
+Exit north & 380{,}005 & 15.8 & 15.5 & 16.0 \\
+Exit west & 358{,}331 & 19.0 & 19.1 & 18.9 \\
+Exit south & 311{,}801 & 14.9 & 15.3 & 14.5 \\
+\addlinespace
+Branching Q1 (low) & 350{,}341 & 9.0 & 8.4 & 9.5 \\
+Branching Q2 & 352{,}176 & 15.7 & 16.7 & 14.9 \\
+Branching Q3 & 357{,}398 & 20.5 & 20.0 & 20.8 \\
+Branching Q4 (high) & 368{,}972 & 17.9 & 18.2 & 17.6 \\
+\addlinespace
+Isolation Q1 (low) & 358{,}710 & 8.5 & 8.3 & 8.7 \\
+Isolation Q2 & 347{,}722 & 13.3 & 13.6 & 13.2 \\
+Isolation Q3 & 363{,}344 & 16.9 & 17.5 & 16.5 \\
+Isolation Q4 (high) & 359{,}111 & 24.4 & 24.6 & 24.3 \\
+\bottomrule
+\end{tabular}

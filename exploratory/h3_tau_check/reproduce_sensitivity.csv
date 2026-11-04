@@ -1,0 +1,9 @@
+file,target,quantity,method,frozen,reproduced,bitwise_equal
+h3_sensitivity.csv,0.95,point_fixed_fit,mvp_log,0.9825709388231193,0.9825709388231193,True
+h3_sensitivity.csv,0.95,point_fixed_fit,qr_ogd,1.001467285934677,1.001467285934677,True
+h3_sensitivity.csv,0.95,point_fixed_fit,static,0.8446780691479742,0.8446780691479742,True
+h3_sensitivity.csv,0.95,point_fixed_fit,aci_g0005,0.9034947528928406,0.9034947528928406,True
+h3_sensitivity.csv,0.95,point_fixed_fit,mondrian_hour_hop_speed,0.9099432265253492,0.9099432265253492,True
+h3_sensitivity.csv,0.95,point_fixed_fit,qr_groups,0.9986542773966632,0.9986542773966632,True
+h3_sensitivity.csv,0.95,point_fixed_fit,qr_groups_refit,0.9935811000532709,0.9935811000532709,True
+h3_sensitivity.csv,0.95,point_fixed_fit,qr_groups_refit7,0.9935465244370302,0.9935465244370302,True

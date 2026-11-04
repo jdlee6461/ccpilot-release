@@ -1,0 +1,11 @@
+target,seed,mvp_log_hops_at_a_min_share,note
+0.9,0,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.9,1,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.93,0,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.93,1,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.95,0,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.95,1,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.97,0,0.0,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.97,1,1.3291178146644892e-05,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.98,0,8.306986341653057e-05,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)
+0.98,1,8.80540552215224e-05,proxy: the hop's mvp_log cost equals the cost at the lowest threshold (a_min)

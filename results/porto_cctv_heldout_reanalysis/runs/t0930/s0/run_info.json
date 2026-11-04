@@ -1,0 +1,7 @@
+{
+ "config": "configs/porto_cctv_heldout_reanalysis.yaml",
+ "target": 0.93,
+ "seed": 0,
+ "eval_seconds": 7985.126049995422,
+ "started": "2026-10-17T09:06:45-0400"
+}

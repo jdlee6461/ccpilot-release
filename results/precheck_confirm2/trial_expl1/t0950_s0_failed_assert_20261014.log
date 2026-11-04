@@ -1,0 +1,18 @@
+[eval] train=710163 cal=150646 test=601903 (exit rate train=0.161)
+[mvp] src_zone_speed/mvp_groups: groups=25 eta=0.0319 m=40 scale=quantile
+[mvp] src_zone_speed/mvp_log: groups=25 eta=0.0319 m=40 scale=log
+[mvp] src_zone_speed/mvp_global: groups=1 eta=0.1167 m=40 scale=quantile
+[mvp] src_zone_hour_speed/mvp_groups: groups=25 eta=0.0319 m=40 scale=quantile
+[mvp] src_zone_hour_speed/mvp_log: groups=25 eta=0.0319 m=40 scale=log
+[mvp] src_zone_hour_speed/mvp_global: groups=1 eta=0.1167 m=40 scale=quantile
+[qr_refit] src_zone_hour_speed/qr_groups_refit: 28 refits, rows 80000..80000, 4305s
+[qr_refit] src_zone_hour_speed/qr_groups_refit7: 28 refits, rows 39329..80000, 2048s
+Traceback (most recent call last):
+  File "/home/user/ccpilot/confirm2_run.py", line 71, in <module>
+    main()
+  File "/home/user/ccpilot/confirm2_run.py", line 60, in main
+    evaluate.run(cfg, trans, truth, cams, n_bins, cfg["out_dir"])
+  File "/home/user/ccpilot/ccpilot/evaluate.py", line 301, in run
+    assert np.array_equal(det_store[(pname, mname)] >= 0, s_true >= tau)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

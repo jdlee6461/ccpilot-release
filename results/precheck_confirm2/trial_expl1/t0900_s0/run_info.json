@@ -1,0 +1,7 @@
+{
+ "config": "configs/porto_cctv.yaml",
+ "target": 0.9,
+ "seed": 0,
+ "eval_seconds": 7795.455550193787,
+ "started": "2026-10-14T12:18:17-0400"
+}

@@ -1,0 +1,199 @@
+dataset: porto
+timezone: Europe/Lisbon
+work_dir: work/porto_cctv_confirm2
+out_dir: results/porto_cctv_confirm2/runs/block2/t0930/s3
+porto:
+  csv_path: data/porto/train.csv
+  start_date: '2013-07-01'
+  end_date: '2013-11-04'
+  proj_center:
+  - -8.61
+  - 41.15
+  bbox:
+  - -8.7
+  - 41.1
+  - -8.55
+  - 41.2
+  gps_interval_s: 15
+  max_speed_mps: 50
+  chunksize: 100000
+  max_trips: null
+  reuse_trajectories: null
+  drop_duplicate_trip_id: both
+cameras:
+  geojson: data/porto/porto_cctv.json
+  merge_radius_m: 50
+  exclude_tunnel: true
+events:
+  camera_radius_m: 50
+  interp_step_s: 1.0
+  max_overlap: 4
+  t_max_s: 600
+  bin_s: 5
+  hour_group_edges:
+  - 0
+  - 6
+  - 10
+  - 16
+  - 20
+  - 24
+eval:
+  seed: 3
+  target_recall: 0.93
+  candidate_radius_m: 2500
+  predictors:
+    src:
+    - src
+    src_zone:
+    - src
+    - zone
+    src_zone_hour:
+    - src
+    - zone
+    - hgroup
+    src_zone_speed:
+    - src
+    - zone
+    - speed_bin
+    src_zone_hour_speed:
+    - src
+    - zone
+    - hgroup
+    - speed_bin
+  confound_predictor: src_zone
+  model:
+    lam: 20.0
+    eps: 0.0001
+    sigma_bins: 1.0
+  spatula:
+    s_thresh: 0.05
+    t_quantile: 0.98
+  mondrian:
+    mondrian_hour:
+    - hgroup
+    mondrian_hop:
+    - hopfirst
+    mondrian_hour_hop:
+    - hgroup
+    - hopfirst
+    mondrian_speed:
+    - speed_bin
+    mondrian_hour_hop_speed:
+    - hgroup
+    - hopfirst
+    - speed_bin
+  min_group_n: 200
+  aci:
+    window: 2000
+    feedback_fraction: 0.3
+  aci_variants:
+  - name: aci_g001
+    gamma: 0.001
+    alpha_floor: -0.5
+  - name: aci_g0005
+    gamma: 0.0005
+    alpha_floor: -0.5
+  - name: aci_hophour_g001f
+    gamma: 0.001
+    alpha_floor: alpha/5
+    groups:
+    - hgroup
+    - hopfirst
+  multigroup:
+    predictors:
+    - src_zone_speed
+    - src_zone_hour_speed
+    dims:
+    - hgroup
+    - hopkind
+    - speed_bin
+    - zone
+    - entropy_bin
+    - nn_bin
+    mvp_variants:
+    - name: mvp_groups
+      scale: quantile
+      m: 40
+    - name: mvp_log
+      scale: log
+      m: 40
+      a_min: 0.002
+    - name: mvp_global
+      scale: quantile
+      m: 40
+      global_only: true
+    qr_max_n: 80000
+    qr_ogd:
+      gamma: 0.005
+      clip: 3.0
+    qr_refit:
+    - name: qr_groups_refit
+      window_days: null
+      predictors:
+      - src_zone_hour_speed
+    - name: qr_groups_refit7
+      window_days: 7
+      predictors:
+      - src_zone_hour_speed
+  strata:
+  - hgroup
+  - hopfirst
+  - hopkind
+  - zone
+  - speed_bin
+  - entropy_bin
+  - nn_bin
+  n_spatial_bins: 4
+  group_bar: 0.94
+  n_speed_bins: 4
+  dip_margin: 0.05
+  plot_methods:
+  - static
+  - mondrian_hour_hop_speed
+  - aci_g0005
+  - mvp_groups
+  - mvp_log
+  - qr_groups
+  - qr_ogd
+  splits:
+    train:
+    - '2013-09-02'
+    - '2013-09-30'
+    cal:
+    - '2013-09-30'
+    - '2013-10-07'
+    test:
+    - name: block2_eval
+      range:
+      - '2013-10-07'
+      - '2013-11-04'
+  max_hops: 10
+  rolling_window: 1000
+  citytrac:
+    targets:
+    - 0.9
+    - 0.93
+    - 0.95
+    - 0.97
+    - 0.98
+    window_q: 0.98
+    min_n: 30
+  save_hits: true
+  save_scores:
+    tau_min_levels:
+    - 0.002
+  save_feedback_mask: true
+  save_cost_lookup:
+  - src_zone_hour_speed
+  save_detect_time:
+    predictors:
+    - src_zone_hour_speed
+    methods:
+    - static
+    - aci_g0005
+    - mondrian_hour_hop_speed
+    - qr_groups
+    - qr_groups_refit
+    - qr_groups_refit7
+    - mvp_log
+    - qr_ogd

@@ -1,0 +1,1 @@
+F1 group calibration curves (confirm2, candidate period, seeds 0-4, combined); grey: 25 groups; band: 95% interval; reachable upper bound of the highlighted groups: all >= 0.9997

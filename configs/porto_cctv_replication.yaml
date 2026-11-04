@@ -1,0 +1,87 @@
+# Exploratory period 2 (Feb - Apr 2014) with REAL Porto CCTV sites.
+dataset: porto
+timezone: Europe/Lisbon
+work_dir: work/porto_cctv_rep
+out_dir: results/porto_cctv_rep
+
+porto:
+  csv_path: data/porto/train.csv
+  start_date: "2014-02-03"
+  end_date: "2014-04-28"
+  proj_center: [-8.61, 41.15]        # lon0, lat0 for local metric projection
+  bbox: [-8.70, 41.10, -8.55, 41.20] # keep trips touching central Porto (adjust)
+  gps_interval_s: 15
+  max_speed_mps: 50
+  chunksize: 100000
+  max_trips: null                     # e.g. 20000 for a quick first run
+  reuse_trajectories: work/porto_rep/trajectories.parquet   # same period already loaded; null to reload                     
+
+cameras:
+  geojson: data/porto/porto_cctv.json   # Porto traffic-management CCTV (2025 snapshot, Wayback Machine)
+  merge_radius_m: 50                    # cameras within 50 m (complete linkage) -> one site
+  exclude_tunnel: true
+
+events:
+  camera_radius_m: 50
+  interp_step_s: 1.0
+  max_overlap: 4
+  t_max_s: 600
+  bin_s: 5
+  hour_group_edges: [0, 6, 10, 16, 20, 24]
+
+eval:
+  seed: 0
+  target_recall: 0.95
+  candidate_radius_m: 2500
+  predictors:            # name -> conditioning levels (hierarchical, coarse -> fine)
+    src: [src]
+    src_zone: [src, zone]
+    src_zone_hour: [src, zone, hgroup]
+    src_zone_speed: [src, zone, speed_bin]
+    src_zone_hour_speed: [src, zone, hgroup, speed_bin]
+  confound_predictor: src_zone
+  model: {lam: 20.0, eps: 1.0e-4, sigma_bins: 1.0}
+  spatula: {s_thresh: 0.05, t_quantile: 0.98}
+  citytrac: {targets: [0.95, 0.99], window_q: 0.98, min_n: 30}   # CityTrac-style baseline (approximation)
+  # conditional (Mondrian) calibration: name -> columns defining groups
+  mondrian:
+    mondrian_hour: [hgroup]
+    mondrian_hop: [hopfirst]
+    mondrian_hour_hop: [hgroup, hopfirst]
+    mondrian_speed: [speed_bin]
+    mondrian_hour_hop_speed: [hgroup, hopfirst, speed_bin]   # 40 cells: partition approach at its limit
+  min_group_n: 200                      # groups smaller than this fall back to global tau
+  aci:
+    window: 2000
+    feedback_fraction: 0.3
+  # adaptive variants; alpha_floor: number or "alpha/k"; -0.5 = effectively no floor
+  aci_variants:
+    - {name: aci_g001,          gamma: 0.001,  alpha_floor: -0.5}
+    - {name: aci_g0005,         gamma: 0.0005, alpha_floor: -0.5}
+    - {name: aci_hophour_g001f, gamma: 0.001,  alpha_floor: "alpha/5", groups: [hgroup, hopfirst]}
+  # overlapping-group calibration (no cell products): MVP (online) and group QR (offline)
+  multigroup:
+    predictors: [src_zone_speed, src_zone_hour_speed]
+    dims: [hgroup, hopkind, speed_bin, zone, entropy_bin, nn_bin]   # 25 overlapping groups
+    mvp_variants:
+      - {name: mvp_groups, scale: quantile, m: 40}             # previous version (uniform buckets)
+      - {name: mvp_log,    scale: log, m: 40, a_min: 0.002}    # log-scale buckets + capped extreme
+      - {name: mvp_global, scale: quantile, m: 40, global_only: true}
+    qr_max_n: 80000
+    qr_ogd: {gamma: 0.005, clip: 3.0}                          # QR start + online group updates
+  # strata for conditional / worst-group coverage
+  strata: [hgroup, hopfirst, hopkind, zone, speed_bin, entropy_bin, nn_bin]
+  n_spatial_bins: 4
+  group_bar: 0.94                       # worst-group bar used for 'n_groups_sig_below_bar'
+  n_speed_bins: 4
+  dip_margin: 0.05                      # frac_below = share of rolling windows below target - margin
+  plot_methods: [static, mondrian_hour_hop_speed, aci_g0005, mvp_groups, mvp_log, qr_groups, qr_ogd]
+  splits:
+    train: ["2014-02-03", "2014-03-03"]
+    cal:   ["2014-03-03", "2014-03-10"]
+    test:
+      - {name: test_mar,    range: ["2014-03-10", "2014-03-24"]}
+      - {name: test_apr,    range: ["2014-03-24", "2014-04-14"]}
+      - {name: test_easter, range: ["2014-04-14", "2014-04-28"]}
+  max_hops: 10
+  rolling_window: 1000

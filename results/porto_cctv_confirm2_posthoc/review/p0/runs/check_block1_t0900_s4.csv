@@ -1,0 +1,7 @@
+block,target,seed,predictor,method,n_diff,bitwise,seconds
+block1,0.9,4,src_zone_hour_speed,static,0,True,821.4
+block1,0.9,4,src_zone_hour_speed,qr_groups,0,True,821.4
+block1,0.9,4,src_zone_hour_speed,mvp_log,0,True,821.4
+block1,0.9,4,src_zone_speed,static,0,True,821.4
+block1,0.9,4,src_zone_speed,qr_groups,0,True,821.4
+block1,0.9,4,src_zone_speed,mvp_log,0,True,821.4

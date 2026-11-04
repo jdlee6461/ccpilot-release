@@ -1,0 +1,27 @@
+% source: results/porto_cctv_confirm2/runs/<block>/t<target>/s<seed>/summary.csv @ 7616e69
+% predictor=src_zone_hour_speed; columns coverage, worst_group_cov (as-run strata), cost_mean_cam_s; mean over seeds 0-4 per block; no interval.
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+ & & \multicolumn{3}{c}{Block 1} & \multicolumn{3}{c}{Block 2} \\
+\cmidrule(lr){3-5}\cmidrule(l){6-8}
+Variant & $t$ & Recall & Worst & Cost & Recall & Worst & Cost \\
+\midrule
+ACI $\gamma=0.0005$ (main) & 0.90 & 0.900 & 0.817 & 120 & 0.900 & 0.821 & 150 \\
+ & 0.93 & 0.930 & 0.857 & 171 & 0.930 & 0.868 & 219 \\
+ & 0.95 & 0.950 & 0.885 & 245 & 0.950 & 0.898 & 323 \\
+ & 0.97 & 0.970 & 0.921 & 434 & 0.970 & 0.932 & 583 \\
+ & 0.98 & 0.980 & 0.945 & 665 & 0.980 & 0.953 & 883 \\
+\addlinespace[2pt]
+ACI $\gamma=0.001$ & 0.90 & 0.900 & 0.816 & 121 & 0.900 & 0.821 & 151 \\
+ & 0.93 & 0.930 & 0.858 & 172 & 0.930 & 0.868 & 222 \\
+ & 0.95 & 0.950 & 0.886 & 249 & 0.950 & 0.899 & 329 \\
+ & 0.97 & 0.970 & 0.922 & 442 & 0.970 & 0.932 & 589 \\
+ & 0.98 & 0.980 & 0.945 & 681 & 0.980 & 0.953 & 919 \\
+\addlinespace[2pt]
+ACI per hour $\times$ first hop & 0.90 & 0.900 & 0.815 & 120 & 0.900 & 0.828 & 151 \\
+ & 0.93 & 0.930 & 0.876 & 171 & 0.930 & 0.884 & 221 \\
+ & 0.95 & 0.950 & 0.909 & 244 & 0.950 & 0.918 & 322 \\
+ & 0.97 & 0.970 & 0.939 & 426 & 0.970 & 0.949 & 566 \\
+ & 0.98 & 0.980 & 0.958 & 656 & 0.980 & 0.965 & 878 \\
+\bottomrule
+\end{tabular}

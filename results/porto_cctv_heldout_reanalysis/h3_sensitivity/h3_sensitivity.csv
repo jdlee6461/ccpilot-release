@@ -1,0 +1,9 @@
+target,method,blocks,cluster,B,point_fixed_fit,lo_refit,hi_refit,lo_fixed,hi_fixed,note
+0.95,mvp_log,heldout,taxi,100,0.9771183449230679,0.9556564019434286,0.9976733386323005,0.9753241101640677,0.9792227392056486,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,qr_ogd,heldout,taxi,100,1.0033319731264823,0.9796776323522799,1.023799491078528,1.0021001391135256,1.0046185717353207,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,static,heldout,taxi,100,0.7821135740432869,0.7626277413854402,0.80255234869428,0.7758011483775158,0.7883733836030985,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,aci_g0005,heldout,taxi,100,0.9056389048323807,0.883248489947681,0.929790240589922,0.8975854111241184,0.9128364363258212,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,mondrian_hour_hop_speed,heldout,taxi,100,0.8543225935627485,0.8335209012194217,0.876347038916893,0.8475334813449077,0.8611907804766061,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,qr_groups,heldout,taxi,100,0.9473437436631027,0.9249679538063883,0.9665520529143076,0.9453089760158375,0.949786095375531,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,qr_groups_refit,heldout,taxi,100,0.9454880198849843,0.9233021562713033,0.9645559396962959,0.9437888491864921,0.9472442177424505,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+0.95,qr_groups_refit7,heldout,taxi,100,0.9780316945537815,0.9552244001318795,0.9974901892881259,0.9771298318578303,0.9790384435668233,ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3

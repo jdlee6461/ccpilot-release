@@ -1,0 +1,13 @@
+method,statement,status,detail
+mvp_log,S1 core,keep,"static improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0162 to 0.0676 | ACI improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0126 to 0.0552"
+mvp_log,S1 mechanism clause,keep,targets where the 95% lower bound of (group cost / static group cost) > 1 in both re-acquired and isolation Q4: 5
+mvp_log,S1 addition (offline group calibration),none,majority improvement over Mondrian and qr_groups
+mvp_log,S2,반대였다,"refit: improvement 0, worsening 1; refit7: improvement 0, worsening 4 (of 5 targets)"
+mvp_log,S3,always reported (ratios with 95% intervals),"t=0.9 H2 1.213 [1.203, 1.222]; t=0.9 H3 0.992 [0.965, 1.022]; t=0.93 H2 1.170 [1.157, 1.181]; t=0.93 H3 0.987 [0.958, 1.020]; t=0.95 H2 1.122 [1.109, 1.134]; t=0.95 H3 1.003 [0.974, 1.034]; t=0.97 H2 1.064 [1.053, 1.078]; t=0.97 H3 1.006 [0.982, 1.034]; t=0.98 H2 1.069 [1.055, 1.083]; t=0.98 H3 0.991 [0.970, 1.013]"
+mvp_log,S4,remains,"t=0.9 d 0.0223 [0.0096, 0.0355]; t=0.93 d 0.0118 [0.0013, 0.0228]; t=0.95 d 0.0126 [0.0038, 0.0221]; t=0.97 d 0.0138 [0.0065, 0.0209]; t=0.98 d 0.0147 [0.0081, 0.0212]"
+qr_ogd,S1 core,keep,"static improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0160 to 0.0567 | ACI improvement: t = 0.9, 0.93, 0.95, 0.97, 0.98; difference 0.0124 to 0.0420"
+qr_ogd,S1 mechanism clause,keep,targets where the 95% lower bound of (group cost / static group cost) > 1 in both re-acquired and isolation Q4: 5
+qr_ogd,S1 addition (offline group calibration),none,majority improvement over Mondrian and qr_groups
+qr_ogd,S2,반대였다,"refit: improvement 0, worsening 4; refit7: improvement 0, worsening 5 (of 5 targets)"
+qr_ogd,S3,always reported (ratios with 95% intervals),"t=0.9 H2 1.246 [1.236, 1.257]; t=0.9 H3 1.011 [0.969, 1.052]; t=0.93 H2 1.209 [1.194, 1.223]; t=0.93 H3 1.006 [0.968, 1.044]; t=0.95 H2 1.153 [1.135, 1.171]; t=0.95 H3 1.012 [0.977, 1.047]; t=0.97 H2 1.074 [1.060, 1.087]; t=0.97 H3 1.008 [0.976, 1.039]; t=0.98 H2 1.071 [1.054, 1.086]; t=0.98 H3 0.992 [0.971, 1.014]"
+qr_ogd,S4,remains,"t=0.9 d 0.0310 [0.0186, 0.0445]; t=0.93 d 0.0357 [0.0246, 0.0477]; t=0.95 d 0.0262 [0.0165, 0.0367]; t=0.97 d 0.0120 [0.0044, 0.0195]; t=0.98 d 0.0149 [0.0082, 0.0215]"

@@ -1,0 +1,18 @@
+rule,method,condition,value,satisfied
+B7a,v_mvp_log,upper bound of D(v) - D(full) <= 0.02,"D(v) - D(full) 0.0059 [0.0026, 0.0083]",True
+B7b,v_mvp_log,not B7a and D(iv) - D(v) interval excludes 0 with v better (D(v) - D(iv) upper bound < 0),"D(v) - D(iv) -0.2070 [-0.2205, -0.1924]",False
+B7c,v_mvp_log,not B7a and not B7b,"D(v) - D(iv) -0.2070 [-0.2205, -0.1924]",False
+B7d,v_mvp_log,"median label updates of the post-gap group per run < 200 (target 0.95, 10 runs)",median 102,True
+B7a,v_qr_ogd,upper bound of D(v) - D(full) <= 0.02,"D(v) - D(full) 0.0014 [-0.0002, 0.0024]",True
+B7b,v_qr_ogd,not B7a and D(iv) - D(v) interval excludes 0 with v better (D(v) - D(iv) upper bound < 0),"D(v) - D(iv) -0.2099 [-0.2177, -0.2032]",False
+B7c,v_qr_ogd,not B7a and not B7b,"D(v) - D(iv) -0.2099 [-0.2177, -0.2032]",False
+B7d,v_qr_ogd,"median label updates of the post-gap group per run < 200 (target 0.95, 10 runs)",median 102,True
+B7a,v_aci_groups,upper bound of D(v) - D(full) <= 0.02,"D(v) - D(full) 0.0016 [-0.0002, 0.0029]",True
+B7b,v_aci_groups,not B7a and D(iv) - D(v) interval excludes 0 with v better (D(v) - D(iv) upper bound < 0),"D(v) - D(iv) -0.2054 [-0.2142, -0.1935]",False
+B7c,v_aci_groups,not B7a and not B7b,"D(v) - D(iv) -0.2054 [-0.2142, -0.1935]",False
+B7d,v_aci_groups,"median label updates of the post-gap group per run < 200 (target 0.95, 10 runs)",median 102,True
+mixed,"mvp_log, qr_ogd",the two online methods fall in different cases (B7a-c),"{'v_mvp_log': 'B7a', 'v_qr_ogd': 'B7a'}",False
+additional target 0.93,iv_mvp_log,post-gap d(online) - d(refit7 (iv)) upper bound < 0 (online smaller: order differs from confirm2),"0.0916 [0.0652, 0.1183]",False
+additional target 0.93,iv_qr_ogd,post-gap d(online) - d(refit7 (iv)) upper bound < 0 (online smaller: order differs from confirm2),"-0.0185 [-0.0306, -0.0063]",True
+additional target 0.93,v_mvp_log,post-gap d(online) - d(refit7 (iv)) upper bound < 0 (online smaller: order differs from confirm2),"-0.0645 [-0.0794, -0.0508]",True
+additional target 0.93,v_qr_ogd,post-gap d(online) - d(refit7 (iv)) upper bound < 0 (online smaller: order differs from confirm2),"-0.0744 [-0.0895, -0.0603]",True

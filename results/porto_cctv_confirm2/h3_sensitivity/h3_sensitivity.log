@@ -1,0 +1,19 @@
+{
+ "target": 0.95,
+ "B": 100,
+ "taxi_clusters": 430,
+ "workers": 4,
+ "hops": 1202685,
+ "full_fit_seconds": 700.9180908203125,
+ "bootstrap_seconds": 27941.291263341904,
+ "seconds_per_replicate_per_worker": 1117.651650533676
+}
+ target                  method        blocks cluster   B  point_fixed_fit  lo_refit  hi_refit  lo_fixed  hi_fixed                                                                                               note
+   0.95                 mvp_log block1+block2    taxi 100           0.9826    0.9597    1.0059    0.9808    0.9842 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95                  qr_ogd block1+block2    taxi 100           1.0015    0.9782    1.0267    1.0010    1.0022 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95                  static block1+block2    taxi 100           0.8447    0.8223    0.8671    0.8392    0.8501 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95               aci_g0005 block1+block2    taxi 100           0.9035    0.8819    0.9279    0.8983    0.9101 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95 mondrian_hour_hop_speed block1+block2    taxi 100           0.9099    0.8873    0.9360    0.9044    0.9163 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95               qr_groups block1+block2    taxi 100           0.9987    0.9755    1.0236    0.9977    0.9998 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95         qr_groups_refit block1+block2    taxi 100           0.9936    0.9704    1.0184    0.9927    0.9946 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3
+   0.95        qr_groups_refit7 block1+block2    taxi 100           0.9935    0.9707    1.0185    0.9929    0.9943 ratio = seed-mean method cost / H3 cost; refit = H3 refitted per replicate; fixed = full-sample H3

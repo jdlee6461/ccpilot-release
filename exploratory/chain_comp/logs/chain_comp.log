@@ -1,0 +1,90 @@
+     start    scope  j  n_hops  n_state0  n_state1  n_state2  share_state0  share_state1  share_state2
+       all combined  2  188955    188955         0         0           1.0           0.0           0.0
+       all combined  3  167086    167086         0         0           1.0           0.0           0.0
+       all combined  4  142657    142657         0         0           1.0           0.0           0.0
+       all combined  5  118883    118883         0         0           1.0           0.0           0.0
+reacquired combined  2    3605      3605         0         0           1.0           0.0           0.0
+reacquired combined  3    3004      3004         0         0           1.0           0.0           0.0
+reacquired combined  4    2405      2405         0         0           1.0           0.0           0.0
+reacquired combined  5    1925      1925         0         0           1.0           0.0           0.0
+     start    scope   j  state          method   recall        n  cond_recall   n_cond
+       all combined   2      0          static 0.947199 188955.0     0.950164 177482.0
+       all combined   3      0          static 0.955412 167086.0     0.959522 151143.0
+       all combined   4      0          static 0.956385 142657.0     0.960244 125465.0
+       all combined   5      0          static 0.956234 118883.0     0.961132 101883.0
+       all combined   2      0       aci_g0005 0.947014 188955.0     0.949812 177450.2
+       all combined   3      0       aci_g0005 0.955496 167086.0     0.959591 151041.0
+       all combined   4      0       aci_g0005 0.956211 142657.0     0.960193 125366.6
+       all combined   5      0       aci_g0005 0.955906 118883.0     0.960756 101814.8
+       all combined   2      0         mvp_log 0.945839 188955.0     0.947836 180018.4
+       all combined   3      0         mvp_log 0.952978 167086.0     0.956384 152404.8
+       all combined   4      0         mvp_log 0.951415 142657.0     0.954983 125841.8
+       all combined   5      0         mvp_log 0.952542 118883.0     0.957510 101661.4
+       all combined   2      0 qr_groups_refit 0.946260 188955.0     0.948193 180407.0
+       all combined   3      0 qr_groups_refit 0.953256 167086.0     0.956441 152841.0
+       all combined   4      0 qr_groups_refit 0.950942 142657.0     0.954354 126286.2
+       all combined   5      0 qr_groups_refit 0.951742 118883.0     0.956618 102056.0
+reacquired combined   2      0          static 0.905409   3605.0     0.910961   3257.0
+reacquired combined   3      0          static 0.931092   3004.0     0.938986   2524.0
+reacquired combined   4      0          static 0.934304   2405.0     0.941481   1931.0
+reacquired combined   5      0          static 0.930390   1925.0     0.941781   1460.0
+reacquired combined   2      0       aci_g0005 0.907961   3605.0     0.912204   3264.4
+reacquired combined   3      0       aci_g0005 0.934154   3004.0     0.941129   2531.0
+reacquired combined   4      0       aci_g0005 0.934553   2405.0     0.940921   1943.2
+reacquired combined   5      0       aci_g0005 0.929974   1925.0     0.942813   1468.8
+reacquired combined   2      0         mvp_log 0.900527   3605.0     0.903052   3426.6
+reacquired combined   3      0         mvp_log 0.932690   3004.0     0.937694   2616.0
+reacquired combined   4      0         mvp_log 0.930312   2405.0     0.934927   1997.8
+reacquired combined   5      0         mvp_log 0.924675   1925.0     0.935662   1495.2
+reacquired combined   2      0 qr_groups_refit 0.900139   3605.0     0.902258   3454.0
+reacquired combined   3      0 qr_groups_refit 0.931358   3004.0     0.935406   2631.8
+reacquired combined   4      0 qr_groups_refit 0.927484   2405.0     0.930594   2005.6
+reacquired combined   5      0 qr_groups_refit 0.922805   1925.0     0.932511   1493.6
+ every hop combined any      0          static 0.954362 993697.0          NaN      NaN
+ every hop combined any      1          static 0.931524 204598.0          NaN      NaN
+ every hop combined any      2          static 0.889977   4390.0          NaN      NaN
+ every hop combined any      0       aci_g0005 0.954065 993697.0          NaN      NaN
+ every hop combined any      1       aci_g0005 0.931438 204598.0          NaN      NaN
+ every hop combined any      2       aci_g0005 0.892528   4390.0          NaN      NaN
+ every hop combined any      0         mvp_log 0.950229 993697.0          NaN      NaN
+ every hop combined any      1         mvp_log 0.947579 204598.0          NaN      NaN
+ every hop combined any      2         mvp_log 0.939863   4390.0          NaN      NaN
+ every hop combined any      0 qr_groups_refit 0.950026 993697.0          NaN      NaN
+ every hop combined any      1 qr_groups_refit 0.949190 204598.0          NaN      NaN
+ every hop combined any      2 qr_groups_refit 0.948383   4390.0          NaN      NaN
+   scope           group  marginal        D4  S_sum_cond_diff  S_over_D4  later_recall_group  later_recall_marginal  L4_4x_later_diff  L4_over_D4  Lp_power4_diff  Lp_over_D4
+combined qr_groups_refit    static -0.025279        -0.026961   1.066524            0.950026               0.954362         -0.017347    0.686218       -0.014976    0.592435
+combined         mvp_log    static -0.017577        -0.015875   0.903168            0.950229               0.954362         -0.016531    0.940494       -0.014277    0.812220
+combined qr_groups_refit aci_g0005 -0.030929        -0.033158   1.072061            0.950026               0.954065         -0.016159    0.522437       -0.013944    0.450826
+combined         mvp_log aci_g0005 -0.023024        -0.021695   0.942305            0.950229               0.954065         -0.015343    0.666401       -0.013244    0.575241
+  block1 qr_groups_refit    static -0.011001        -0.011820   1.074378            0.949289               0.953933         -0.018577    1.688607       -0.016009    1.455156
+  block1         mvp_log    static -0.010478        -0.008329   0.794888            0.950310               0.953933         -0.014491    1.383043       -0.012508    1.193754
+  block1 qr_groups_refit aci_g0005 -0.015797        -0.016750   1.060329            0.949289               0.953978         -0.018756    1.187373       -0.016164    1.023290
+  block1         mvp_log aci_g0005 -0.015297        -0.012997   0.849633            0.950310               0.953978         -0.014670    0.959048       -0.012663    0.827847
+  block2 qr_groups_refit    static -0.034944        -0.037493   1.072957            0.950615               0.954706         -0.016363    0.468255       -0.014147    0.404855
+  block2         mvp_log    static -0.022364        -0.021114   0.944080            0.950165               0.954706         -0.018164    0.812194       -0.015694    0.701727
+  block2 qr_groups_refit aci_g0005 -0.041150        -0.044524   1.082002            0.950615               0.954135         -0.014080    0.342165       -0.012163    0.295570
+  block2         mvp_log aci_g0005 -0.028218        -0.027696   0.981511            0.950165               0.954135         -0.015881    0.562808       -0.013709    0.485823
+	Command being timed: "python exploratory/chain_comp/chain_comp.py"
+	User time (seconds): 11.36
+	System time (seconds): 1.20
+	Percent of CPU this job got: 120%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1235308
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 459586
+	Voluntary context switches: 685
+	Involuntary context switches: 68
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

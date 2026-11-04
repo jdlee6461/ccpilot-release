@@ -1,0 +1,8 @@
+# class: additional | source: results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv @ 73e3519; results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv @ 73e3519 | note: exploratory periods 1 (test_same, test_holiday) and 2 (test_mar, test_apr, test_easter), no outage (mode=normal), evaluation seed 0; cost ratio = mean over segments of cost / hindsight oracle; failed = segments with at least one group significantly below 0.94 (25-group definition, n >= 200); mean column equals the 4th-chapter macros abl*RatioMean exactly; table note a = matched resolution (m = 89, log_cap1e6_m89)
+variant,label,cost_ratio_p1,segments_failed_p1,segments_p1,cost_ratio_p2,segments_failed_p2,segments_p2,cost_ratio_mean,macro_mean
+unif_nocap,Uniform,1.8019810842003641,0,2,2.0460076967246561,0,3,1.9239943904625101,1.9239943904625101
+unif_cap002,Uniform + bound,1.4739725304749929,0,2,1.8331961201111258,0,3,1.6535843252930593,1.6535843252930593
+mvp_log,Log + bound (mvp\_log),1.1477750639665945,0,2,1.2201236695767321,0,3,1.1839493667716634,1.1839493667716634
+log_cap1e6_m89,"Log, no bound$^{a}$",1.1503565130408795,1,2,1.2222601915325495,0,3,1.1863083522867144,1.1863083522867144
+log_cap001,$a_{\min}=0.001$,1.141853935144868,0,2,1.2206928982736365,0,3,1.1812734167092522,1.1812734167092522
+log_cap005,$a_{\min}=0.005$,1.1441423413713188,1,2,1.2004355946349285,0,3,1.1722889680031237,1.1722889680031239

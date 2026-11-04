@@ -1,0 +1,26 @@
+% source: results/porto_cctv_confirm2/analysis/claims_10_8.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/main_estimands.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/deficits.csv @ 1a806b3; results/porto_cctv_heldout_reanalysis/analysis/claims_10_8.csv @ 533850c; results/porto_cctv_heldout_reanalysis/analysis/main_estimands.csv @ 533850c; results/porto_cctv_heldout_reanalysis/analysis/deficits.csv @ 533850c
+% status = claims_10_8.csv (locked judge; 'restrict (previous evaluation ...)' shown as 'qualified', '반대였다' as 'opposite'; plan statements S1-S4 shown as Claim 1-4); targets = number of the five targets: S1 core improvement against static and against ACI; S1 addition improvement against Mondrian / qr_groups; S2 one verdict per method, worsening count per variant; S4 95% lower bound of the re-acquisition shortfall above zero.
+\begin{tabular}{@{}lllrlr@{}}
+\toprule
+ & & \multicolumn{2}{c}{Confirmation} & \multicolumn{2}{c}{Held-out} \\
+\cmidrule(lr){3-4}\cmidrule(l){5-6}
+Statement & Method & Judgment & Targets & Judgment & Targets \\
+\midrule
+Claim 1 & \texttt{mvp\_log} & kept & 5/5 & kept & 5/5 \\
+Claim 1 & \texttt{qr\_ogd} & kept & 5/5 & kept & 5/5 \\
+Claim 1 addition & \texttt{mvp\_log} & added &  & added &  \\
+\quad improved against Mondrian & &  & 5/5 &  & 5/5 \\
+\quad improved against \texttt{qr\_groups} & &  & 0/5 &  & 1/5 \\
+Claim 1 addition & \texttt{qr\_ogd} & added &  & not added &  \\
+\quad improved against Mondrian & &  & 5/5 &  & 5/5 \\
+\quad improved against \texttt{qr\_groups} & &  & 0/5 &  & 5/5 \\
+Claim 2 & \texttt{mvp\_log} & opposite &  & opposite &  \\
+\quad worse than \texttt{qr\_groups\_refit} & &  & 5/5 &  & 4/5 \\
+\quad worse than \texttt{qr\_groups\_refit7} & &  & 5/5 &  & 4/5 \\
+Claim 2 & \texttt{qr\_ogd} & opposite &  & opposite &  \\
+\quad worse than \texttt{qr\_groups\_refit} & &  & 3/5 &  & 3/5 \\
+\quad worse than \texttt{qr\_groups\_refit7} & &  & 0/5 &  & 3/5 \\
+Claim 4 & \texttt{mvp\_log} & remains & 4/5 & remains & 5/5 \\
+Claim 4 & \texttt{qr\_ogd} & qualified & 0/5 & remains & 4/5 \\
+\bottomrule
+\end{tabular}

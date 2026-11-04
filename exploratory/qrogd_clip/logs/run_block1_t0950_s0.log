@@ -1,0 +1,24 @@
+{'block': 'block1', 'target': 0.95, 'seed': 0, 'predictor': 'src_zone_hour_speed', 'gamma': 0.005, 'clip': 3.0, 'n_hops': 534713, 'hits_bitwise_stored': True, 'n_diff_stored': 0, 'replay_tau_bitwise': True, 'sha256_hits_recomputed': 'e97e608924704f81f44eca33ca977efd010a5c0bdac5549ee9211f25f594388a', 'sha256_hits_stored': 'e97e608924704f81f44eca33ca977efd010a5c0bdac5549ee9211f25f594388a', 'seconds': 164.2}
+	Command being timed: "python exploratory/qrogd_clip/qrogd_clip.py --run block1 0.95 0"
+	User time (seconds): 167.95
+	System time (seconds): 0.57
+	Percent of CPU this job got: 102%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:44.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1282384
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 135167
+	Voluntary context switches: 278
+	Involuntary context switches: 767
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

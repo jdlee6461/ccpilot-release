@@ -1,0 +1,70 @@
+# confirm2 analysis settings: every seed and analysis choice in one file (plan notes/instructions/PLAN_confirm2.md,
+# rev 72, §11.1-2). Frozen at tag confirm2-plan.
+version: 2026-10-15
+
+seeds:
+  method: [0, 1, 2, 3, 4]        # evaluation seeds: feedback sample (first draw of default_rng(seed)) and MVP randomisation
+  bootstrap: 20261013            # numpy default_rng seed of the cluster bootstrap (all estimands)
+
+targets: [0.90, 0.93, 0.95, 0.97, 0.98]   # five target recalls t (1 - alpha); one evaluation run per (block, target, seed)
+
+blocks:                           # candidate period; [start, end) local dates (Europe/Lisbon)
+  block1: {train: ["2013-07-01", "2013-07-29"], cal: ["2013-07-29", "2013-08-05"], eval: ["2013-08-05", "2013-09-02"]}
+  block2: {train: ["2013-09-02", "2013-09-30"], cal: ["2013-09-30", "2013-10-07"], eval: ["2013-10-07", "2013-11-04"]}
+
+preprocessing:
+  drop_duplicate_trip_id: both    # candidate period: every record whose TRIP_ID occurs more than once in the period (§2,
+                                  # general rule: 17 TRIP_IDs, 14 kept trips, 89 transitions removed); held-out re-analysis
+                                  # (§12) keeps the frozen preprocessing (duplicates as separate trips)
+
+predictor: src_zone_hour_speed
+proposed: [mvp_log, qr_ogd]
+comparators_main: [static, aci_g0005, mondrian_hour_hop_speed, qr_groups, qr_groups_refit, qr_groups_refit7]
+comparators_other: ["spatula_rule|fixed", "citytrac_nominal"]   # CityTrac-style rule at nominal target = run target t (§4)
+groups: prereg_25                 # 25 pre-registered groups; groups with n < min_group_n are not judged
+min_group_n: 200
+group_keys:
+  reacquired: hopkind=2
+  isolation_q4: nn_bin=3
+
+estimands:
+  main: [reacq_deficit_diff, isoq4_deficit_diff, worst_deficit_diff]   # (a), (b), (c): comparator minus method (positive = improvement)
+  deficit: "d_G = t - R_G, not truncated (negative = above target); worst deficit and differences also untruncated (§5.1); per seed, then averaged over seeds"
+  sign: "Delta = D_comparator - D_method; positive = improvement of the method; same direction for (a) and (b)"
+  claim_estimand: reacq_deficit_diff        # plan §10.8 judged on (a)
+  claim_majority: 3                         # at least 3 of the 5 targets; 99% interval, conservative bound per end
+
+bootstrap:
+  clusters: [taxi, day]           # taxi = TAXI_ID; day = local date of the hop's exit time, within block
+  combine: conservative           # lower bound = min of the two, upper bound = max of the two
+  main: {B: 10000, level: 0.99}
+  other: {B: 2000, level: 0.95}   # cost ratios and every other interval
+  refit_hindsight_each_replicate: [H1, H2, H4]   # H3 fixed at the full-sample fit in the main analysis (§6.3); see h3_sensitivity
+  threads: 8                      # thread-count limit of the analysis (§11.1-6); set in confirm2_analysis.py
+
+hindsight:                        # fitted per block on the block's evaluation hops (true scores)
+  H1: largest single threshold with overall recall >= t
+  H2: largest single threshold with overall recall >= the method's realised overall recall (per method and seed)
+  H3: "hindsight group quantile regression (qr_group_taus design, level 1 - t, no subsampling, lp_method highs-ipm); main analysis: threshold fixed at the full-sample fit (§6.3)"
+  H4: per group the largest tau_G with recall >= t; each hop uses the minimum tau_G over its groups
+
+h3_sensitivity: {target: 0.95, blocks: combined, cluster: taxi, B: 100}   # H3 refitted in every replicate (§6.3); text uses the
+                                                                          # point estimate and this interval (§10.5), fixed intervals only in the appendix
+figures: {F2_x_axis: log, F1_reachable_bound: "dotted line if within the y range, else caption 'all >= value' (§7)"}
+dominance: "interval (§10.5): A dominates B if cost_hi(A, t1) < cost_lo(B, t2) and worst-group-recall_lo(A, t1) > worst_hi(B, t2); 95%"
+
+reachable_bound: after_lock_only  # structural-miss share and share below mvp_log's lowest threshold; new period only after lock
+
+# Options added to the frozen evaluation settings for every confirm2 / re-analysis run (confirm2_run.py).
+run_options:
+  multigroup_qr_refit:
+    - {name: qr_groups_refit,  window_days: null, predictors: [src_zone_hour_speed]}
+    - {name: qr_groups_refit7, window_days: 7,    predictors: [src_zone_hour_speed]}
+  citytrac: {targets: [0.90, 0.93, 0.95, 0.97, 0.98], window_q: 0.98, min_n: 30}   # nominal targets (§4)
+  save_hits: true
+  save_scores: {tau_min_levels: [0.002]}
+  save_feedback_mask: true
+  save_cost_lookup: [src_zone_hour_speed]
+  save_detect_time:
+    predictors: [src_zone_hour_speed]
+    methods: [static, aci_g0005, mondrian_hour_hop_speed, qr_groups, qr_groups_refit, qr_groups_refit7, mvp_log, qr_ogd]

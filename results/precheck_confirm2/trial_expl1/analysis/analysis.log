@@ -1,0 +1,21 @@
+{
+ "n_hops": 601903,
+ "targets": [
+  0.95
+ ],
+ "seeds": [
+  0,
+  1
+ ],
+ "B_main": 10000,
+ "B_other": 2000,
+ "clusters": {
+  "taxi": 428,
+  "day": 28
+ },
+ "timing": {
+  "main_bootstrap_s": 2.389277219772339,
+  "H3_fit_s_t0.95": 284.06393575668335,
+  "hindsight_bootstrap_s": 3093.0237443447113
+ }
+}

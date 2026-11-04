@@ -1,0 +1,17 @@
+leaf,n,miss_rate,path
+30,3042,0.32215647600262987,nn_bin_3 AND speed_bin_0 AND elapsed_bin_0 AND density_bin_0
+29,3171,0.1545253863134658,nn_bin_3 AND speed_bin_0 AND elapsed_bin_0 AND NOT density_bin_0
+26,10255,0.14139444173573867,nn_bin_3 AND speed_bin_0 AND NOT elapsed_bin_0 AND NOT prevratio_1
+22,27408,0.11354349095154699,nn_bin_3 AND NOT speed_bin_0 AND entropy_bin_3 AND NOT zone_2
+27,6610,0.09440242057488654,nn_bin_3 AND speed_bin_0 AND NOT elapsed_bin_0 AND prevratio_1
+23,8554,0.08054711246200608,nn_bin_3 AND NOT speed_bin_0 AND entropy_bin_3 AND zone_2
+19,43589,0.07088944458464291,nn_bin_3 AND NOT speed_bin_0 AND NOT entropy_bin_3 AND NOT prevratio_1
+4,110014,0.06880033450288145,NOT nn_bin_3 AND NOT entropy_bin_0 AND NOT entropy_bin_1 AND NOT prevratio_1
+14,21982,0.05413520152852334,NOT nn_bin_3 AND entropy_bin_0 AND speed_bin_0 AND NOT prevratio_1
+5,82290,0.049823793899623284,NOT nn_bin_3 AND NOT entropy_bin_0 AND NOT entropy_bin_1 AND prevratio_1
+7,91567,0.046283049570260026,NOT nn_bin_3 AND NOT entropy_bin_0 AND entropy_bin_1 AND NOT zone_3
+12,12680,0.04235015772870662,NOT nn_bin_3 AND entropy_bin_0 AND NOT speed_bin_0 AND density_bin_1
+20,38334,0.04163405853811238,nn_bin_3 AND NOT speed_bin_0 AND NOT entropy_bin_3 AND prevratio_1
+15,12894,0.028152629129827828,NOT nn_bin_3 AND entropy_bin_0 AND speed_bin_0 AND prevratio_1
+8,25279,0.023655999050595355,NOT nn_bin_3 AND NOT entropy_bin_0 AND entropy_bin_1 AND zone_3
+11,104234,0.020521135138246636,NOT nn_bin_3 AND entropy_bin_0 AND NOT speed_bin_0 AND NOT density_bin_1

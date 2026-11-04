@@ -1,0 +1,13 @@
+{
+ "copy_bitwise|aci": true,
+ "seconds|aci": 35.1,
+ "copy_bitwise|aci_groups": true,
+ "seconds|aci_groups": 73.6,
+ "copy_bitwise|mvp_log": true,
+ "seconds|mvp_log": 42.4,
+ "copy_bitwise|qr_ogd": true,
+ "seconds|qr_ogd": 4.6,
+ "n_feedback": 199883,
+ "n_audit": 33221,
+ "seconds_total": 349.8
+}

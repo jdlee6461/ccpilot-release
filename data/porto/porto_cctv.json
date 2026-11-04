@@ -1,0 +1,3112 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68822899241839, 41.1670841118442]
+      },
+      "properties": {
+        "cctv_id": "83",
+        "em_tunel": "Não",
+        "objectid": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58923426280666, 41.1641813538704]
+      },
+      "properties": {
+        "cctv_id": "32",
+        "em_tunel": null,
+        "objectid": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61003832761194, 41.1518953988992]
+      },
+      "properties": {
+        "cctv_id": "2",
+        "em_tunel": null,
+        "objectid": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60182272748657, 41.1456644936343]
+      },
+      "properties": {
+        "cctv_id": "9",
+        "em_tunel": null,
+        "objectid": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62602239891154, 41.1523935994981]
+      },
+      "properties": {
+        "cctv_id": "13",
+        "em_tunel": null,
+        "objectid": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61042026755443, 41.143286523956]
+      },
+      "properties": {
+        "cctv_id": " 4",
+        "em_tunel": null,
+        "objectid": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6048999909773, 41.143937051447]
+      },
+      "properties": {
+        "cctv_id": "8",
+        "em_tunel": null,
+        "objectid": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59832768397534, 41.1483050395335]
+      },
+      "properties": {
+        "cctv_id": "10",
+        "em_tunel": null,
+        "objectid": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67410312732797, 41.1728195509833]
+      },
+      "properties": {
+        "cctv_id": "87",
+        "em_tunel": null,
+        "objectid": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60921672831739, 41.157401588962]
+      },
+      "properties": {
+        "cctv_id": "49",
+        "em_tunel": null,
+        "objectid": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61101358604163, 41.145167467834]
+      },
+      "properties": {
+        "cctv_id": "95",
+        "em_tunel": null,
+        "objectid": 11
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6718677463335, 41.1649506706496]
+      },
+      "properties": {
+        "cctv_id": "80",
+        "em_tunel": "Não",
+        "objectid": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61122917225597, 41.146006963208]
+      },
+      "properties": {
+        "cctv_id": " 3",
+        "em_tunel": "Não",
+        "objectid": 13
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62898410719789, 41.1590370362832]
+      },
+      "properties": {
+        "cctv_id": "47",
+        "em_tunel": null,
+        "objectid": 14
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59683266853003, 41.1524503592982]
+      },
+      "properties": {
+        "cctv_id": "21",
+        "em_tunel": "Não",
+        "objectid": 15
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64267638446433, 41.16525221898]
+      },
+      "properties": {
+        "cctv_id": "72",
+        "em_tunel": null,
+        "objectid": 16
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68481310445027, 41.1673707896605]
+      },
+      "properties": {
+        "cctv_id": "82",
+        "em_tunel": null,
+        "objectid": 17
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67785473822697, 41.1662107685084]
+      },
+      "properties": {
+        "cctv_id": "81",
+        "em_tunel": null,
+        "objectid": 18
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59415175171808, 41.1509112680689]
+      },
+      "properties": {
+        "cctv_id": "20",
+        "em_tunel": null,
+        "objectid": 19
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61338595311134, 41.1542283258615]
+      },
+      "properties": {
+        "cctv_id": " 1",
+        "em_tunel": null,
+        "objectid": 20
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60622679743453, 41.153486362179]
+      },
+      "properties": {
+        "cctv_id": "6",
+        "em_tunel": null,
+        "objectid": 21
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60576793569947, 41.1497348240855]
+      },
+      "properties": {
+        "cctv_id": "7",
+        "em_tunel": null,
+        "objectid": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63565507981726, 41.1590038755]
+      },
+      "properties": {
+        "cctv_id": "11",
+        "em_tunel": null,
+        "objectid": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63264137344547, 41.1527764432126]
+      },
+      "properties": {
+        "cctv_id": "12",
+        "em_tunel": null,
+        "objectid": 24
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6208539123293, 41.1564948099912]
+      },
+      "properties": {
+        "cctv_id": "14",
+        "em_tunel": null,
+        "objectid": 25
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62474558120654, 41.1599064259525]
+      },
+      "properties": {
+        "cctv_id": "15",
+        "em_tunel": null,
+        "objectid": 26
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6203396454184, 41.1473093872509]
+      },
+      "properties": {
+        "cctv_id": "16",
+        "em_tunel": null,
+        "objectid": 27
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61555254059182, 41.1454249014867]
+      },
+      "properties": {
+        "cctv_id": "17",
+        "em_tunel": null,
+        "objectid": 28
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60377397511521, 41.1463791028478]
+      },
+      "properties": {
+        "cctv_id": "18",
+        "em_tunel": null,
+        "objectid": 29
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59536486934627, 41.1460809293535]
+      },
+      "properties": {
+        "cctv_id": "19",
+        "em_tunel": null,
+        "objectid": 30
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60970885307332, 41.1407905738699]
+      },
+      "properties": {
+        "cctv_id": "22",
+        "em_tunel": null,
+        "objectid": 31
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59504406148271, 41.1557927794366]
+      },
+      "properties": {
+        "cctv_id": "23",
+        "em_tunel": "Não",
+        "objectid": 32
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5937623169532, 41.1552845292823]
+      },
+      "properties": {
+        "cctv_id": "24",
+        "em_tunel": null,
+        "objectid": 33
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59321817372172, 41.1552259607282]
+      },
+      "properties": {
+        "cctv_id": "25",
+        "em_tunel": null,
+        "objectid": 34
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59251186613614, 41.155415806551]
+      },
+      "properties": {
+        "cctv_id": "26",
+        "em_tunel": null,
+        "objectid": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59105141196253, 41.1554919225637]
+      },
+      "properties": {
+        "cctv_id": "27",
+        "em_tunel": null,
+        "objectid": 36
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.602118279859, 41.1431446536008]
+      },
+      "properties": {
+        "cctv_id": "29",
+        "em_tunel": null,
+        "objectid": 37
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5918588777016, 41.1609729179168]
+      },
+      "properties": {
+        "cctv_id": "30",
+        "em_tunel": "Não",
+        "objectid": 38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59058249442076, 41.1628243492487]
+      },
+      "properties": {
+        "cctv_id": "31",
+        "em_tunel": null,
+        "objectid": 39
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5852508727109, 41.1627013272283]
+      },
+      "properties": {
+        "cctv_id": "33",
+        "em_tunel": null,
+        "objectid": 40
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58369616524326, 41.1630649495591]
+      },
+      "properties": {
+        "cctv_id": "41",
+        "em_tunel": null,
+        "objectid": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58515574208936, 41.1626065661279]
+      },
+      "properties": {
+        "cctv_id": "40",
+        "em_tunel": null,
+        "objectid": 42
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5896489544252, 41.1638812332964]
+      },
+      "properties": {
+        "cctv_id": "34",
+        "em_tunel": null,
+        "objectid": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58933703956762, 41.1639074868288]
+      },
+      "properties": {
+        "cctv_id": "35",
+        "em_tunel": null,
+        "objectid": 44
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58913044130786, 41.1638916307134]
+      },
+      "properties": {
+        "cctv_id": "36",
+        "em_tunel": null,
+        "objectid": 45
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58932652853761, 41.1642088983149]
+      },
+      "properties": {
+        "cctv_id": "37",
+        "em_tunel": null,
+        "objectid": 46
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5865137220395, 41.1629585696107]
+      },
+      "properties": {
+        "cctv_id": "39",
+        "em_tunel": null,
+        "objectid": 47
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58794499172337, 41.1634210471723]
+      },
+      "properties": {
+        "cctv_id": "38",
+        "em_tunel": null,
+        "objectid": 48
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58346685137427, 41.1632981304939]
+      },
+      "properties": {
+        "cctv_id": "42",
+        "em_tunel": null,
+        "objectid": 49
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58478444611438, 41.1628212482316]
+      },
+      "properties": {
+        "cctv_id": "43",
+        "em_tunel": null,
+        "objectid": 50
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58546916924374, 41.1617726932]
+      },
+      "properties": {
+        "cctv_id": "44",
+        "em_tunel": null,
+        "objectid": 51
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61087636559448, 41.149849629917]
+      },
+      "properties": {
+        "cctv_id": "45",
+        "em_tunel": "Não",
+        "objectid": 52
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62931003679057, 41.1568637168972]
+      },
+      "properties": {
+        "cctv_id": "46",
+        "em_tunel": null,
+        "objectid": 53
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6110641810382, 41.1627529569809]
+      },
+      "properties": {
+        "cctv_id": "48",
+        "em_tunel": null,
+        "objectid": 54
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64141662790616, 41.1510176073891]
+      },
+      "properties": {
+        "cctv_id": "50",
+        "em_tunel": null,
+        "objectid": 55
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64555908664685, 41.1560747924224]
+      },
+      "properties": {
+        "cctv_id": "51",
+        "em_tunel": null,
+        "objectid": 56
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64999351373336, 41.1613985165194]
+      },
+      "properties": {
+        "cctv_id": "52",
+        "em_tunel": null,
+        "objectid": 57
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64214699728578, 41.167152467517]
+      },
+      "properties": {
+        "cctv_id": "53",
+        "em_tunel": null,
+        "objectid": 58
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63268110219053, 41.1720076679224]
+      },
+      "properties": {
+        "cctv_id": "54",
+        "em_tunel": null,
+        "objectid": 59
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62266956586348, 41.1732277325762]
+      },
+      "properties": {
+        "cctv_id": "55",
+        "em_tunel": null,
+        "objectid": 60
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6134912752607, 41.1746149620029]
+      },
+      "properties": {
+        "cctv_id": "56",
+        "em_tunel": null,
+        "objectid": 61
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60482879389156, 41.1712703291249]
+      },
+      "properties": {
+        "cctv_id": "57",
+        "em_tunel": "Não",
+        "objectid": 62
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59520113754544, 41.171986086015]
+      },
+      "properties": {
+        "cctv_id": "58",
+        "em_tunel": null,
+        "objectid": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58819324891882, 41.1674625713148]
+      },
+      "properties": {
+        "cctv_id": "59",
+        "em_tunel": null,
+        "objectid": 64
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58097263143633, 41.1630430666964]
+      },
+      "properties": {
+        "cctv_id": "60",
+        "em_tunel": null,
+        "objectid": 65
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58304290097872, 41.1547633819171]
+      },
+      "properties": {
+        "cctv_id": "61",
+        "em_tunel": null,
+        "objectid": 66
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58115892732019, 41.1464872290258]
+      },
+      "properties": {
+        "cctv_id": "62",
+        "em_tunel": null,
+        "objectid": 67
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61212041777311, 41.1480060703]
+      },
+      "properties": {
+        "cctv_id": "63",
+        "em_tunel": null,
+        "objectid": 68
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63373865963048, 41.1634979865952]
+      },
+      "properties": {
+        "cctv_id": "70",
+        "em_tunel": null,
+        "objectid": 69
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63955428746006, 41.1649025560533]
+      },
+      "properties": {
+        "cctv_id": "71",
+        "em_tunel": null,
+        "objectid": 70
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6182088392701, 41.1481042393774]
+      },
+      "properties": {
+        "cctv_id": "66",
+        "em_tunel": null,
+        "objectid": 71
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61677462209496, 41.1482937340904]
+      },
+      "properties": {
+        "cctv_id": "65",
+        "em_tunel": null,
+        "objectid": 72
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61450576854365, 41.1483485390915]
+      },
+      "properties": {
+        "cctv_id": "64",
+        "em_tunel": null,
+        "objectid": 73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62041547439675, 41.1474182974876]
+      },
+      "properties": {
+        "cctv_id": "68",
+        "em_tunel": null,
+        "objectid": 74
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62005961495127, 41.1476687666116]
+      },
+      "properties": {
+        "cctv_id": "67",
+        "em_tunel": null,
+        "objectid": 75
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61431946971654, 41.148408879539]
+      },
+      "properties": {
+        "cctv_id": "69",
+        "em_tunel": null,
+        "objectid": 76
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64995257441363, 41.1664372364766]
+      },
+      "properties": {
+        "cctv_id": "73",
+        "em_tunel": null,
+        "objectid": 77
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65507733029363, 41.1672525976255]
+      },
+      "properties": {
+        "cctv_id": "74",
+        "em_tunel": null,
+        "objectid": 78
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61023837345995, 41.1407796782458]
+      },
+      "properties": {
+        "cctv_id": "75",
+        "em_tunel": null,
+        "objectid": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61333061687738, 41.1413099655019]
+      },
+      "properties": {
+        "cctv_id": "76",
+        "em_tunel": null,
+        "objectid": 80
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61472683261693, 41.1409003031315]
+      },
+      "properties": {
+        "cctv_id": "77",
+        "em_tunel": null,
+        "objectid": 81
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61601081163613, 41.1404434468472]
+      },
+      "properties": {
+        "cctv_id": "78",
+        "em_tunel": null,
+        "objectid": 82
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63201884986046, 41.1694326974081]
+      },
+      "properties": {
+        "cctv_id": "79",
+        "em_tunel": null,
+        "objectid": 83
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6881429228787, 41.173336041992]
+      },
+      "properties": {
+        "cctv_id": "84",
+        "em_tunel": null,
+        "objectid": 84
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68394128959831, 41.1735534403641]
+      },
+      "properties": {
+        "cctv_id": " 85",
+        "em_tunel": "Não",
+        "objectid": 85
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68077687242969, 41.1719926782881]
+      },
+      "properties": {
+        "cctv_id": "86",
+        "em_tunel": null,
+        "objectid": 86
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67142756240648, 41.1738437933591]
+      },
+      "properties": {
+        "cctv_id": "88",
+        "em_tunel": null,
+        "objectid": 87
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67096800231118, 41.170600815065]
+      },
+      "properties": {
+        "cctv_id": "89",
+        "em_tunel": null,
+        "objectid": 88
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67083183124075, 41.1682214911584]
+      },
+      "properties": {
+        "cctv_id": "90",
+        "em_tunel": null,
+        "objectid": 89
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68703989159914, 41.1678560715157]
+      },
+      "properties": {
+        "cctv_id": "94",
+        "em_tunel": null,
+        "objectid": 90
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61417214840498, 41.1428478880531]
+      },
+      "properties": {
+        "cctv_id": "96",
+        "em_tunel": null,
+        "objectid": 91
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6134798097323, 41.14567092592]
+      },
+      "properties": {
+        "cctv_id": "97",
+        "em_tunel": null,
+        "objectid": 92
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6133087798483, 41.1453404917942]
+      },
+      "properties": {
+        "cctv_id": "98",
+        "em_tunel": null,
+        "objectid": 93
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61223395137638, 41.1453223510798]
+      },
+      "properties": {
+        "cctv_id": "99",
+        "em_tunel": null,
+        "objectid": 94
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61183997271009, 41.1448868298377]
+      },
+      "properties": {
+        "cctv_id": "100",
+        "em_tunel": null,
+        "objectid": 95
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61420655021473, 41.144421900493]
+      },
+      "properties": {
+        "cctv_id": "101",
+        "em_tunel": null,
+        "objectid": 96
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61482659445008, 41.1429178058228]
+      },
+      "properties": {
+        "cctv_id": "102",
+        "em_tunel": null,
+        "objectid": 97
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61465247689682, 41.1427035265962]
+      },
+      "properties": {
+        "cctv_id": "103",
+        "em_tunel": null,
+        "objectid": 98
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6145956496167, 41.1418318143149]
+      },
+      "properties": {
+        "cctv_id": "104",
+        "em_tunel": null,
+        "objectid": 99
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60651428260198, 41.1664544869501]
+      },
+      "properties": {
+        "cctv_id": "105",
+        "em_tunel": "Não",
+        "objectid": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61101374306749, 41.1434114112336]
+      },
+      "properties": {
+        "cctv_id": "106",
+        "em_tunel": null,
+        "objectid": 101
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61400130320223, 41.146194651718]
+      },
+      "properties": {
+        "cctv_id": "107",
+        "em_tunel": "Não",
+        "objectid": 102
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62511256663028, 41.1670135145741]
+      },
+      "properties": {
+        "cctv_id": "108",
+        "em_tunel": null,
+        "objectid": 103
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60520887786604, 41.1802227827816]
+      },
+      "properties": {
+        "cctv_id": "109",
+        "em_tunel": null,
+        "objectid": 104
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59709975353051, 41.1823809186846]
+      },
+      "properties": {
+        "cctv_id": "110",
+        "em_tunel": null,
+        "objectid": 105
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.66285703489824, 41.1636756896609]
+      },
+      "properties": {
+        "cctv_id": "112",
+        "em_tunel": null,
+        "objectid": 106
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59868932344768, 41.1655678246276]
+      },
+      "properties": {
+        "cctv_id": "113",
+        "em_tunel": null,
+        "objectid": 107
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60313551886753, 41.1545220831222]
+      },
+      "properties": {
+        "cctv_id": "114",
+        "em_tunel": null,
+        "objectid": 108
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65392341561691, 41.1484590481073]
+      },
+      "properties": {
+        "cctv_id": "115",
+        "em_tunel": null,
+        "objectid": 109
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6042204408679, 41.1619017571481]
+      },
+      "properties": {
+        "cctv_id": "116",
+        "em_tunel": null,
+        "objectid": 110
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61215820829182, 41.1453983423787]
+      },
+      "properties": {
+        "cctv_id": "117",
+        "em_tunel": null,
+        "objectid": 111
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61262983464103, 41.1718459733802]
+      },
+      "properties": {
+        "cctv_id": "118",
+        "em_tunel": null,
+        "objectid": 112
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60571293956567, 41.1736739990178]
+      },
+      "properties": {
+        "cctv_id": "119",
+        "em_tunel": null,
+        "objectid": 113
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.66236865086401, 41.1503589691403]
+      },
+      "properties": {
+        "cctv_id": "120",
+        "em_tunel": null,
+        "objectid": 114
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63290593099558, 41.146891583101]
+      },
+      "properties": {
+        "cctv_id": "121",
+        "em_tunel": null,
+        "objectid": 115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59410606248469, 41.1670004263143]
+      },
+      "properties": {
+        "cctv_id": "122",
+        "em_tunel": null,
+        "objectid": 116
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60736038404958, 41.1509807670715]
+      },
+      "properties": {
+        "cctv_id": "123",
+        "em_tunel": null,
+        "objectid": 117
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67475104323578, 41.1480112676569]
+      },
+      "properties": {
+        "cctv_id": "124",
+        "em_tunel": null,
+        "objectid": 118
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61294320800988, 41.1415460086585]
+      },
+      "properties": {
+        "cctv_id": "126",
+        "em_tunel": null,
+        "objectid": 120
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6067959750698, 41.1469691211468]
+      },
+      "properties": {
+        "cctv_id": "128",
+        "em_tunel": null,
+        "objectid": 121
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60638406822057, 41.1482922269352]
+      },
+      "properties": {
+        "cctv_id": "127",
+        "em_tunel": null,
+        "objectid": 122
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60007025238168, 41.1510752468777]
+      },
+      "properties": {
+        "cctv_id": "131",
+        "em_tunel": null,
+        "objectid": 123
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62059405545393, 41.1638396304041]
+      },
+      "properties": {
+        "cctv_id": "132",
+        "em_tunel": null,
+        "objectid": 124
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61026165615975, 41.1506768770678]
+      },
+      "properties": {
+        "cctv_id": "133",
+        "em_tunel": null,
+        "objectid": 125
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61626750667089, 41.1488060465378]
+      },
+      "properties": {
+        "cctv_id": "129",
+        "em_tunel": null,
+        "objectid": 126
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61768480181222, 41.1516087095096]
+      },
+      "properties": {
+        "cctv_id": "130",
+        "em_tunel": null,
+        "objectid": 127
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6162113570062, 41.1470967204966]
+      },
+      "properties": {
+        "cctv_id": "139",
+        "em_tunel": null,
+        "objectid": 128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6158780946277, 41.147326203551]
+      },
+      "properties": {
+        "cctv_id": "140",
+        "em_tunel": null,
+        "objectid": 129
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67318029074538, 41.1548052853051]
+      },
+      "properties": {
+        "cctv_id": "146",
+        "em_tunel": "Não",
+        "objectid": 130
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.66515718162345, 41.1582849867899]
+      },
+      "properties": {
+        "cctv_id": "147",
+        "em_tunel": null,
+        "objectid": 131
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65514602186149, 41.1622988296541]
+      },
+      "properties": {
+        "cctv_id": "148",
+        "em_tunel": null,
+        "objectid": 132
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68388399426816, 41.1593075066328]
+      },
+      "properties": {
+        "cctv_id": "149",
+        "em_tunel": null,
+        "objectid": 133
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60953558503046, 41.1615297030496]
+      },
+      "properties": {
+        "cctv_id": "91",
+        "em_tunel": "Não",
+        "objectid": 134
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58242695546561, 41.1600572482252]
+      },
+      "properties": {
+        "cctv_id": "28",
+        "em_tunel": "Não",
+        "objectid": 135
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60558213876423, 41.1429287890331]
+      },
+      "properties": {
+        "cctv_id": "155",
+        "em_tunel": "Não",
+        "objectid": 136
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60797389775225, 41.1432971631074]
+      },
+      "properties": {
+        "cctv_id": "153",
+        "em_tunel": "Não",
+        "objectid": 137
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60697132987927, 41.1432687417141]
+      },
+      "properties": {
+        "cctv_id": "154",
+        "em_tunel": "Não",
+        "objectid": 138
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61395570738477, 41.1756661790025]
+      },
+      "properties": {
+        "cctv_id": "93",
+        "em_tunel": "Não",
+        "objectid": 139
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61356464008284, 41.1830737638098]
+      },
+      "properties": {
+        "cctv_id": "92",
+        "em_tunel": "Não",
+        "objectid": 140
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62586342090443, 41.1698476410902]
+      },
+      "properties": {
+        "cctv_id": "160",
+        "em_tunel": "Não",
+        "objectid": 141
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6254126557413, 41.1486801018225]
+      },
+      "properties": {
+        "cctv_id": "157",
+        "em_tunel": "Não",
+        "objectid": 142
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58598410291724, 41.1486639497493]
+      },
+      "properties": {
+        "cctv_id": "156",
+        "em_tunel": "Não",
+        "objectid": 143
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62913944426488, 41.1514355778982]
+      },
+      "properties": {
+        "cctv_id": "161",
+        "em_tunel": "Não",
+        "objectid": 144
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60879753770457, 41.1474850269474]
+      },
+      "properties": {
+        "cctv_id": "159",
+        "em_tunel": "Não",
+        "objectid": 145
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6145940768684, 41.1418320748118]
+      },
+      "properties": {
+        "cctv_id": "144",
+        "em_tunel": "Não",
+        "objectid": 146
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61475825882238, 41.1429250969645]
+      },
+      "properties": {
+        "cctv_id": "143",
+        "em_tunel": "Não",
+        "objectid": 147
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60792478518958, 41.1488152366515]
+      },
+      "properties": {
+        "cctv_id": "5",
+        "em_tunel": "Não",
+        "objectid": 148
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60111074296173, 41.1595061521759]
+      },
+      "properties": {
+        "cctv_id": "162",
+        "em_tunel": "Não",
+        "objectid": 149
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68744259536691, 41.167676757202]
+      },
+      "properties": {
+        "cctv_id": "166",
+        "em_tunel": "Não",
+        "objectid": 150
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68798171256751, 41.1670120199205]
+      },
+      "properties": {
+        "cctv_id": "167",
+        "em_tunel": null,
+        "objectid": 151
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67465521379407, 41.1480260153222]
+      },
+      "properties": {
+        "cctv_id": "169",
+        "em_tunel": null,
+        "objectid": 152
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.674625298698, 41.1480148843131]
+      },
+      "properties": {
+        "cctv_id": "168",
+        "em_tunel": "Não",
+        "objectid": 153
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65495275335938, 41.1781448133612]
+      },
+      "properties": {
+        "cctv_id": "181",
+        "em_tunel": "Não",
+        "objectid": 154
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65496602117584, 41.1781456923952]
+      },
+      "properties": {
+        "cctv_id": "179",
+        "em_tunel": "Não",
+        "objectid": 155
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6549626001211, 41.1781322446574]
+      },
+      "properties": {
+        "cctv_id": "180",
+        "em_tunel": "Não",
+        "objectid": 156
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61355547425497, 41.1832419988785]
+      },
+      "properties": {
+        "cctv_id": "170",
+        "em_tunel": "Não",
+        "objectid": 157
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61357378364917, 41.1832519415905]
+      },
+      "properties": {
+        "cctv_id": "172",
+        "em_tunel": "Não",
+        "objectid": 158
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61357033066822, 41.183233168511]
+      },
+      "properties": {
+        "cctv_id": "171",
+        "em_tunel": "Não",
+        "objectid": 159
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58341091473641, 41.1809886370356]
+      },
+      "properties": {
+        "cctv_id": "188",
+        "em_tunel": "Não",
+        "objectid": 160
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58342090433357, 41.1809948604794]
+      },
+      "properties": {
+        "cctv_id": "189",
+        "em_tunel": "Não",
+        "objectid": 161
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58199170759638, 41.1803579455804]
+      },
+      "properties": {
+        "cctv_id": "192",
+        "em_tunel": "Não",
+        "objectid": 162
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.68789745756863, 41.1685544328294]
+      },
+      "properties": {
+        "cctv_id": "165",
+        "em_tunel": "Não",
+        "objectid": 163
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6741766082412, 41.1729102024804]
+      },
+      "properties": {
+        "cctv_id": "184",
+        "em_tunel": null,
+        "objectid": 164
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67417337556815, 41.1729202376629]
+      },
+      "properties": {
+        "cctv_id": "183",
+        "em_tunel": "Não",
+        "objectid": 165
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 166,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67418494755373, 41.1729164258028]
+      },
+      "properties": {
+        "cctv_id": "182",
+        "em_tunel": "Não",
+        "objectid": 166
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 167,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62948091477924, 41.1795003037631]
+      },
+      "properties": {
+        "cctv_id": "176",
+        "em_tunel": "Não",
+        "objectid": 167
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 168,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62949044391114, 41.1794877710175]
+      },
+      "properties": {
+        "cctv_id": "177",
+        "em_tunel": "Não",
+        "objectid": 168
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62964687747575, 41.1793493244876]
+      },
+      "properties": {
+        "cctv_id": "125",
+        "em_tunel": "Não",
+        "objectid": 169
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 170,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62947053218297, 41.1794853518323]
+      },
+      "properties": {
+        "cctv_id": "178",
+        "em_tunel": "Não",
+        "objectid": 170
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 171,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6057494676194, 41.1737408610946]
+      },
+      "properties": {
+        "cctv_id": "185",
+        "em_tunel": "Não",
+        "objectid": 171
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 172,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60576938577469, 41.1737445368615]
+      },
+      "properties": {
+        "cctv_id": "187",
+        "em_tunel": "Não",
+        "objectid": 172
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 173,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60576261016033, 41.1737245246475]
+      },
+      "properties": {
+        "cctv_id": "186",
+        "em_tunel": "Não",
+        "objectid": 173
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 174,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58197190808147, 41.1803427703346]
+      },
+      "properties": {
+        "cctv_id": "191",
+        "em_tunel": "Não",
+        "objectid": 174
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 175,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59788311166003, 41.1505592417822]
+      },
+      "properties": {
+        "cctv_id": "223",
+        "em_tunel": "Não",
+        "objectid": 175
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 176,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59755869777374, 41.1514848693159]
+      },
+      "properties": {
+        "cctv_id": "195",
+        "em_tunel": "Não",
+        "objectid": 176
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 177,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59719132832527, 41.151757591844]
+      },
+      "properties": {
+        "cctv_id": "196",
+        "em_tunel": "Não",
+        "objectid": 177
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 178,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59718793792935, 41.1517707725756]
+      },
+      "properties": {
+        "cctv_id": "197",
+        "em_tunel": "Não",
+        "objectid": 178
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 179,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59684429978214, 41.1524436708599]
+      },
+      "properties": {
+        "cctv_id": "198",
+        "em_tunel": "Não",
+        "objectid": 179
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 180,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59682356470218, 41.1524674547011]
+      },
+      "properties": {
+        "cctv_id": "199",
+        "em_tunel": "Não",
+        "objectid": 180
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 181,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59619333661802, 41.1535075475859]
+      },
+      "properties": {
+        "cctv_id": "201",
+        "em_tunel": "Não",
+        "objectid": 181
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 182,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59618299778128, 41.1535233890916]
+      },
+      "properties": {
+        "cctv_id": "202",
+        "em_tunel": "Não",
+        "objectid": 182
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 183,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59550210493661, 41.1547927848651]
+      },
+      "properties": {
+        "cctv_id": "203",
+        "em_tunel": "Não",
+        "objectid": 183
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 184,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59511262320127, 41.1553921277504]
+      },
+      "properties": {
+        "cctv_id": "205",
+        "em_tunel": "Não",
+        "objectid": 184
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 185,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59509533304462, 41.155410631708]
+      },
+      "properties": {
+        "cctv_id": "206",
+        "em_tunel": "Não",
+        "objectid": 185
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 186,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59504915420412, 41.1557794893001]
+      },
+      "properties": {
+        "cctv_id": "207",
+        "em_tunel": "Não",
+        "objectid": 186
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 187,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59457174241343, 41.1562633157713]
+      },
+      "properties": {
+        "cctv_id": "208",
+        "em_tunel": "Não",
+        "objectid": 187
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 188,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59445986128165, 41.1567035391275]
+      },
+      "properties": {
+        "cctv_id": "209",
+        "em_tunel": "Não",
+        "objectid": 188
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 189,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59445298539024, 41.1567167337283]
+      },
+      "properties": {
+        "cctv_id": "210",
+        "em_tunel": "Não",
+        "objectid": 189
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 190,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59387666952304, 41.1575064249967]
+      },
+      "properties": {
+        "cctv_id": "211",
+        "em_tunel": "Não",
+        "objectid": 190
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 191,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59386630987859, 41.1575196334964]
+      },
+      "properties": {
+        "cctv_id": "212",
+        "em_tunel": "Não",
+        "objectid": 191
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 192,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59326719952613, 41.1585385176306]
+      },
+      "properties": {
+        "cctv_id": "213",
+        "em_tunel": "Não",
+        "objectid": 192
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 193,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59324988841835, 41.1585543876148]
+      },
+      "properties": {
+        "cctv_id": "214",
+        "em_tunel": "Não",
+        "objectid": 193
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 194,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59292686087687, 41.1591955904257]
+      },
+      "properties": {
+        "cctv_id": "215",
+        "em_tunel": "Não",
+        "objectid": 194
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 195,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59290259825152, 41.1592141218775]
+      },
+      "properties": {
+        "cctv_id": "216",
+        "em_tunel": "Não",
+        "objectid": 195
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 196,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59255126461137, 41.1597948697248]
+      },
+      "properties": {
+        "cctv_id": "217",
+        "em_tunel": "Não",
+        "objectid": 196
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 197,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59253389902488, 41.1598028394027]
+      },
+      "properties": {
+        "cctv_id": "218",
+        "em_tunel": "Não",
+        "objectid": 197
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 198,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59186592644205, 41.1609457588537]
+      },
+      "properties": {
+        "cctv_id": "219",
+        "em_tunel": "Não",
+        "objectid": 198
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 199,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59182427852379, 41.1609696250546]
+      },
+      "properties": {
+        "cctv_id": "220",
+        "em_tunel": "Não",
+        "objectid": 199
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 200,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59224673586925, 41.1610890719237]
+      },
+      "properties": {
+        "cctv_id": "221",
+        "em_tunel": "Não",
+        "objectid": 200
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 201,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59223639371294, 41.1611049130703]
+      },
+      "properties": {
+        "cctv_id": "222",
+        "em_tunel": "Não",
+        "objectid": 201
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6140263040579, 41.1462111297809]
+      },
+      "properties": {
+        "cctv_id": "137",
+        "em_tunel": "Não",
+        "objectid": 202
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 203,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62198838205081, 41.1445895719873]
+      },
+      "properties": {
+        "cctv_id": "150",
+        "em_tunel": "Não",
+        "objectid": 203
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 204,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62197464501088, 41.1446159644503]
+      },
+      "properties": {
+        "cctv_id": "151",
+        "em_tunel": "Não",
+        "objectid": 204
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 205,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62187147462623, 41.1447954738376]
+      },
+      "properties": {
+        "cctv_id": "152",
+        "em_tunel": "Não",
+        "objectid": 205
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 206,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60439130879851, 41.1603896541743]
+      },
+      "properties": {
+        "cctv_id": "158",
+        "em_tunel": "Não",
+        "objectid": 206
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 208,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63634867668275, 41.1643587572236]
+      },
+      "properties": {
+        "cctv_id": "227",
+        "em_tunel": "Não",
+        "objectid": 208
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 209,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.57797193439994, 41.1447948527616]
+      },
+      "properties": {
+        "cctv_id": "225",
+        "em_tunel": "Não",
+        "objectid": 209
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 210,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65060284053559, 41.1740749849233]
+      },
+      "properties": {
+        "cctv_id": "224",
+        "em_tunel": "Não",
+        "objectid": 210
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 609,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5779489802753, 41.1448053846751]
+      },
+      "properties": {
+        "cctv_id": "190",
+        "em_tunel": "Não",
+        "objectid": 609
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 610,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61000578476847, 41.157342477164]
+      },
+      "properties": {
+        "cctv_id": "163",
+        "em_tunel": "Não",
+        "objectid": 610
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1010,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61771137911867, 41.1463912275375]
+      },
+      "properties": {
+        "cctv_id": "111",
+        "em_tunel": "Não",
+        "objectid": 1010
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1011,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59445630524265, 41.1567096907354]
+      },
+      "properties": {
+        "cctv_id": "193",
+        "em_tunel": "Não",
+        "objectid": 1011
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1012,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59552285996472, 41.1547974369374]
+      },
+      "properties": {
+        "cctv_id": "194",
+        "em_tunel": "Não",
+        "objectid": 1012
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1013,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6245138779819, 41.1456910099973]
+      },
+      "properties": {
+        "cctv_id": "229",
+        "em_tunel": "Não",
+        "objectid": 1013
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1014,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.64832980488744, 41.1542836642858]
+      },
+      "properties": {
+        "cctv_id": "230",
+        "em_tunel": "Sim",
+        "objectid": 1014
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1015,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.6374725194146, 41.1527350502519]
+      },
+      "properties": {
+        "cctv_id": "236",
+        "em_tunel": "Não",
+        "objectid": 1015
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1016,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61419159247559, 41.1777642899971]
+      },
+      "properties": {
+        "cctv_id": "237",
+        "em_tunel": "Não",
+        "objectid": 1016
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1411,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65122531959393, 41.1665404311084]
+      },
+      "properties": {
+        "cctv_id": "226",
+        "em_tunel": "Não",
+        "objectid": 1411
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1412,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.63161285337772, 41.1608855384418]
+      },
+      "properties": {
+        "cctv_id": "228",
+        "em_tunel": "Não",
+        "objectid": 1412
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1413,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62019363714228, 41.1460422374473]
+      },
+      "properties": {
+        "cctv_id": "111",
+        "em_tunel": "Não",
+        "objectid": 1413
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1813,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61313852687758, 41.140338600095]
+      },
+      "properties": {
+        "cctv_id": "241",
+        "em_tunel": "Não",
+        "objectid": 1813
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2213,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59711337835766, 41.1697323867218]
+      },
+      "properties": {
+        "cctv_id": "234",
+        "em_tunel": "Não",
+        "objectid": 2213
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2613,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60132233177184, 41.1830616191117]
+      },
+      "properties": {
+        "cctv_id": "246",
+        "em_tunel": null,
+        "objectid": 2613
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3013,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61738221475939, 41.1409309141171]
+      },
+      "properties": {
+        "cctv_id": "242",
+        "em_tunel": "Não",
+        "objectid": 3013
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3413,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.61477128944258, 41.1498976384588]
+      },
+      "properties": {
+        "cctv_id": "245",
+        "em_tunel": "Não",
+        "objectid": 3413
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3813,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58315445332584, 41.1560341241662]
+      },
+      "properties": {
+        "cctv_id": "254",
+        "em_tunel": "Não",
+        "objectid": 3813
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4213,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.65839476092676, 41.1609433888554]
+      },
+      "properties": {
+        "cctv_id": "255",
+        "em_tunel": "Não",
+        "objectid": 4213
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4214,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58236828037519, 41.1513445930323]
+      },
+      "properties": {
+        "cctv_id": "248",
+        "em_tunel": "Não",
+        "objectid": 4214
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4613,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.66004381205488, 41.1600155770597]
+      },
+      "properties": {
+        "cctv_id": "256",
+        "em_tunel": "Não",
+        "objectid": 4613
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4614,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.67176529949027, 41.1556830041553]
+      },
+      "properties": {
+        "cctv_id": "257",
+        "em_tunel": "Não",
+        "objectid": 4614
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4615,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58295447280276, 41.15367625767]
+      },
+      "properties": {
+        "cctv_id": "238",
+        "em_tunel": "Não",
+        "objectid": 4615
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4616,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60846365290011, 41.1644091368419]
+      },
+      "properties": {
+        "cctv_id": "231",
+        "em_tunel": "Não",
+        "objectid": 4616
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4617,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.5991852039566, 41.1779699979459]
+      },
+      "properties": {
+        "cctv_id": "232",
+        "em_tunel": "Não",
+        "objectid": 4617
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5013,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.66914467423162, 41.156460580877]
+      },
+      "properties": {
+        "cctv_id": "258",
+        "em_tunel": "Não",
+        "objectid": 5013
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5014,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.59970218105645, 41.1747355982826]
+      },
+      "properties": {
+        "cctv_id": "233",
+        "em_tunel": "Não",
+        "objectid": 5014
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5015,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.60385167973673, 41.1764411238452]
+      },
+      "properties": {
+        "cctv_id": "235",
+        "em_tunel": "Não",
+        "objectid": 5015
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5016,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58330533609652, 41.1530235990348]
+      },
+      "properties": {
+        "cctv_id": "249",
+        "em_tunel": "Não",
+        "objectid": 5016
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5413,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.62032966867184, 41.1425373018843]
+      },
+      "properties": {
+        "cctv_id": "244",
+        "em_tunel": "Não",
+        "objectid": 5413
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5414,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-8.58515216087397, 41.1467252206538]
+      },
+      "properties": {
+        "cctv_id": "239",
+        "em_tunel": "Não",
+        "objectid": 5414
+      }
+    }
+  ]
+}

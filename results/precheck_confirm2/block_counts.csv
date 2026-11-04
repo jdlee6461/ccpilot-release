@@ -1,0 +1,269 @@
+block,split,family,group,hops,below_200
+block1,eval,total,all non-exit hops,534713,False
+block1,cal,total,all non-exit hops,141001,False
+block1,train,total,all non-exit hops,603224,False
+block1,eval,total,transitions incl. exits,635242,False
+block1,eval,25 groups,grp_all=0,534713,False
+block1,eval,25 groups,hgroup=0,104055,False
+block1,eval,25 groups,hgroup=1,70987,False
+block1,eval,25 groups,hgroup=2,156244,False
+block1,eval,25 groups,hgroup=3,105628,False
+block1,eval,25 groups,hgroup=4,97799,False
+block1,eval,25 groups,hopkind=0,441706,False
+block1,eval,25 groups,hopkind=1,91228,False
+block1,eval,25 groups,hopkind=2,1779,False
+block1,eval,25 groups,speed_bin=0,123299,False
+block1,eval,25 groups,speed_bin=1,136393,False
+block1,eval,25 groups,speed_bin=2,137817,False
+block1,eval,25 groups,speed_bin=3,137204,False
+block1,eval,25 groups,zone=0,145656,False
+block1,eval,25 groups,zone=1,146081,False
+block1,eval,25 groups,zone=2,128111,False
+block1,eval,25 groups,zone=3,114865,False
+block1,eval,25 groups,entropy_bin=0,144674,False
+block1,eval,25 groups,entropy_bin=1,137101,False
+block1,eval,25 groups,entropy_bin=2,121731,False
+block1,eval,25 groups,entropy_bin=3,131207,False
+block1,eval,25 groups,nn_bin=0,152747,False
+block1,eval,25 groups,nn_bin=1,134491,False
+block1,eval,25 groups,nn_bin=2,133318,False
+block1,eval,25 groups,nn_bin=3,114157,False
+block1,eval,intersections,I1 re-acquired x isolation Q4,834,False
+block1,eval,intersections,I2 re-acquired x branching Q4,507,False
+block1,eval,intersections,I3 re-acquired x speed Q4,520,False
+block1,eval,intersections,I4 initiated x isolation Q4,24089,False
+block1,eval,intersections,I5 speed Q4 x isolation Q4,45394,False
+block1,eval,intersections,I6 00-06h x re-acquired,274,False
+block1,eval,hour (24 bins),hour=00,20018,False
+block1,eval,hour (24 bins),hour=01,17871,False
+block1,eval,hour (24 bins),hour=02,15279,False
+block1,eval,hour (24 bins),hour=03,14864,False
+block1,eval,hour (24 bins),hour=04,20045,False
+block1,eval,hour (24 bins),hour=05,15978,False
+block1,eval,hour (24 bins),hour=06,14115,False
+block1,eval,hour (24 bins),hour=07,14407,False
+block1,eval,hour (24 bins),hour=08,18606,False
+block1,eval,hour (24 bins),hour=09,23859,False
+block1,eval,hour (24 bins),hour=10,27941,False
+block1,eval,hour (24 bins),hour=11,27308,False
+block1,eval,hour (24 bins),hour=12,23328,False
+block1,eval,hour (24 bins),hour=13,22544,False
+block1,eval,hour (24 bins),hour=14,26044,False
+block1,eval,hour (24 bins),hour=15,29079,False
+block1,eval,hour (24 bins),hour=16,27847,False
+block1,eval,hour (24 bins),hour=17,26826,False
+block1,eval,hour (24 bins),hour=18,25542,False
+block1,eval,hour (24 bins),hour=19,25413,False
+block1,eval,hour (24 bins),hour=20,24092,False
+block1,eval,hour (24 bins),hour=21,26126,False
+block1,eval,hour (24 bins),hour=22,24582,False
+block1,eval,hour (24 bins),hour=23,22999,False
+block1,eval,3-hour (8 bins),hour3=00-03,53168,False
+block1,eval,3-hour (8 bins),hour3=03-06,50887,False
+block1,eval,3-hour (8 bins),hour3=06-09,47128,False
+block1,eval,3-hour (8 bins),hour3=09-12,79108,False
+block1,eval,3-hour (8 bins),hour3=12-15,71916,False
+block1,eval,3-hour (8 bins),hour3=15-18,83752,False
+block1,eval,3-hour (8 bins),hour3=18-21,75047,False
+block1,eval,3-hour (8 bins),hour3=21-24,73707,False
+block1,eval,exit direction (8 sectors),zone8=0,68871,False
+block1,eval,exit direction (8 sectors),zone8=1,87729,False
+block1,eval,exit direction (8 sectors),zone8=2,71293,False
+block1,eval,exit direction (8 sectors),zone8=3,57534,False
+block1,eval,exit direction (8 sectors),zone8=4,71363,False
+block1,eval,exit direction (8 sectors),zone8=5,53698,False
+block1,eval,exit direction (8 sectors),zone8=6,64149,False
+block1,eval,exit direction (8 sectors),zone8=7,60076,False
+block1,eval,speed_bin quintiles,speed_bin5=0,96775,False
+block1,eval,speed_bin quintiles,speed_bin5=1,107788,False
+block1,eval,speed_bin quintiles,speed_bin5=2,110016,False
+block1,eval,speed_bin quintiles,speed_bin5=3,110532,False
+block1,eval,speed_bin quintiles,speed_bin5=4,109602,False
+block1,eval,entropy_bin quintiles,entropy_bin5=0,120247,False
+block1,eval,entropy_bin quintiles,entropy_bin5=1,105466,False
+block1,eval,entropy_bin quintiles,entropy_bin5=2,111181,False
+block1,eval,entropy_bin quintiles,entropy_bin5=3,99078,False
+block1,eval,entropy_bin quintiles,entropy_bin5=4,98741,False
+block1,eval,nn_bin quintiles,nn_bin5=0,121468,False
+block1,eval,nn_bin quintiles,nn_bin5=1,101742,False
+block1,eval,nn_bin quintiles,nn_bin5=2,116422,False
+block1,eval,nn_bin quintiles,nn_bin5=3,99841,False
+block1,eval,nn_bin quintiles,nn_bin5=4,95240,False
+block2,eval,total,all non-exit hops,668001,False
+block2,cal,total,all non-exit hops,173080,False
+block2,train,total,all non-exit hops,657993,False
+block2,eval,total,transitions incl. exits,793678,False
+block2,eval,25 groups,grp_all=0,668001,False
+block2,eval,25 groups,hgroup=0,120642,False
+block2,eval,25 groups,hgroup=1,94675,False
+block2,eval,25 groups,hgroup=2,218195,False
+block2,eval,25 groups,hgroup=3,135076,False
+block2,eval,25 groups,hgroup=4,99413,False
+block2,eval,25 groups,hopkind=0,552017,False
+block2,eval,25 groups,hopkind=1,113373,False
+block2,eval,25 groups,hopkind=2,2611,False
+block2,eval,25 groups,speed_bin=0,156929,False
+block2,eval,25 groups,speed_bin=1,171955,False
+block2,eval,25 groups,speed_bin=2,170953,False
+block2,eval,25 groups,speed_bin=3,168164,False
+block2,eval,25 groups,zone=0,181184,False
+block2,eval,25 groups,zone=1,174034,False
+block2,eval,25 groups,zone=2,162194,False
+block2,eval,25 groups,zone=3,150589,False
+block2,eval,25 groups,entropy_bin=0,173976,False
+block2,eval,25 groups,entropy_bin=1,159654,False
+block2,eval,25 groups,entropy_bin=2,162522,False
+block2,eval,25 groups,entropy_bin=3,171849,False
+block2,eval,25 groups,nn_bin=0,175347,False
+block2,eval,25 groups,nn_bin=1,166834,False
+block2,eval,25 groups,nn_bin=2,168518,False
+block2,eval,25 groups,nn_bin=3,157302,False
+block2,eval,intersections,I1 re-acquired x isolation Q4,1278,False
+block2,eval,intersections,I2 re-acquired x branching Q4,793,False
+block2,eval,intersections,I3 re-acquired x speed Q4,685,False
+block2,eval,intersections,I4 initiated x isolation Q4,33050,False
+block2,eval,intersections,I5 speed Q4 x isolation Q4,59298,False
+block2,eval,intersections,I6 00-06h x re-acquired,281,False
+block2,eval,hour (24 bins),hour=00,19043,False
+block2,eval,hour (24 bins),hour=01,20498,False
+block2,eval,hour (24 bins),hour=02,19636,False
+block2,eval,hour (24 bins),hour=03,18209,False
+block2,eval,hour (24 bins),hour=04,23814,False
+block2,eval,hour (24 bins),hour=05,19442,False
+block2,eval,hour (24 bins),hour=06,17663,False
+block2,eval,hour (24 bins),hour=07,18002,False
+block2,eval,hour (24 bins),hour=08,25140,False
+block2,eval,hour (24 bins),hour=09,33870,False
+block2,eval,hour (24 bins),hour=10,39280,False
+block2,eval,hour (24 bins),hour=11,36291,False
+block2,eval,hour (24 bins),hour=12,35204,False
+block2,eval,hour (24 bins),hour=13,34355,False
+block2,eval,hour (24 bins),hour=14,35327,False
+block2,eval,hour (24 bins),hour=15,37738,False
+block2,eval,hour (24 bins),hour=16,36680,False
+block2,eval,hour (24 bins),hour=17,35329,False
+block2,eval,hour (24 bins),hour=18,31319,False
+block2,eval,hour (24 bins),hour=19,31748,False
+block2,eval,hour (24 bins),hour=20,28966,False
+block2,eval,hour (24 bins),hour=21,26337,False
+block2,eval,hour (24 bins),hour=22,23254,False
+block2,eval,hour (24 bins),hour=23,20856,False
+block2,eval,3-hour (8 bins),hour3=00-03,59177,False
+block2,eval,3-hour (8 bins),hour3=03-06,61465,False
+block2,eval,3-hour (8 bins),hour3=06-09,60805,False
+block2,eval,3-hour (8 bins),hour3=09-12,109441,False
+block2,eval,3-hour (8 bins),hour3=12-15,104886,False
+block2,eval,3-hour (8 bins),hour3=15-18,109747,False
+block2,eval,3-hour (8 bins),hour3=18-21,92033,False
+block2,eval,3-hour (8 bins),hour3=21-24,70447,False
+block2,eval,exit direction (8 sectors),zone8=0,87188,False
+block2,eval,exit direction (8 sectors),zone8=1,103059,False
+block2,eval,exit direction (8 sectors),zone8=2,87162,False
+block2,eval,exit direction (8 sectors),zone8=3,68549,False
+block2,eval,exit direction (8 sectors),zone8=4,90408,False
+block2,eval,exit direction (8 sectors),zone8=5,71244,False
+block2,eval,exit direction (8 sectors),zone8=6,84322,False
+block2,eval,exit direction (8 sectors),zone8=7,76069,False
+block2,eval,speed_bin quintiles,speed_bin5=0,123003,False
+block2,eval,speed_bin quintiles,speed_bin5=1,136515,False
+block2,eval,speed_bin quintiles,speed_bin5=2,137922,False
+block2,eval,speed_bin quintiles,speed_bin5=3,135493,False
+block2,eval,speed_bin quintiles,speed_bin5=4,135068,False
+block2,eval,entropy_bin quintiles,entropy_bin5=0,143141,False
+block2,eval,entropy_bin quintiles,entropy_bin5=1,130627,False
+block2,eval,entropy_bin quintiles,entropy_bin5=2,135237,False
+block2,eval,entropy_bin quintiles,entropy_bin5=3,124847,False
+block2,eval,entropy_bin quintiles,entropy_bin5=4,134149,False
+block2,eval,nn_bin quintiles,nn_bin5=0,138403,False
+block2,eval,nn_bin quintiles,nn_bin5=1,122969,False
+block2,eval,nn_bin quintiles,nn_bin5=2,150378,False
+block2,eval,nn_bin quintiles,nn_bin5=3,129434,False
+block2,eval,nn_bin quintiles,nn_bin5=4,126817,False
+combined,eval,total,all non-exit hops,1202714,False
+combined,eval,total,transitions incl. exits,1428920,False
+combined,eval,25 groups,grp_all=0,1202714,False
+combined,eval,25 groups,hgroup=0,224697,False
+combined,eval,25 groups,hgroup=1,165662,False
+combined,eval,25 groups,hgroup=2,374439,False
+combined,eval,25 groups,hgroup=3,240704,False
+combined,eval,25 groups,hgroup=4,197212,False
+combined,eval,25 groups,hopkind=0,993723,False
+combined,eval,25 groups,hopkind=1,204601,False
+combined,eval,25 groups,hopkind=2,4390,False
+combined,eval,25 groups,speed_bin=0,280228,False
+combined,eval,25 groups,speed_bin=1,308348,False
+combined,eval,25 groups,speed_bin=2,308770,False
+combined,eval,25 groups,speed_bin=3,305368,False
+combined,eval,25 groups,zone=0,326840,False
+combined,eval,25 groups,zone=1,320115,False
+combined,eval,25 groups,zone=2,290305,False
+combined,eval,25 groups,zone=3,265454,False
+combined,eval,25 groups,entropy_bin=0,318650,False
+combined,eval,25 groups,entropy_bin=1,296755,False
+combined,eval,25 groups,entropy_bin=2,284253,False
+combined,eval,25 groups,entropy_bin=3,303056,False
+combined,eval,25 groups,nn_bin=0,328094,False
+combined,eval,25 groups,nn_bin=1,301325,False
+combined,eval,25 groups,nn_bin=2,301836,False
+combined,eval,25 groups,nn_bin=3,271459,False
+combined,eval,intersections,I1 re-acquired x isolation Q4,2112,False
+combined,eval,intersections,I2 re-acquired x branching Q4,1300,False
+combined,eval,intersections,I3 re-acquired x speed Q4,1205,False
+combined,eval,intersections,I4 initiated x isolation Q4,57139,False
+combined,eval,intersections,I5 speed Q4 x isolation Q4,104692,False
+combined,eval,intersections,I6 00-06h x re-acquired,555,False
+combined,eval,hour (24 bins),hour=00,39061,False
+combined,eval,hour (24 bins),hour=01,38369,False
+combined,eval,hour (24 bins),hour=02,34915,False
+combined,eval,hour (24 bins),hour=03,33073,False
+combined,eval,hour (24 bins),hour=04,43859,False
+combined,eval,hour (24 bins),hour=05,35420,False
+combined,eval,hour (24 bins),hour=06,31778,False
+combined,eval,hour (24 bins),hour=07,32409,False
+combined,eval,hour (24 bins),hour=08,43746,False
+combined,eval,hour (24 bins),hour=09,57729,False
+combined,eval,hour (24 bins),hour=10,67221,False
+combined,eval,hour (24 bins),hour=11,63599,False
+combined,eval,hour (24 bins),hour=12,58532,False
+combined,eval,hour (24 bins),hour=13,56899,False
+combined,eval,hour (24 bins),hour=14,61371,False
+combined,eval,hour (24 bins),hour=15,66817,False
+combined,eval,hour (24 bins),hour=16,64527,False
+combined,eval,hour (24 bins),hour=17,62155,False
+combined,eval,hour (24 bins),hour=18,56861,False
+combined,eval,hour (24 bins),hour=19,57161,False
+combined,eval,hour (24 bins),hour=20,53058,False
+combined,eval,hour (24 bins),hour=21,52463,False
+combined,eval,hour (24 bins),hour=22,47836,False
+combined,eval,hour (24 bins),hour=23,43855,False
+combined,eval,3-hour (8 bins),hour3=00-03,112345,False
+combined,eval,3-hour (8 bins),hour3=03-06,112352,False
+combined,eval,3-hour (8 bins),hour3=06-09,107933,False
+combined,eval,3-hour (8 bins),hour3=09-12,188549,False
+combined,eval,3-hour (8 bins),hour3=12-15,176802,False
+combined,eval,3-hour (8 bins),hour3=15-18,193499,False
+combined,eval,3-hour (8 bins),hour3=18-21,167080,False
+combined,eval,3-hour (8 bins),hour3=21-24,144154,False
+combined,eval,exit direction (8 sectors),zone8=0,156059,False
+combined,eval,exit direction (8 sectors),zone8=1,190788,False
+combined,eval,exit direction (8 sectors),zone8=2,158455,False
+combined,eval,exit direction (8 sectors),zone8=3,126083,False
+combined,eval,exit direction (8 sectors),zone8=4,161771,False
+combined,eval,exit direction (8 sectors),zone8=5,124942,False
+combined,eval,exit direction (8 sectors),zone8=6,148471,False
+combined,eval,exit direction (8 sectors),zone8=7,136145,False
+combined,eval,speed_bin quintiles,speed_bin5=0,219778,False
+combined,eval,speed_bin quintiles,speed_bin5=1,244303,False
+combined,eval,speed_bin quintiles,speed_bin5=2,247938,False
+combined,eval,speed_bin quintiles,speed_bin5=3,246025,False
+combined,eval,speed_bin quintiles,speed_bin5=4,244670,False
+combined,eval,entropy_bin quintiles,entropy_bin5=0,263388,False
+combined,eval,entropy_bin quintiles,entropy_bin5=1,236093,False
+combined,eval,entropy_bin quintiles,entropy_bin5=2,246418,False
+combined,eval,entropy_bin quintiles,entropy_bin5=3,223925,False
+combined,eval,entropy_bin quintiles,entropy_bin5=4,232890,False
+combined,eval,nn_bin quintiles,nn_bin5=0,259871,False
+combined,eval,nn_bin quintiles,nn_bin5=1,224711,False
+combined,eval,nn_bin quintiles,nn_bin5=2,266800,False
+combined,eval,nn_bin quintiles,nn_bin5=3,229275,False
+combined,eval,nn_bin quintiles,nn_bin5=4,222057,False

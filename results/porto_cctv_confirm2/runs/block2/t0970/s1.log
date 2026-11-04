@@ -1,0 +1,111 @@
+[eval] train=781977 cal=173080 test=667972 (exit rate train=0.159)
+[mvp] src_zone_speed/mvp_groups: groups=25 eta=0.0319 m=40 scale=quantile
+[mvp] src_zone_speed/mvp_log: groups=25 eta=0.0319 m=40 scale=log
+[mvp] src_zone_speed/mvp_global: groups=1 eta=0.1167 m=40 scale=quantile
+[mvp] src_zone_hour_speed/mvp_groups: groups=25 eta=0.0319 m=40 scale=quantile
+[mvp] src_zone_hour_speed/mvp_log: groups=25 eta=0.0319 m=40 scale=log
+[mvp] src_zone_hour_speed/mvp_global: groups=1 eta=0.1167 m=40 scale=quantile
+[qr_refit] src_zone_hour_speed/qr_groups_refit: 28 refits, rows 80000..80000, 6002s
+[qr_refit] src_zone_hour_speed/qr_groups_refit7: 28 refits, rows 48201..80000, 2851s
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:342: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"hit|{pred}|{meth}"] = hit.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:343: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"cost|{pred}|{meth}"] = cost.astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:345: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[k if k.startswith(("taumin", "kid|")) else f"score|{k}"] = v
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:347: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H[f"tdet|{pred}|{meth}"] = np.where(b >= 0, b * delta, np.nan).astype(np.float32)
+/home/user/ccpilot/ccpilot/evaluate.py:349: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H["feedback"] = fb_mask.astype(np.int8)
+/home/user/ccpilot/ccpilot/evaluate.py:350: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H["t_res_hit"] = t_res_hit; H["t_res_miss"] = t_res_miss
+/home/user/ccpilot/ccpilot/evaluate.py:350: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  H["t_res_hit"] = t_res_hit; H["t_res_miss"] = t_res_miss
+[eval] saved per-hop outcomes -> results/porto_cctv_confirm2/runs/block2/t0970/s1/hits.parquet
+[confirm2_run] configs/confirm2/porto_cctv_confirm2_block2_t0970.yaml target=0.97 seed=1: 9958s -> results/porto_cctv_confirm2/runs/block2/t0970/s1

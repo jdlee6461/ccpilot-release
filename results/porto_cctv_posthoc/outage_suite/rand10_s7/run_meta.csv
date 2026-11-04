@@ -1,0 +1,2 @@
+config,scenario,site_seed,start,n_offline,sightings_removed,methods,amin,offline_sites
+configs/porto_cctv.yaml,rand10,7,2013-12-23,18,37006,reduced,True,"0,9,23,37,48,50,86,94,100,110,127,137,140,142,145,148,150,156"

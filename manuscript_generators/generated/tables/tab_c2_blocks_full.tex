@@ -1,0 +1,32 @@
+% source: results/porto_cctv_confirm2/analysis/block_comparison.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/deficits.csv @ 1a806b3
+% Dbar: -(diff) of block_comparison.csv (= D_block2 - D_block1, autumn minus August) with [-hi, -lo] (conservative 95%: taxi paired, day independent); re-acquisition: deficit(block2) - deficit(block1) of deficits.csv cell hopkind=2, point only (no interval for this difference in the result files).
+\setlength{\tabcolsep}{3.4pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Method & 0.90 & 0.93 & 0.95 & 0.97 & 0.98 \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{Worst-group shortfall \Dbar{}, autumn minus August (pp), 95\% interval}} \\
+\texttt{mvp\_log} & $-$0.8 [$-$2.7, 0.9] & $-$1.4 [$-$2.9, 0.4] & $-$1.0 [$-$2.1, 0.6] & $-$0.6 [$-$1.6, 0.7] & $-$0.4 [$-$1.3, 0.6] \\
+\texttt{qr\_ogd} & 0.1 [$-$1.6, 1.7] & $-$0.2 [$-$1.5, 1.5] & $-$0.4 [$-$1.3, 1.0] & $-$0.1 [$-$0.7, 0.4] & 0.2 [$-$0.3, 0.7] \\
+\texttt{static} & $-$0.6 [$-$3.1, 1.2] & $-$0.7 [$-$3.5, 1.9] & $-$1.3 [$-$3.7, 1.3] & $-$0.6 [$-$2.7, 1.5] & $-$1.2 [$-$2.8, 0.6] \\
+ACI & $-$0.4 [$-$2.6, 1.2] & $-$1.1 [$-$3.4, 1.2] & $-$1.3 [$-$3.5, 1.0] & $-$1.1 [$-$2.9, 0.7] & $-$0.8 [$-$2.1, 0.6] \\
+Mondrian & $-$1.4 [$-$1.8, $-$0.8] & $-$1.1 [$-$2.4, $-$0.6] & $-$0.9 [$-$2.5, 0.6] & $-$1.0 [$-$2.3, 0.7] & $-$0.8 [$-$1.9, 0.4] \\
+\texttt{qr\_groups} & $-$0.2 [$-$1.5, 1.3] & $-$0.5 [$-$1.9, 1.0] & $-$0.7 [$-$1.5, 0.5] & $-$0.2 [$-$0.7, 0.3] & 0.1 [$-$0.3, 0.6] \\
+\texttt{qr\_groups\_refit} & 0.0 [$-$1.7, 0.6] & $-$0.3 [$-$1.9, 0.5] & $-$0.3 [$-$1.2, 0.4] & $-$0.1 [$-$0.4, 0.4] & 0.1 [$-$0.2, 0.7] \\
+\texttt{qr\_groups\_refit7} & $-$0.3 [$-$2.4, 0.7] & $-$0.6 [$-$2.0, 0.6] & $-$0.3 [$-$1.3, 0.8] & $-$0.1 [$-$0.9, 0.7] & 0.2 [$-$0.5, 0.8] \\
+CityTrac-style & 1.5 [$-$0.7, 3.7] & 0.7 [$-$1.1, 2.7] & 0.8 [$-$0.7, 2.6] & 1.4 [0.1, 3.0] & 1.4 [0.1, 3.0] \\
+Spatula-style & 2.3 [$-$0.4, 5.0] & 2.3 [$-$0.4, 5.0] & 2.3 [$-$0.4, 5.0] & 2.3 [$-$0.4, 5.0] & 2.3 [$-$0.4, 5.0] \\
+\midrule
+\multicolumn{6}{@{}l}{\emph{Post-gap shortfall, autumn minus August (pp), point estimate}} \\
+\texttt{mvp\_log} & $-$1.0 & $-$1.7 & $-$1.1 & $-$0.6 & $-$0.4 \\
+\texttt{qr\_ogd} & 0.3 & 0.1 & $-$0.0 & 0.3 & 0.7 \\
+\texttt{static} & $-$0.6 & $-$0.7 & $-$1.3 & $-$0.6 & $-$1.2 \\
+ACI & $-$0.3 & $-$1.1 & $-$1.3 & $-$1.1 & $-$0.8 \\
+Mondrian & $-$1.0 & $-$1.6 & $-$0.9 & $-$1.0 & $-$0.8 \\
+\texttt{qr\_groups} & 0.3 & $-$0.2 & $-$0.3 & 0.2 & 0.6 \\
+\texttt{qr\_groups\_refit} & $-$0.6 & $-$1.0 & $-$0.6 & 0.2 & 0.5 \\
+\texttt{qr\_groups\_refit7} & $-$1.1 & $-$0.9 & $-$0.4 & $-$0.0 & 0.3 \\
+CityTrac-style & 1.5 & 0.7 & 0.8 & 1.4 & 1.4 \\
+Spatula-style & 2.3 & 2.3 & 2.3 & 2.3 & 2.3 \\
+\bottomrule
+\end{tabular}

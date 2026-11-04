@@ -1,0 +1,3 @@
+run,method,hops,replay_hit_equals_stored,replay_cost_equals_stored,first_rank_tau_inf,first_rank_tau_gt1,first_rank_tau_gt2,n_tau_inf,n_tau_gt1,n_tau_gt2,n_cost_neg,neg_cost_iff_tau_gt2,first_t_exit_tau_gt1,t_exit_first,t_exit_last,max_log_tau
+block1_t0950_s0,iii_mvp_log,534713,True,True,43654.0,43654,43654,444955,444955,444955,444953,False,inf,1375657209.0,1378076395.0,-0.37709934046194793
+block1_t0950_s0,iii_qr_ogd,534713,True,True,,9003,13827,0,428127,314922,314920,False,1.017180759753307,1375657209.0,1378076395.0,3.4442338389045615

@@ -1,0 +1,28 @@
+% source: results/precheck_confirm2/precheck_report2.md @ 71193cd; results/precheck_confirm2/trial_expl1/analysis/group_recall.csv @ 7d954a1; results/precheck_confirm2/trial_expl1/analysis/cost_ratios.csv @ 7d954a1; configs/porto_cctv_confirm2.yaml @ 6758bce
+% tuning history: precheck_report2.md section A9 (research records README v2-v7; before the pre-registration tag, not verifiable in git), translated; refit variants: plan section 3 and commit dcc7f9f; baseline parameters: run config. Trial: exploratory period 1, target 0.95, evaluation seeds 0-1; Dbar = 0.95 - min over the judged groups of the seed-mean recall (pp); cost ratio to H1 (cost_ratios.csv point). CityTrac-style at nominal 0.95.
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lp{6.2cm}p{3.6cm}lrr@{}}
+\toprule
+ & & & & \multicolumn{2}{c}{Trial run} \\
+\cmidrule(l){5-6}
+Method & Tuned parameters & Chosen on & Variants & \Dbar{} (pp) & Cost/H1 \\
+\midrule
+\texttt{static} & none & -- & -- & 6.5 & 0.91 \\
+ACI & $\gamma \in \{0.005, 0.001, 0.0005\}$, floor $\alpha/5$, per hour $\times$ first hop; window 2{,}000 (initial value) & expl.\ 1 (virtual layout), then expl.\ 2 (virtual) & 5, then 3 kept & 5.5 & 1.07 \\
+Mondrian & cells (hour, first hop, hour $\times$ first hop; later speed and hour $\times$ first hop $\times$ speed, 40 cells); minimum 200 & expl.\ 1, then expl.\ 2 (virtual) & 5 & 3.9 & 0.98 \\
+\texttt{qr\_groups} & log scale (linear scale gave negative $\tau$); at most 80{,}000 rows & exploratory & 2 scales & 3.8 & 1.08 \\
+\texttt{qr\_groups\_refit} & as \texttt{qr\_groups}, refitted daily, cumulative & defined before the trial run & 1 & 0.9 & 1.10 \\
+\texttt{qr\_groups\_refit7} & as \texttt{qr\_groups}, refitted daily, 7-day window & defined before the trial run & 1 & 0.2 & 1.16 \\
+\texttt{qr\_ogd} & $\gamma = 0.005$, clip 3 & exploratory & 1 & 2.6 & 1.16 \\
+\texttt{mvp\_log} & log scale, $a_{\min} = 0.002$, $m = 40$ & expl.\ 1 and 2 (real layout) & 1 & 1.3 & 1.15 \\
+Spatula-style & share threshold 0.05, delay quantile 0.98 & from the reading of the paper & -- & 16.1 & 1.48 \\
+CityTrac-style & delay window quantile 0.98, minimum 30 per key & from the reading of the paper & -- & 3.7 & 2.24 \\
+\midrule
+Predictor & hierarchy src $\to$ zone $\to$ hour $\to$ speed; $\lambda = 20$, $\varepsilon = 10^{-4}$, $\sigma = 1$ bin & expl.\ 1 and 2 & 5 & & \\
+Groups, criteria & 25 groups; bar 0.94 (first draft); cost bound 1.20 & research records & -- & & \\
+\midrule
+Trial run (pre-lock) & detection-time output compared in float64 like the score (the first trial run stopped on the consistency check); output code only, no method, comparator, or parameter changed (commit \texttt{b5e10e6}) & exploratory period 1 & -- & & \\
+\bottomrule
+\end{tabular}
+
+\smallskip\parbox{\textwidth}{\footnotesize Tuning history before the pre-registration tag (\texttt{prereg-v3}): research records (README versions 2--7 and internal deviation notes), not verifiable in the version history. Trial run: exploratory period 1, target 0.95, evaluation seeds 0--1, made before the lock of the confirmation plan.}

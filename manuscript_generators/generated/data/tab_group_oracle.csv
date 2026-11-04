@@ -1,0 +1,20 @@
+# class: additional | source: results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv @ 906c800; results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_groups.csv @ f969e99 | note: held-out period, segments A and B, primary predictor, evaluation seed 0, no outage (posthoc_group_oracle.py); (a) group-minimum rule: per pre-registered group the largest threshold with in-sample group recall >= 0.95, each hop takes the minimum over its groups; (b) hindsight group QR: qr_groups design fitted without subsampling to the segment's own scores; recall/worst/below over the 25-group definition with n >= 200 (Wilson 95% upper bound); n_groups_lt200_used = groups with n < 200 that enter the reference's construction; ratio_vs_oracle = cost / global hindsight oracle cost, ratio_vs_group_min = cost / cost of (a), same segment; block 'later hops': hops whose track state is 'later' (hopkind = 0) only, recall and mean cost of each method on these hops (group_oracle_groups.csv), ratio_vs_oracle = cost / cost of the hindsight oracle on the same later hops
+segment,method,recall_mean,worst,worst_key,below94,below95,cost_cam_s,n_groups_lt200_used,ratio_vs_oracle,ratio_vs_group_min,worst_name,block,n_hops
+test_jun_a,oracle,0.9500071720305906,0.90891840607210639,hopkind=2,6,9,278.9381619972973,0,1,0.6968462823135122,Re-acquired,all hops,
+test_jun_a,group_min,0.96432858469413163,0.95024858203207063,nn_bin=3,0,0,400.28650374832966,0,1.4350367152423129,1,Isolation Q4 (high),all hops,
+test_jun_a,hindsight_qr,0.95003737005413003,0.94997474322276476,zone=3,0,0,330.17054333793851,0,1.183669315714275,0.82483556214407161,Exit south,all hops,
+test_jun_a,mvp_log,0.94970896654813941,0.94212523719165076,hopkind=2,0,7,329.98696899414062,0,1.1830111972894477,0.8243769547664086,Re-acquired,all hops,
+test_jun_a,qr_ogd,0.94982220913641202,0.94307400379506645,hopkind=2,0,3,333.7440185546875,0,1.1964803100621322,0.83376285592811517,Re-acquired,all hops,
+test_jun_b,oracle,0.95000781127948764,0.87588652482269502,hopkind=2,5,8,301.3609921147189,0,1,0.69089501898743333,Re-acquired,all hops,
+test_jun_b,group_min,0.96387899916953756,0.95035460992907805,hopkind=2,0,0,436.1892673019841,0,1.4473979005748034,1,Re-acquired,all hops,
+test_jun_b,hindsight_qr,0.95003247847786942,0.94992450513531002,hgroup=0,0,0,356.75718843272841,0,1.1838200622093846,0.81789538435785736,00-06 h,all hops,
+test_jun_b,mvp_log,0.94974880569647835,0.92671394799054363,hopkind=2,0,7,352.88595581054688,0,1.1709742303881652,0.80902026313782649,Re-acquired,all hops,
+test_jun_b,qr_ogd,0.95031615125926039,0.92080378250591022,hopkind=2,1,4,355.880859375,0,1.1809121574683663,0.81588632745659773,Re-acquired,all hops,
+test_jun_a,oracle,0.95498132633491484,,,,,270.12972920891565,,1,,,later hops,217954
+test_jun_a,aci,0.95472439138533816,,,,,289.6656494140625,,1.0723205115644194,,,later hops,217954
+test_jun_a,qr_ogd,0.95023261789184876,,,,,295.71755981445312,,1.0947242300226352,,,later hops,217954
+test_jun_a,mvp_log,0.95104012773337498,,,,,296.75601196289062,,1.0985685020006906,,,later hops,217954
+test_jun_b,oracle,0.95394129822198959,,,,,292.04748011271539,,1,,,later hops,200505
+test_jun_b,aci,0.95472930849604765,,,,,324.62771606445312,,1.1115580108383865,,,later hops,200505
+test_jun_b,qr_ogd,0.95003615869928437,,,,,318.05178833007812,,1.0890413716541105,,,later hops,200505
+test_jun_b,mvp_log,0.94960724171467037,,,,,315.16680908203125,,1.0791629120045583,,,later hops,200505

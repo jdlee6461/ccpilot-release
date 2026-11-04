@@ -1,0 +1,33 @@
+{
+ "block": "block1",
+ "n_train": 718140,
+ "n_cal": 141001,
+ "n_test": 534713,
+ "tr_id_equal": true,
+ "dims_equal": {
+  "hgroup": true,
+  "hopkind": true,
+  "speed_bin": true,
+  "zone": true,
+  "entropy_bin": true,
+  "nn_bin": true
+ },
+ "score_bitwise|src": true,
+ "score_maxabs|src": 0.0,
+ "seconds|src": 2.4,
+ "score_bitwise|src_zone": true,
+ "score_maxabs|src_zone": 0.0,
+ "seconds|src_zone": 3.3,
+ "score_bitwise|src_zone_hour": true,
+ "score_maxabs|src_zone_hour": 0.0,
+ "seconds|src_zone_hour": 4.9,
+ "score_bitwise|src_zone_speed": true,
+ "score_maxabs|src_zone_speed": 0.0,
+ "seconds|src_zone_speed": 4.8,
+ "score_bitwise|src_zone_hour_speed": true,
+ "score_maxabs|src_zone_hour_speed": 0.0,
+ "kid_bitwise": true,
+ "cost_lookup_bitwise": true,
+ "seconds|src_zone_hour_speed": 8.6,
+ "seconds_total": 28.6
+}

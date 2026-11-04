@@ -1,0 +1,33 @@
+# LOCK_confirm2_addendum.txt -- addendum to LOCK_confirm2.txt (DEVIATIONS.md D4); LOCK_confirm2.txt is unchanged
+
+## corrected content hash
+frame_sha256_v2(df): one sha256 over the columns in order; for each column: the UTF-8 column name, the dtype string, then the values. Numeric and boolean columns: the numpy values' bytes (C order), exactly as frame_sha256 of the lock. Object/string columns: for each value in row order, an 8-byte little-endian length followed by the UTF-8 bytes of str(value); a missing value is the length 0xFFFFFFFFFFFFFFFF with no bytes.
+
+## recomputed with frame_sha256_v2 (execution work directory work/porto_cctv_confirm2)
+cameras (lock source work/porto_cctv_confirm/cameras.csv) 698257ddc6ae96372e6de7aed58700b9c9522911e9272f34f0dc032c8ad22314
+cameras (execution work/porto_cctv_confirm2/cameras.csv) 698257ddc6ae96372e6de7aed58700b9c9522911e9272f34f0dc032c8ad22314
+cameras v2 equal: True
+trip_table 5040261e6803a64748d7d2a07468e411a0151d667d1f2fe25072b12b4d389531 | lock 5040261e6803a64748d7d2a07468e411a0151d667d1f2fe25072b12b4d389531 | EQUAL
+hop_table_all 53c32863c646270ceded08f6b138d23f7d2a0511973bd20c66c87f8e55dcd295 | lock 53c32863c646270ceded08f6b138d23f7d2a0511973bd20c66c87f8e55dcd295 | EQUAL
+hop_table_block1 1152b32277a3680a5d9868eba9a551718d9d0f07d8ae4f3d83d7fa37b2d35c1f | lock 1152b32277a3680a5d9868eba9a551718d9d0f07d8ae4f3d83d7fa37b2d35c1f | EQUAL
+hop_table_block2 a58deb3c61ce498a2e4f75c7e9ed5daa796aa5e1d9d3581ff32c83dfb1ee1098 | lock a58deb3c61ce498a2e4f75c7e9ed5daa796aa5e1d9d3581ff32c83dfb1ee1098 | EQUAL
+
+## file sha256
+cdaae7bdb01638781dc4bcaa1895864d01810f83f4b9b733160462308bce1168  work/porto_cctv_confirm/cameras.csv
+cdaae7bdb01638781dc4bcaa1895864d01810f83f4b9b733160462308bce1168  work/porto_cctv_confirm2/cameras.csv
+a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1  data/porto/porto_cctv.json
+camera files byte-identical: True
+
+## camera table, column-wise value equality (176 sites lock source, 176 execution)
+cam_id: equal
+x: equal
+y: equal
+lon: equal
+lat: equal
+n_cams: equal
+cctv_ids: equal
+
+## lock value for the cameras (not reproducible; kept as recorded): 5bbd88e9ebf0369d71daa08a05db0fc32cfd172d55f7cabd9f274280d95a44e1 (frame_sha256 hashed the pointer bytes of the string column cctv_ids)
+
+## confirm2-exec
+commit ca586a6bb01597209a0c65b7d480f109023262e6, tag confirm2-exec pushed 2026-10-15T17:55:31-04:00 (21:55:31 UTC); confirm2-plan unchanged (6758bce)

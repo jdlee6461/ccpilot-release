@@ -1,0 +1,59 @@
+% source: results/porto_cctv_confirm2/analysis/main_estimands.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/dominance.csv @ 1a806b3
+% upper: class of every pre-specified comparison (99% simultaneous, conservative); lower: number of pairs of target points (any target of one method against any target of the other) in which one point dominates the other (interval dominance, 95%, plan 10.5), from dominance.csv.
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}llccccc@{\hspace{6pt}}ccccc@{}}
+\toprule
+ & & \multicolumn{5}{c}{\texttt{mvp\_log}} & \multicolumn{5}{c}{\texttt{qr\_ogd}} \\
+\cmidrule(r){3-7}\cmidrule(l){8-12}
+Comparator & Estimate & .90 & .93 & .95 & .97 & .98 & .90 & .93 & .95 & .97 & .98 \\
+\midrule
+\texttt{static} & post-gap & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & iso.\ Q4 & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\addlinespace[2pt]
+ACI & post-gap & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & iso.\ Q4 & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\addlinespace[2pt]
+Mondrian & post-gap & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & iso.\ Q4 & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups} & post-gap & $=$ & $=$ & $-^{3}$ & $-^{4}$ & $-^{4}$ & $=$ & $=$ & $=$ & $=$ & $=$ \\
+ & iso.\ Q4 & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ \\
+ & \Dbar{} & $=$ & $=$ & $-^{3}$ & $-^{4}$ & $-^{4}$ & $=$ & $+$ & $=$ & $=$ & $=$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups\_refit} & post-gap & $-$ & $-$ & $-$ & $-$ & $-$ & $-^{4}$ & $-^{3}$ & $-^{3}$ & $=$ & $=$ \\
+ & iso.\ Q4 & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $=$ & $+$ \\
+ & \Dbar{} & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $=$ & $=$ & $-^{4}$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups\_refit7} & post-gap & $-$ & $-$ & $-^{4}$ & $-^{4}$ & $-$ & $=$ & $=$ & $=$ & $+^{3}$ & $=$ \\
+ & iso.\ Q4 & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $-$ & $-$ & $-^{4}$ & $-^{4}$ & $-$ & $=$ & $=$ & $=$ & $=$ & $=$ \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\textit{Dominance: pairs of target points in which the online method dominates the comparator, and in which the comparator dominates the online method.}
+\smallskip
+
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{\texttt{mvp\_log}} & \multicolumn{2}{c}{\texttt{qr\_ogd}} \\
+\cmidrule(lr){2-3}\cmidrule(l){4-5}
+Comparator & dominates & dominated & dominates & dominated \\
+\midrule
+\texttt{static} & 2 & 0 & 3 & 0 \\
+ACI & 2 & 0 & 3 & 0 \\
+Mondrian & 0 & 0 & 0 & 0 \\
+\texttt{qr\_groups} & 0 & 0 & 0 & 0 \\
+\texttt{qr\_groups\_refit} & 0 & 0 & 0 & 0 \\
+\texttt{qr\_groups\_refit7} & 0 & 0 & 0 & 0 \\
+Spatula-style & 15 & 0 & 15 & 0 \\
+CityTrac-style & 6 & 0 & 9 & 0 \\
+H1 & 2 & 0 & 4 & 0 \\
+H3 & 0 & 0 & 0 & 0 \\
+H4 & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}

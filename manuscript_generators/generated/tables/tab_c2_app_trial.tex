@@ -1,0 +1,33 @@
+% source: results/precheck_confirm2/trial_expl1/analysis/main_estimands.csv @ 7d954a1
+% exploratory period 1, target 0.95, evaluation seeds 0-1; the trial implementation reports method - comparator (negative = improvement): sign flipped here to D_comparator - D_method (plan 13.8); point [lo, hi] (99% conservative), pp; class symbol.
+\begin{tabular}{@{}llrcrc@{}}
+\toprule
+ & & \multicolumn{2}{c}{\texttt{mvp\_log}} & \multicolumn{2}{c}{\texttt{qr\_ogd}} \\
+\cmidrule(lr){3-4}\cmidrule(l){5-6}
+Comparator & Estimate & Difference & & Difference & \\
+\midrule
+\texttt{static} & post-gap & 5.2 [3.8, 6.5] & $+$ & 3.9 [2.8, 4.9] & $+$ \\
+ & iso.\ Q4 & 3.3 [2.8, 3.8] & $+$ & 3.5 [2.9, 4.0] & $+$ \\
+ & \Dbar{} & 5.2 [3.8, 6.4] & $+$ & 3.9 [2.8, 4.9] & $+$ \\
+\addlinespace[2pt]
+ACI & post-gap & 4.3 [3.0, 5.6] & $+$ & 2.9 [1.9, 3.9] & $+$ \\
+ & iso.\ Q4 & 2.7 [2.2, 3.1] & $+$ & 2.8 [2.4, 3.2] & $+$ \\
+ & \Dbar{} & 4.3 [3.0, 5.6] & $+$ & 2.9 [1.9, 3.9] & $+$ \\
+\addlinespace[2pt]
+Mondrian & post-gap & 2.7 [1.5, 3.7] & $+$ & 1.3 [0.4, 2.2] & $+$ \\
+ & iso.\ Q4 & 3.1 [2.7, 3.5] & $+$ & 3.3 [2.8, 3.7] & $+$ \\
+ & \Dbar{} & 2.7 [1.7, 3.6] & $+$ & 1.3 [0.5, 2.2] & $+$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups} & post-gap & 2.5 [1.4, 3.6] & $+$ & 1.2 [0.4, 1.9] & $+$ \\
+ & iso.\ Q4 & 0.4 [0.2, 0.7] & $+$ & 0.6 [0.3, 0.9] & $+$ \\
+ & \Dbar{} & 2.5 [1.4, 3.6] & $+$ & 1.2 [0.4, 1.9] & $+$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups\_refit} & post-gap & $-$0.4 [$-$1.2, 0.7] & $=$ & $-$1.8 [$-$2.6, $-$0.8] & $-$ \\
+ & iso.\ Q4 & 0.2 [$-$0.1, 0.4] & $=$ & 0.4 [0.0, 0.6] & $+$ \\
+ & \Dbar{} & $-$0.4 [$-$1.1, 0.7] & $=$ & $-$1.7 [$-$2.4, $-$0.8] & $-$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups\_refit7} & post-gap & $-$1.1 [$-$1.7, $-$0.2] & $-$ & $-$2.4 [$-$3.1, $-$1.4] & $-$ \\
+ & iso.\ Q4 & $-$0.1 [$-$0.3, 0.1] & $=$ & 0.0 [$-$0.1, 0.2] & $=$ \\
+ & \Dbar{} & $-$1.0 [$-$1.6, $-$0.0] & $-$ & $-$2.3 [$-$3.1, $-$1.2] & $-$ \\
+\bottomrule
+\end{tabular}

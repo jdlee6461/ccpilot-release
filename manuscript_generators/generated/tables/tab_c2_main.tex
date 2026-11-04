@@ -1,0 +1,29 @@
+% source: results/porto_cctv_confirm2/analysis/deficits.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/costs.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/cost_ratios.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/method_points.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/hindsight.csv @ 1a806b3; results/porto_cctv_confirm2/analysis/seed_range.csv @ 1a806b3; exploratory/ref_group_d/ref_group_d.csv @ f484865
+% scope=combined (56 days), target=0.95, seed means; d and Dbar in pp with conservative 95% intervals (deficits.csv cells hopkind=2, nn_bin=3, WORST: deficit [lo, hi]; H rows: Dbar = t - worst_recall of method_points.csv with [t - worst_hi, t - worst_lo]); recall = recall_all (costs.csv) or hindsight.csv; cost = cost_mean (camera-seconds per hop); ratios = cost_ratios.csv ratio (H3: threshold fixed); seeds = D_seed_min-D_seed_max of seed_range.csv (pp; one value for seed-independent methods). Compact (Table 3): no recall, ratios to H2 and H3 only, isolation Q4 point estimate.
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+ & \multicolumn{3}{c}{Shortfall (pp)} & & & \multicolumn{2}{c}{Cost ratio to} \\
+\cmidrule(lr){2-4}\cmidrule(l){7-8}
+Method & Post-gap $d$ & Isolation Q4 $d$ & \Dbar{} & $D^s$, seeds & Cost & H2 & H3 \\
+\midrule
+\texttt{mvp\_log} & 1.0 [0.2, 1.9] & 0.2 & 1.0 [0.5, 1.9] & 0.5--1.4 & 313 & 1.18 & 0.98 \\
+\texttt{qr\_ogd} & 0.6 [$-$0.2, 1.5] & $-$0.0 & 0.7 [0.2, 1.5] & 0.2--1.2 & 319 & 1.20 & 1.00 \\
+\addlinespace
+\texttt{static} & 6.0 [4.9, 7.2] & 2.5 & 6.0 [4.9, 7.2] & 6.0 & 269 & 1.00 & 0.84 \\
+ACI & 5.7 [4.7, 6.8] & 2.5 & 5.7 [4.7, 6.8] & 5.6--5.9 & 288 & 1.08 & 0.90 \\
+Mondrian & 3.3 [2.4, 4.4] & 2.4 & 3.3 [3.0, 4.4] & 3.3 & 290 & 1.08 & 0.91 \\
+\texttt{qr\_groups} & 0.6 [$-$0.2, 1.5] & $-$0.1 & 0.8 [0.3, 1.5] & 0.3--1.2 & 319 & 1.18 & 1.00 \\
+\texttt{qr\_groups\_refit} & 0.2 [$-$0.6, 1.0] & 0.0 & 0.3 [0.2, 1.0] & 0.2--0.4 & 317 & 1.18 & 0.99 \\
+\texttt{qr\_groups\_refit7} & 0.2 [$-$0.6, 1.1] & 0.1 & 0.4 [0.2, 1.2] & 0.2--0.8 & 317 & 1.20 & 0.99 \\
+CityTrac-style & 2.4 [1.5, 3.4] & $-$1.0 & 2.4 [1.5, 3.4] & 2.4 & 663 & 1.66 & 2.08 \\
+Spatula-style & 13.6 [12.1, 15.1] & 6.7 & 13.6 [12.1, 15.1] & 13.6 & 428 & 2.98 & 1.34 \\
+\addlinespace
+H1 & 6.0$^\dagger$ & 2.5$^\dagger$ & 6.0 [4.9, 7.1] & & 267 &  & \\
+H2$^{a}$ & n/a & n/a & n/a & & 144--398 &  & \\
+H3 & 0.0$^\dagger$ & 0.0$^\dagger$ & 0.0 [0.0, 0.8] & & 319 &  & \\
+H4 & $-$0.0$^\dagger$ & $-$0.0$^\dagger$ & $-$0.0 [$-$0.0, $-$0.0] & & 387 &  & \\
+\bottomrule
+\end{tabular}
+
+\smallskip\parbox{\textwidth}{\footnotesize $^{a}$H2 is fitted to each method's overall recall (per seed); the row gives the range over the ten methods of the seed-mean cost. $^\dagger$Additional analysis; point estimate, no interval. n/a: not computed.}

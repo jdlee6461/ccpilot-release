@@ -1,0 +1,3 @@
+block,target,seed,predictor,method,n_hops,n_diff,bitwise,sha256_recomputed,sha256_stored,seconds
+block1,0.97,4,src_zone_hour_speed,qr_ogd,534713,0,True,0baefc44a1fd0062574c0a86525697b910a6060c0631d43660208bd84b81fdf6,0baefc44a1fd0062574c0a86525697b910a6060c0631d43660208bd84b81fdf6,452.5
+block1,0.97,4,src_zone_speed,qr_ogd,534713,0,True,89d8aded20451023bf4c6eb048c48d179abb42669d4e8477f955612779ec9be5,89d8aded20451023bf4c6eb048c48d179abb42669d4e8477f955612779ec9be5,452.5

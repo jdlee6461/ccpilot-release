@@ -1,0 +1,10 @@
+{
+ "target": 0.95,
+ "B": 100,
+ "taxi_clusters": 428,
+ "workers": 5,
+ "hops": 601903,
+ "full_fit_seconds": 333.97994780540466,
+ "bootstrap_seconds": 14688.925859928131,
+ "seconds_per_replicate_per_worker": 734.4462929964066
+}

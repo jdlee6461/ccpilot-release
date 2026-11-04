@@ -1,0 +1,8 @@
+{
+ "label": "C_src_zone_speed_qr_groups_refit",
+ "block": "block1",
+ "target": 0.95,
+ "seed": 4,
+ "predictor": "src_zone_speed",
+ "seconds": 6284.755244970322
+}

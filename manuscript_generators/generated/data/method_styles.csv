@@ -1,0 +1,14 @@
+# class: main | source: paper/scripts/ch6lib.py @ paper ebc0ca2 | note: method order, colour (Okabe-Ito) and marker used in every table and figure
+order,key,label,added_after_main,color,marker
+1,static,static,False,#E69F00,o
+2,aci,ACI,False,#56B4E9,s
+3,mondrian,Mondrian,False,#CC79A7,D
+4,spatula,Spatula-style,False,#F0E442,v
+5,citytrac095,CityTrac-style (0.95),True,#009E73,^
+6,citytrac099,CityTrac-style (0.99),True,#009E73,<
+7,qr_groups,qr_groups,False,#CC79A7,P
+8,mvp_groups,mvp_groups,False,#56B4E9,X
+9,mvp_global,mvp_global,False,#F0E442,h
+10,qr_ogd,qr_ogd,False,#D55E00,>
+11,mvp_log,mvp_log,False,#0072B2,*
+12,oracle,hindsight oracle,False,#000000,d

@@ -1,0 +1,3 @@
+period,segment,method,group,n,recall,taxis,var_boot,var_binom,de_taxi
+exploratory 1,test_holiday,static (target 0.95),re-acquired,1199,0.8832360300250208,351,8.85967322875877e-05,8.601346563024299e-05,1.0300332818636762
+exploratory 1,test_same,static (target 0.95),re-acquired,1492,0.8867292225201072,378,7.220939487274916e-05,6.731937563605455e-05,1.0726391056139808

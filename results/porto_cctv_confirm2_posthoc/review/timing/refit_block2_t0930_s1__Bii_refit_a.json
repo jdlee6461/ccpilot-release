@@ -1,0 +1,8 @@
+{
+ "label": "Bii_refit_a",
+ "block": "block2",
+ "target": 0.93,
+ "seed": 1,
+ "predictor": "src_zone_hour_speed",
+ "seconds": 7160.879428863525
+}

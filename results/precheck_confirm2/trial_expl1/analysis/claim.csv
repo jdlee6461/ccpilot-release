@@ -1,0 +1,13 @@
+proposed,comparator,targets,improvement_targets,claim_holds
+mvp_log,static,1,1,
+mvp_log,aci_g0005,1,1,
+mvp_log,mondrian_hour_hop_speed,1,1,
+mvp_log,qr_groups,1,1,
+mvp_log,qr_groups_refit,1,0,
+mvp_log,qr_groups_refit7,1,0,
+qr_ogd,static,1,1,
+qr_ogd,aci_g0005,1,1,
+qr_ogd,mondrian_hour_hop_speed,1,1,
+qr_ogd,qr_groups,1,1,
+qr_ogd,qr_groups_refit,1,0,
+qr_ogd,qr_groups_refit7,1,0,

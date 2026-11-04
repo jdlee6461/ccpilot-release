@@ -1,0 +1,36 @@
+
+# 원본 데이터와 중간 산출물 (용량이 크고 재생성 가능)
+data/porto/train.csv
+data/**/*.zip
+work/
+*.parquet
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / 편집기
+.DS_Store
+.vscode/
+.idea/
+
+*:Zone.Identifier
+# 사후 분석·재판정 실행별 그림: 스크립트로 재생성 가능하므로 git 제외 (논문 그림 후보는 figures/)
+# 동결된 results/porto_cctv_confirm/ 과 사전 등록 시점의 탐색 결과 폴더는 해당 없음
+results/*_posthoc/**/*.png
+results/*_regrade/**/*.png
+
+# 논문 원고: paper/ 는 별도 git 저장소로 관리한다(ccpilot에 커밋하지 않음)
+paper/
+
+# source papers for checking Section 2 (copyrighted; list and hashes in notes/sources/papers_manifest.csv)
+notes/sources/papers/
+
+# confirm2 run outputs: per-hop files and per-run diagnostic PNGs stay local; their sha256 are committed (runs_manifest_sha256.txt)
+results/porto_cctv_confirm2/runs/**/*.parquet
+results/porto_cctv_confirm2/runs/**/*.npz
+results/porto_cctv_confirm2/runs/**/*.png
+results/porto_cctv_heldout_reanalysis/runs/**/*.parquet
+results/porto_cctv_heldout_reanalysis/runs/**/*.npz
+results/porto_cctv_heldout_reanalysis/runs/**/*.png

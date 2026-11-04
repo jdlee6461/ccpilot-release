@@ -1,0 +1,52 @@
+# held-out re-analysis 2026-10-17T09:06:44-0400 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | configs/porto_cctv_heldout_reanalysis.yaml sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T09:06:44-0400 heldout_t0900_s0 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.9 --seed 0 --out results/porto_cctv_heldout_reanalysis/runs/t0900/s0 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T09:06:44-0400 heldout_t0900_s1 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.9 --seed 1 --out results/porto_cctv_heldout_reanalysis/runs/t0900/s1 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T09:06:44-0400 heldout_t0900_s2 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.9 --seed 2 --out results/porto_cctv_heldout_reanalysis/runs/t0900/s2 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T09:06:44-0400 heldout_t0900_s3 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.9 --seed 3 --out results/porto_cctv_heldout_reanalysis/runs/t0900/s3 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T09:06:44-0400 heldout_t0900_s4 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.9 --seed 4 --out results/porto_cctv_heldout_reanalysis/runs/t0900/s4 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T09:06:44-0400 heldout_t0930_s0 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.93 --seed 0 --out results/porto_cctv_heldout_reanalysis/runs/t0930/s0 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T11:19:14-0400 heldout_t0900_s4 | exit 0
+START 2026-10-17T11:19:14-0400 heldout_t0930_s1 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.93 --seed 1 --out results/porto_cctv_heldout_reanalysis/runs/t0930/s1 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T11:20:14-0400 heldout_t0900_s0 | exit 0
+END   2026-10-17T11:20:14-0400 heldout_t0900_s2 | exit 0
+END   2026-10-17T11:20:14-0400 heldout_t0930_s0 | exit 0
+START 2026-10-17T11:20:14-0400 heldout_t0930_s2 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.93 --seed 2 --out results/porto_cctv_heldout_reanalysis/runs/t0930/s2 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T11:20:14-0400 heldout_t0930_s3 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.93 --seed 3 --out results/porto_cctv_heldout_reanalysis/runs/t0930/s3 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T11:20:14-0400 heldout_t0930_s4 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.93 --seed 4 --out results/porto_cctv_heldout_reanalysis/runs/t0930/s4 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T11:20:44-0400 heldout_t0900_s1 | exit 0
+END   2026-10-17T11:20:44-0400 heldout_t0900_s3 | exit 0
+START 2026-10-17T11:20:44-0400 heldout_t0950_s0 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.95 --seed 0 --out results/porto_cctv_heldout_reanalysis/runs/t0950/s0 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+START 2026-10-17T11:20:44-0400 heldout_t0950_s1 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.95 --seed 1 --out results/porto_cctv_heldout_reanalysis/runs/t0950/s1 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T20:30:15-0400 heldout_t0930_s4 | exit 0
+START 2026-10-17T20:30:15-0400 heldout_t0950_s2 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.95 --seed 2 --out results/porto_cctv_heldout_reanalysis/runs/t0950/s2 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T20:31:15-0400 heldout_t0930_s2 | exit 0
+START 2026-10-17T20:31:15-0400 heldout_t0950_s3 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.95 --seed 3 --out results/porto_cctv_heldout_reanalysis/runs/t0950/s3 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T20:31:45-0400 heldout_t0950_s1 | exit 0
+START 2026-10-17T20:31:45-0400 heldout_t0950_s4 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.95 --seed 4 --out results/porto_cctv_heldout_reanalysis/runs/t0950/s4 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T20:33:45-0400 heldout_t0930_s1 | exit 0
+START 2026-10-17T20:33:45-0400 heldout_t0970_s0 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.97 --seed 0 --out results/porto_cctv_heldout_reanalysis/runs/t0970/s0 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T20:39:45-0400 heldout_t0950_s0 | exit 0
+START 2026-10-17T20:39:45-0400 heldout_t0970_s1 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.97 --seed 1 --out results/porto_cctv_heldout_reanalysis/runs/t0970/s1 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-17T20:43:15-0400 heldout_t0930_s3 | exit 0
+START 2026-10-17T20:43:15-0400 heldout_t0970_s2 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.97 --seed 2 --out results/porto_cctv_heldout_reanalysis/runs/t0970/s2 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T06:59:15-0400 heldout_t0950_s3 | exit 0
+START 2026-10-18T06:59:15-0400 heldout_t0970_s3 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.97 --seed 3 --out results/porto_cctv_heldout_reanalysis/runs/t0970/s3 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T07:01:45-0400 heldout_t0950_s4 | exit 0
+START 2026-10-18T07:01:45-0400 heldout_t0970_s4 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.97 --seed 4 --out results/porto_cctv_heldout_reanalysis/runs/t0970/s4 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T07:04:15-0400 heldout_t0950_s2 | exit 0
+START 2026-10-18T07:04:15-0400 heldout_t0980_s0 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.98 --seed 0 --out results/porto_cctv_heldout_reanalysis/runs/t0980/s0 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T07:06:15-0400 heldout_t0970_s1 | exit 0
+START 2026-10-18T07:06:15-0400 heldout_t0980_s1 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.98 --seed 1 --out results/porto_cctv_heldout_reanalysis/runs/t0980/s1 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T07:10:46-0400 heldout_t0970_s0 | exit 0
+START 2026-10-18T07:10:46-0400 heldout_t0980_s2 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.98 --seed 2 --out results/porto_cctv_heldout_reanalysis/runs/t0980/s2 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T07:18:16-0400 heldout_t0970_s2 | exit 0
+START 2026-10-18T07:18:16-0400 heldout_t0980_s3 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.98 --seed 3 --out results/porto_cctv_heldout_reanalysis/runs/t0980/s3 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T17:57:16-0400 heldout_t0970_s3 | exit 0
+START 2026-10-18T17:57:16-0400 heldout_t0980_s4 | cmd: -u confirm2_run.py --config configs/porto_cctv_heldout_reanalysis.yaml --target 0.98 --seed 4 --out results/porto_cctv_heldout_reanalysis/runs/t0980/s4 | commit b94f828b72675382e2a777e3aded7956fc0f2013 | config sha256 856d7d2d553a722fd459ec579374428b46171eda85948aed6d0b6ccc87406377
+END   2026-10-18T18:03:46-0400 heldout_t0970_s4 | exit 0
+END   2026-10-18T18:10:46-0400 heldout_t0980_s1 | exit 0
+END   2026-10-18T18:13:46-0400 heldout_t0980_s0 | exit 0
+END   2026-10-18T18:15:46-0400 heldout_t0980_s2 | exit 0
+END   2026-10-18T18:22:46-0400 heldout_t0980_s3 | exit 0
+END   2026-10-18T22:14:16-0400 heldout_t0980_s4 | exit 0
+# all queued runs finished 2026-10-18T22:14:46-0400

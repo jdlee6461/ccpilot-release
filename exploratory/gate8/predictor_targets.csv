@@ -1,0 +1,40 @@
+# 사후 분석(확증 2 결과를 본 뒤; exploratory, 저장된 결과 읽기만; 지시문 17)
+label,predictor,method,targets
+C_refit,src_zone_speed,aci_g0005,0.95
+C_refit,src_zone_speed,mondrian_hour_hop_speed,0.95
+C_refit,src_zone_speed,mvp_log,0.95
+C_refit,src_zone_speed,qr_groups,0.95
+C_refit,src_zone_speed,qr_groups_refit,0.95
+C_refit,src_zone_speed,qr_ogd,0.95
+C_refit,src_zone_speed,static,0.95
+C_src,src,aci_g0005,0.9 0.93 0.95 0.97 0.98
+C_src,src,mondrian_hour_hop_speed,0.9 0.93 0.95 0.97 0.98
+C_src,src,mvp_log,0.9 0.93 0.95 0.97 0.98
+C_src,src,qr_groups,0.9 0.93 0.95 0.97 0.98
+C_src,src,qr_ogd,0.9 0.93 0.95 0.97 0.98
+C_src,src,static,0.9 0.93 0.95 0.97 0.98
+C_src_zone,src_zone,aci_g0005,0.9 0.93 0.95 0.97 0.98
+C_src_zone,src_zone,mondrian_hour_hop_speed,0.9 0.93 0.95 0.97 0.98
+C_src_zone,src_zone,mvp_log,0.9 0.93 0.95 0.97 0.98
+C_src_zone,src_zone,qr_groups,0.9 0.93 0.95 0.97 0.98
+C_src_zone,src_zone,qr_ogd,0.9 0.93 0.95 0.97 0.98
+C_src_zone,src_zone,static,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour,src_zone_hour,aci_g0005,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour,src_zone_hour,mondrian_hour_hop_speed,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour,src_zone_hour,mvp_log,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour,src_zone_hour,qr_groups,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour,src_zone_hour,qr_ogd,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour,src_zone_hour,static,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour_speed,src_zone_hour_speed,aci_g0005,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour_speed,src_zone_hour_speed,mondrian_hour_hop_speed,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour_speed,src_zone_hour_speed,mvp_log,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour_speed,src_zone_hour_speed,qr_groups,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour_speed,src_zone_hour_speed,qr_groups_refit,0.95
+C_src_zone_hour_speed,src_zone_hour_speed,qr_ogd,0.9 0.93 0.95 0.97 0.98
+C_src_zone_hour_speed,src_zone_hour_speed,static,0.9 0.93 0.95 0.97 0.98
+C_src_zone_speed,src_zone_speed,aci_g0005,0.9 0.93 0.95 0.97 0.98
+C_src_zone_speed,src_zone_speed,mondrian_hour_hop_speed,0.9 0.93 0.95 0.97 0.98
+C_src_zone_speed,src_zone_speed,mvp_log,0.9 0.93 0.95 0.97 0.98
+C_src_zone_speed,src_zone_speed,qr_groups,0.9 0.93 0.95 0.97 0.98
+C_src_zone_speed,src_zone_speed,qr_ogd,0.9 0.93 0.95 0.97 0.98
+C_src_zone_speed,src_zone_speed,static,0.9 0.93 0.95 0.97 0.98

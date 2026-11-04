@@ -1,0 +1,43 @@
+{
+ "blocks": {
+  "block1": 534713,
+  "block2": 667972
+ },
+ "targets": [
+  0.9,
+  0.93,
+  0.95,
+  0.97,
+  0.98
+ ],
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "B_main": 10000,
+ "B_other": 2000,
+ "clusters": {
+  "taxi": 430,
+  "day": 56
+ },
+ "sign_convention": "Delta = D_comparator - D_method (positive = improvement)",
+ "threads": "8",
+ "timing": {
+  "deficits_and_comparisons_s": 358.6475512981415,
+  "H3_fit_s_block1_t0.9": 286.4552757740021,
+  "H3_fit_s_block2_t0.9": 547.0546350479126,
+  "H3_fit_s_block1_t0.93": 281.33903217315674,
+  "H3_fit_s_block2_t0.93": 413.37774872779846,
+  "H3_fit_s_block1_t0.95": 309.1513316631317,
+  "H3_fit_s_block2_t0.95": 449.1749243736267,
+  "H3_fit_s_block1_t0.97": 355.82942152023315,
+  "H3_fit_s_block2_t0.97": 501.6434416770935,
+  "H3_fit_s_block1_t0.98": 380.88016653060913,
+  "H3_fit_s_block2_t0.98": 14829.129184007645,
+  "hindsight_s": 39187.745968818665,
+  "total_s": 39573.62138056755
+ }
+}

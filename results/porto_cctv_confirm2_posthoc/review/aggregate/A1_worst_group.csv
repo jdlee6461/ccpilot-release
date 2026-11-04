@@ -1,0 +1,7 @@
+# POST HOC (instruction 07 §1 F3): small Mondrian (A1_mondrian_small), label A, scope combined, seed mean; worst_group = judged g25 group with the largest deficit (= D of A_estimates); partition_attribute = the group is all hops, a track state, branching Q4 or isolation Q4 (attributes of the 12 original cells)
+target,worst_group,name,n,deficit,lo,hi,D_estimates,partition_attribute
+0.9,entropy_bin=2,Branching Q3,284245,0.0345916374958222,0.0321340392466551,0.0371956827151645,0.0345916374958222,False
+0.93,entropy_bin=2,Branching Q3,284245,0.0207034424528136,0.0187741839664032,0.022802994632347,0.0207034424528136,False
+0.95,entropy_bin=2,Branching Q3,284245,0.0138392935671691,0.012292444699402,0.015474664281803,0.0138392935671691,False
+0.97,hgroup=1,06-10 h,165645,0.0092526185517219,0.0076753793176704,0.010913900337423,0.0092526185517219,False
+0.98,hgroup=1,06-10 h,165645,0.0065688671556641,0.005293692273369,0.0079569877459343,0.0065688671556641,False

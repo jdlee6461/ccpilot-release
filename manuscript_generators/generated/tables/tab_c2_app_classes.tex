@@ -1,0 +1,34 @@
+% source: results/porto_cctv_confirm2/analysis/main_estimands.csv @ 1a806b3
+% scope=combined, all three estimands, column class (99% simultaneous, conservative): + improvement, = undetermined, - worsening; sign D_comparator - D_method; superscript = seeds whose paired difference has the sign of the class (seed_agreement, plan 5.5), shown only when fewer than five (instruction 23 §9).
+\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{@{}llccccc@{\hspace{6pt}}ccccc@{}}
+\toprule
+ & & \multicolumn{5}{c}{\texttt{mvp\_log}} & \multicolumn{5}{c}{\texttt{qr\_ogd}} \\
+\cmidrule(r){3-7}\cmidrule(l){8-12}
+Comparator & Estimate & .90 & .93 & .95 & .97 & .98 & .90 & .93 & .95 & .97 & .98 \\
+\midrule
+\texttt{static} & post-gap & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & iso.\ Q4 & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\addlinespace[2pt]
+ACI & post-gap & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & iso.\ Q4 & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\addlinespace[2pt]
+Mondrian & post-gap & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & iso.\ Q4 & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ & $+$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups} & post-gap & $=$ & $=$ & $-^{3}$ & $-^{4}$ & $-^{4}$ & $=$ & $=$ & $=$ & $=$ & $=$ \\
+ & iso.\ Q4 & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ \\
+ & \Dbar{} & $=$ & $=$ & $-^{3}$ & $-^{4}$ & $-^{4}$ & $=$ & $+$ & $=$ & $=$ & $=$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups\_refit} & post-gap & $-$ & $-$ & $-$ & $-$ & $-$ & $-^{4}$ & $-^{3}$ & $-^{3}$ & $=$ & $=$ \\
+ & iso.\ Q4 & $-$ & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $=$ & $+$ \\
+ & \Dbar{} & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $=$ & $=$ & $-^{4}$ \\
+\addlinespace[2pt]
+\texttt{qr\_groups\_refit7} & post-gap & $-$ & $-$ & $-^{4}$ & $-^{4}$ & $-$ & $=$ & $=$ & $=$ & $+^{3}$ & $=$ \\
+ & iso.\ Q4 & $-$ & $-$ & $-$ & $-$ & $-$ & $=$ & $=$ & $+$ & $+$ & $+$ \\
+ & \Dbar{} & $-$ & $-$ & $-^{4}$ & $-^{4}$ & $-$ & $=$ & $=$ & $=$ & $=$ & $=$ \\
+\bottomrule
+\end{tabular}

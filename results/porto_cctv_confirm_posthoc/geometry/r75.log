@@ -1,0 +1,133 @@
+[data] reusing trajectories from work/porto_cctv_confirm/trajectories.parquet
+[data] real CCTV: 238 cameras merged into 170 sites (merge radius 75 m)
+[data] trips=267422 points=13312143 cameras=170 (1s)
+[events] sightings=1961073 transitions=1628153 exit_rate=0.162 mean_hops_per_trip=6.31 (47s)
+[eval] train=817238 cal=192450 test=486170 (exit rate train=0.161)
+[mvp] src_zone_hour_speed/mvp_log: groups=25 eta=0.0319 m=40 scale=log
+[mvp] src_zone_hour_speed/mvp_global: groups=1 eta=0.1167 m=40 scale=quantile
+[eval] saved per-hop outcomes -> results/porto_cctv_confirm_posthoc/geometry/r75/hits.parquet
+          predictor                  method    segment  coverage  worst_group_cov   worst_group  worst_group_ub95  n_groups_sig_below_bar  cost_mean_cam_s  cost_median_cam_s  roll_p05  frac_below
+       spatula_rule                   fixed test_jun_a     0.917            0.834     hopkind=2             0.856                      24          432.859              345.0     0.883       0.171
+       spatula_rule                   fixed test_jun_b     0.915            0.820     hopkind=2             0.845                      24          435.132              345.0     0.873       0.177
+src_zone_hour_speed                  static test_jun_a     0.949            0.895     hopkind=2             0.913                       6          253.988              175.0     0.926       0.000
+src_zone_hour_speed                  static test_jun_b     0.944            0.855     hopkind=2             0.878                       8          248.755              170.0     0.913       0.031
+src_zone_hour_speed mondrian_hour_hop_speed test_jun_a     0.949            0.908 entropy_bin=3             0.911                       3          282.835              175.0     0.933       0.000
+src_zone_hour_speed mondrian_hour_hop_speed test_jun_b     0.943            0.879     hopkind=2             0.900                       6          272.323              165.0     0.911       0.032
+src_zone_hour_speed               aci_g0005 test_jun_a     0.950            0.890     hopkind=2             0.909                       6          278.442              185.0     0.927       0.000
+src_zone_hour_speed               aci_g0005 test_jun_b     0.951            0.875     hopkind=2             0.896                       6          297.908              195.0     0.928       0.001
+src_zone_hour_speed                 mvp_log test_jun_a     0.949            0.924     hopkind=2             0.939                       1          296.362              155.0     0.932       0.000
+src_zone_hour_speed                 mvp_log test_jun_b     0.950            0.926     hopkind=2             0.942                       0          319.934              165.0     0.921       0.010
+src_zone_hour_speed              mvp_global test_jun_a     0.948            0.894     hopkind=2             0.912                       6          252.558              175.0     0.926       0.000
+src_zone_hour_speed              mvp_global test_jun_b     0.949            0.872     hopkind=2             0.894                       6          281.754              185.0     0.923       0.009
+src_zone_hour_speed               qr_groups test_jun_a     0.950            0.928     hopkind=2             0.943                       0          308.580              155.0     0.933       0.000
+src_zone_hour_speed               qr_groups test_jun_b     0.944            0.904     hopkind=2             0.923                       3          297.096              145.0     0.915       0.017
+src_zone_hour_speed                  qr_ogd test_jun_a     0.950            0.929     hopkind=2             0.944                       0          310.395              155.0     0.933       0.000
+src_zone_hour_speed                  qr_ogd test_jun_b     0.950            0.915     hopkind=2             0.932                       1          322.955              165.0     0.926       0.004
+src_zone_hour_speed        oracle(post-hoc) test_jun_a     0.950            0.895     hopkind=2             0.913                       6          260.940              180.0       NaN         NaN
+src_zone_hour_speed        oracle(post-hoc) test_jun_b     0.950            0.861     hopkind=2             0.883                       6          280.642              190.0       NaN         NaN
+
+[worst-group coverage] (min over groups with n >= min_group_n)
+segment                                      test_jun_a                                                  test_jun_b                                                
+dim                                         entropy_bin hgroup hopfirst hopkind nn_bin speed_bin   zone entropy_bin hgroup hopfirst hopkind nn_bin speed_bin   zone
+predictor           method                                                                                                                                         
+spatula_rule        fixed                         0.880  0.898    0.893   0.834  0.886     0.866  0.896       0.880  0.895    0.893   0.820  0.881     0.860  0.899
+src_zone_hour_speed aci_g0005                     0.909  0.940    0.930   0.890  0.917     0.938  0.944       0.914  0.943    0.935   0.875  0.917     0.935  0.945
+                    mondrian_hour_hop_speed       0.908  0.947    0.944   0.913  0.916     0.947  0.942       0.903  0.932    0.939   0.879  0.905     0.939  0.936
+                    mvp_global                    0.906  0.938    0.927   0.894  0.915     0.934  0.942       0.911  0.946    0.932   0.872  0.914     0.931  0.944
+                    mvp_log                       0.949  0.948    0.941   0.924  0.944     0.947  0.946       0.948  0.943    0.948   0.926  0.947     0.945  0.948
+                    qr_groups                     0.944  0.946    0.945   0.928  0.946     0.946  0.942       0.941  0.932    0.942   0.904  0.938     0.941  0.935
+                    qr_ogd                        0.950  0.949    0.947   0.929  0.948     0.949  0.949       0.949  0.944    0.950   0.915  0.947     0.949  0.949
+                    static                        0.907  0.938    0.928   0.895  0.915     0.935  0.942       0.902  0.937    0.926   0.855  0.906     0.925  0.938
+[eval] done (268s) -> results/porto_cctv_confirm_posthoc/geometry/r75
+
+densify+query:   0%|          | 0/267422 [00:00<?, ?it/s]
+densify+query:   3%|▎         | 7574/267422 [00:00<00:03, 75733.93it/s]
+densify+query:   6%|▌         | 15148/267422 [00:01<00:30, 8190.66it/s]
+densify+query:  10%|█         | 27024/267422 [00:03<00:29, 8127.32it/s]
+densify+query:  15%|█▌        | 40509/267422 [00:03<00:15, 14799.80it/s]
+densify+query:  18%|█▊        | 47179/267422 [00:04<00:23, 9471.98it/s] 
+densify+query:  20%|██        | 54092/267422 [00:06<00:28, 7516.60it/s]
+densify+query:  25%|██▌       | 67527/267422 [00:06<00:15, 12669.88it/s]
+densify+query:  28%|██▊       | 73998/267422 [00:07<00:20, 9251.49it/s] 
+densify+query:  30%|███       | 80694/267422 [00:08<00:24, 7593.31it/s]
+densify+query:  35%|███▌      | 93864/267422 [00:10<00:21, 8138.26it/s]
+densify+query:  40%|████      | 107587/267422 [00:10<00:12, 12701.92it/s]
+densify+query:  42%|████▏     | 113561/267422 [00:11<00:16, 9498.17it/s] 
+densify+query:  45%|████▌     | 120843/267422 [00:13<00:18, 8033.17it/s]
+densify+query:  50%|█████     | 134786/267422 [00:13<00:10, 13023.41it/s]
+densify+query:  53%|█████▎    | 141204/267422 [00:14<00:13, 9433.69it/s] 
+densify+query:  55%|█████▌    | 148377/267422 [00:15<00:15, 7927.23it/s]
+densify+query:  60%|██████    | 161790/267422 [00:17<00:12, 8397.52it/s]
+densify+query:  65%|██████▌   | 174255/267422 [00:17<00:07, 12435.10it/s]
+densify+query:  67%|██████▋   | 179855/267422 [00:18<00:09, 9072.98it/s] 
+densify+query:  71%|███████   | 189587/267422 [00:20<00:09, 8363.93it/s]
+densify+query:  76%|███████▌  | 203495/267422 [00:20<00:04, 13185.80it/s]
+densify+query:  78%|███████▊  | 209798/267422 [00:21<00:06, 9539.66it/s] 
+densify+query:  81%|████████▏ | 217638/267422 [00:22<00:06, 8252.96it/s]
+densify+query:  87%|████████▋ | 231527/267422 [00:23<00:02, 13229.95it/s]
+densify+query:  89%|████████▉ | 238048/267422 [00:24<00:02, 9798.86it/s] 
+densify+query:  92%|█████████▏| 245767/267422 [00:25<00:02, 8124.12it/s]
+densify+query:  97%|█████████▋| 258858/267422 [00:25<00:00, 12802.49it/s]
+densify+query:  99%|█████████▉| 265211/267422 [00:27<00:00, 9407.82it/s] 
+densify+query: 100%|██████████| 267422/267422 [00:27<00:00, 9840.67it/s]
+
+transitions:   0%|          | 0/257996 [00:00<?, ?it/s]
+transitions:   2%|▏         | 4323/257996 [00:00<00:05, 43225.82it/s]
+transitions:   3%|▎         | 8646/257996 [00:00<00:06, 41470.07it/s]
+transitions:   5%|▍         | 12811/257996 [00:00<00:05, 41543.94it/s]
+transitions:   7%|▋         | 17014/257996 [00:00<00:05, 41730.13it/s]
+transitions:   8%|▊         | 21265/257996 [00:00<00:05, 41875.23it/s]
+transitions:  10%|▉         | 25454/257996 [00:00<00:05, 41458.63it/s]
+transitions:  11%|█▏        | 29602/257996 [00:00<00:05, 41427.88it/s]
+transitions:  13%|█▎        | 33840/257996 [00:00<00:05, 41726.02it/s]
+transitions:  15%|█▍        | 38014/257996 [00:00<00:05, 41549.29it/s]
+transitions:  17%|█▋        | 42609/257996 [00:01<00:05, 42894.31it/s]
+transitions:  18%|█▊        | 47199/257996 [00:01<00:04, 43807.72it/s]
+transitions:  20%|██        | 51638/257996 [00:01<00:04, 43980.57it/s]
+transitions:  22%|██▏       | 56373/257996 [00:01<00:04, 44996.76it/s]
+transitions:  24%|██▎       | 60874/257996 [00:01<00:04, 44431.15it/s]
+transitions:  25%|██▌       | 65320/257996 [00:01<00:04, 43769.68it/s]
+transitions:  27%|██▋       | 69861/257996 [00:01<00:04, 44254.21it/s]
+transitions:  29%|██▉       | 74532/257996 [00:01<00:04, 44982.10it/s]
+transitions:  31%|███       | 79296/257996 [00:01<00:03, 45772.70it/s]
+transitions:  33%|███▎      | 83935/257996 [00:01<00:03, 45956.51it/s]
+transitions:  34%|███▍      | 88533/257996 [00:02<00:03, 45468.24it/s]
+transitions:  36%|███▌      | 93083/257996 [00:02<00:03, 44703.43it/s]
+transitions:  38%|███▊      | 97558/257996 [00:02<00:03, 44555.02it/s]
+transitions:  40%|███▉      | 102318/257996 [00:02<00:03, 45449.35it/s]
+transitions:  41%|████▏     | 107065/257996 [00:02<00:03, 46047.15it/s]
+transitions:  43%|████▎     | 111842/257996 [00:02<00:03, 46558.71it/s]
+transitions:  45%|████▌     | 116501/257996 [00:02<00:03, 45924.11it/s]
+transitions:  47%|████▋     | 121097/257996 [00:02<00:03, 44103.14it/s]
+transitions:  49%|████▊     | 125524/257996 [00:02<00:03, 43371.37it/s]
+transitions:  50%|█████     | 129943/257996 [00:02<00:02, 43605.74it/s]
+transitions:  52%|█████▏    | 134406/257996 [00:03<00:02, 43901.17it/s]
+transitions:  54%|█████▍    | 139215/257996 [00:03<00:02, 45132.48it/s]
+transitions:  56%|█████▌    | 143736/257996 [00:03<00:03, 36357.26it/s]
+transitions:  57%|█████▋    | 147747/257996 [00:03<00:02, 37309.81it/s]
+transitions:  59%|█████▉    | 151778/257996 [00:03<00:02, 38105.96it/s]
+transitions:  60%|██████    | 155746/257996 [00:03<00:02, 38362.68it/s]
+transitions:  62%|██████▏   | 159695/257996 [00:03<00:02, 38319.32it/s]
+transitions:  64%|██████▎   | 163904/257996 [00:03<00:02, 39391.98it/s]
+transitions:  65%|██████▌   | 167955/257996 [00:03<00:02, 39714.87it/s]
+transitions:  67%|██████▋   | 172590/257996 [00:04<00:02, 41653.65it/s]
+transitions:  69%|██████▊   | 177327/257996 [00:04<00:01, 43336.55it/s]
+transitions:  71%|███████   | 181963/257996 [00:04<00:01, 44231.29it/s]
+transitions:  72%|███████▏  | 186407/257996 [00:04<00:01, 44077.73it/s]
+transitions:  74%|███████▍  | 190830/257996 [00:04<00:01, 41834.14it/s]
+transitions:  76%|███████▌  | 195248/257996 [00:04<00:01, 42506.01it/s]
+transitions:  77%|███████▋  | 199901/257996 [00:04<00:01, 43670.95it/s]
+transitions:  79%|███████▉  | 204474/257996 [00:04<00:01, 44273.45it/s]
+transitions:  81%|████████  | 208957/257996 [00:04<00:01, 44424.58it/s]
+transitions:  83%|████████▎ | 213412/257996 [00:04<00:01, 42176.35it/s]
+transitions:  84%|████████▍ | 217661/257996 [00:05<00:00, 42180.02it/s]
+transitions:  86%|████████▌ | 222054/257996 [00:05<00:00, 42682.97it/s]
+transitions:  88%|████████▊ | 226650/257996 [00:05<00:00, 43640.34it/s]
+transitions:  90%|████████▉ | 231028/257996 [00:05<00:00, 33257.72it/s]
+transitions:  91%|█████████▏| 235548/257996 [00:05<00:00, 36158.07it/s]
+transitions:  93%|█████████▎| 239495/257996 [00:05<00:00, 35326.27it/s]
+transitions:  95%|█████████▍| 244037/257996 [00:05<00:00, 37948.01it/s]
+transitions:  96%|█████████▌| 248130/257996 [00:05<00:00, 38752.99it/s]
+transitions:  98%|█████████▊| 252522/257996 [00:06<00:00, 40191.63it/s]
+transitions: 100%|█████████▉| 257047/257996 [00:06<00:00, 41632.36it/s]
+transitions: 100%|██████████| 257996/257996 [00:06<00:00, 42058.00it/s]

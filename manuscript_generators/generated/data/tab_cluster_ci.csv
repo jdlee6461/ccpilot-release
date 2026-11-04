@@ -1,0 +1,14 @@
+# class: additional | source: results/porto_cctv_confirm_posthoc/cluster_ci/cluster_ci.csv @ 458641b | note: held-out period, evaluation seed 0, primary predictor, 25-group definition (n >= 200); number of groups whose 95% interval upper end is below the bar: Wilson (as in C1), percentile cluster bootstrap with clusters = taxi (427 in A, 425 in B) or = local day of exit (12 in A, 10 in B), 4,000 resamples within segment (posthoc_cluster.py)
+method,below94_A_wilson,below94_A_taxi,below94_A_day,below94_B_wilson,below94_B_taxi,below94_B_day,below95_A_wilson,below95_A_taxi,below95_A_day,below95_B_wilson,below95_B_taxi,below95_B_day
+static,6,6,6,8,7,5,12,10,10,19,18,14
+aci,4,4,5,5,5,5,10,10,10,8,8,8
+mondrian,3,3,3,6,6,4,10,9,9,20,19,18
+spatula,23,23,23,23,23,23,25,25,25,25,25,25
+citytrac095,0,0,0,0,0,0,1,1,0,3,3,0
+citytrac099,0,0,0,0,0,0,0,0,0,0,0,0
+qr_groups,0,0,0,3,3,1,13,11,11,24,24,20
+mvp_groups,0,0,0,0,0,0,7,6,5,6,4,3
+mvp_global,6,6,6,5,5,5,13,11,10,15,13,9
+qr_ogd,0,0,0,1,1,0,3,2,3,4,3,2
+mvp_log,0,0,0,0,0,0,7,5,6,7,5,2
+oracle,6,5,4,5,5,4,9,9,9,8,8,6

@@ -1,0 +1,26 @@
+# 사후 분석(확증 2 결과를 본 뒤 수행; exploratory, 집계와 산술만)
+start,scope,j,n_hops,n_state0,n_state1,n_state2,share_state0,share_state1,share_state2
+all,combined,2,188955,188955,0,0,1.0,0.0,0.0
+all,combined,3,167086,167086,0,0,1.0,0.0,0.0
+all,combined,4,142657,142657,0,0,1.0,0.0,0.0
+all,combined,5,118883,118883,0,0,1.0,0.0,0.0
+reacquired,combined,2,3605,3605,0,0,1.0,0.0,0.0
+reacquired,combined,3,3004,3004,0,0,1.0,0.0,0.0
+reacquired,combined,4,2405,2405,0,0,1.0,0.0,0.0
+reacquired,combined,5,1925,1925,0,0,1.0,0.0,0.0
+all,block1,2,84264,84264,0,0,1.0,0.0,0.0
+all,block1,3,74788,74788,0,0,1.0,0.0,0.0
+all,block1,4,63999,63999,0,0,1.0,0.0,0.0
+all,block1,5,53392,53392,0,0,1.0,0.0,0.0
+reacquired,block1,2,1475,1475,0,0,1.0,0.0,0.0
+reacquired,block1,3,1224,1224,0,0,1.0,0.0,0.0
+reacquired,block1,4,999,999,0,0,1.0,0.0,0.0
+reacquired,block1,5,767,767,0,0,1.0,0.0,0.0
+all,block2,2,104691,104691,0,0,1.0,0.0,0.0
+all,block2,3,92298,92298,0,0,1.0,0.0,0.0
+all,block2,4,78658,78658,0,0,1.0,0.0,0.0
+all,block2,5,65491,65491,0,0,1.0,0.0,0.0
+reacquired,block2,2,2130,2130,0,0,1.0,0.0,0.0
+reacquired,block2,3,1780,1780,0,0,1.0,0.0,0.0
+reacquired,block2,4,1406,1406,0,0,1.0,0.0,0.0
+reacquired,block2,5,1158,1158,0,0,1.0,0.0,0.0

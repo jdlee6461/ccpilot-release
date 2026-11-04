@@ -1,0 +1,439 @@
+macro,value,raw,source
+targetRecall,0.95,0.95,configs/porto_cctv_confirm.yaml: eval.target_recall | commit 729b651
+alphaTarget,0.05,0.050000000000000044,configs/porto_cctv_confirm.yaml: 1 - eval.target_recall | commit 729b651
+candRadius,2500,2500.0,configs/porto_cctv_confirm.yaml: eval.candidate_radius_m (metres) | commit 729b651
+shrinkLambda,20,20.0,configs/porto_cctv_confirm.yaml: eval.model.lam | commit 729b651
+shrinkFloor,\ensuremath{10^{-4}},0.0001,configs/porto_cctv_confirm.yaml: eval.model.eps | commit 729b651
+smoothWidthBins,1,1.0,configs/porto_cctv_confirm.yaml: eval.model.sigma_bins (bins) | commit 729b651
+binWidth,5,5.0,configs/porto_cctv_confirm.yaml: events.bin_s (seconds) | commit 729b651
+horizon,600,600.0,configs/porto_cctv_confirm.yaml: events.t_max_s (seconds) | commit 729b651
+feedbackFraction,0.3,0.3,configs/porto_cctv_confirm.yaml: eval.aci.feedback_fraction (rho) | commit 729b651
+aciWindow,2000,2000.0,configs/porto_cctv_confirm.yaml: eval.aci.window (W) | commit 729b651
+aciGamma,0.0005,0.0005,configs/porto_cctv_confirm.yaml: eval.aci_variants[name=aci_g0005].gamma (variant kept in post-hoc runs) | commit 729b651
+aciGammaAlt,0.001,0.001,configs/porto_cctv_confirm.yaml: eval.aci_variants[name=aci_g001].gamma | commit 729b651
+minCellHops,200,200.0,configs/porto_cctv_confirm.yaml: eval.min_group_n (Mondrian fallback and group reporting minimum) | commit 729b651
+qrSubsampleMax,\ensuremath{8\times10^{4}},80000.0,configs/porto_cctv_confirm.yaml: eval.multigroup.qr_max_n | commit 729b651
+mvpBuckets,40,40.0,configs/porto_cctv_confirm.yaml: mvp_variants[mvp_log].m | commit 729b651
+mvpR,1000,1000.0,ccpilot/multigroup.py: MVP.__init__ default r (not set in config) | commit dcc7f9f
+mvpEpsilon,1,1.0,ccpilot/multigroup.py: MVP.__init__ default eps (not set in config) | commit dcc7f9f
+aMin,0.002,0.002,configs/porto_cctv_confirm.yaml: mvp_variants[mvp_log].a_min | commit 729b651
+qrOgdGamma,0.005,0.005,configs/porto_cctv_confirm.yaml: eval.multigroup.qr_ogd.gamma | commit 729b651
+qrOgdClip,3,3.0,"configs/porto_cctv_confirm.yaml: eval.multigroup.qr_ogd.clip (offsets clipped to [-clip, clip]) | commit 729b651"
+numGroups,25,25.0,configs/porto_cctv_confirm.yaml: eval.multigroup.dims + 'all'; levels counted in results/porto_cctv_confirm_regrade/hits.parquet (test hops)
+groupsPerHop,7,7.0,configs/porto_cctv_confirm.yaml: 1 + len(eval.multigroup.dims) | commit 729b651
+numAttributes,6,6.0,configs/porto_cctv_confirm.yaml: len(eval.multigroup.dims) | commit 729b651
+productCells,3840,3840.0,"product of levels of ['hgroup', 'hopkind', 'speed_bin', 'zone', 'entropy_bin', 'nn_bin'] in results/porto_cctv_confirm_regrade/hits.parquet: 5*3*4*4*4*4"
+mondrianCells,40,40.0,"configs/porto_cctv_confirm.yaml: eval.mondrian.mondrian_hour_hop_speed=['hgroup', 'hopfirst', 'speed_bin']; product of levels in results/porto_cctv_confirm_regrade/hits.parquet"
+mvpBucketWidth,0.025,0.025,1/m
+alphaMinusBucket,0.025,0.025000000000000043,"alpha - 1/m (uniform scale, one bucket below the target miss level)"
+alphaPlusBucket,0.075,0.07500000000000004,alpha + 1/m (one bucket above)
+logBucketFactor,0.856,0.8561024696578493,a_min^(1/m)
+kEps,3.39,3.387735535200845,ccpilot/multigroup.py: _K_eps(eps) = sum_{n<1e6} f(n)^-2 + integral tail 1/(eps ln(1e6)^eps) | commit dcc7f9f
+etaGroups,0.0319,0.031929985701902565,"sqrt(ln(|G| m) / (2 K_eps |G| m)), |G| = numGroups (ccpilot/multigroup.py MVP eta='theory')"
+etaGlobal,0.1167,0.1166668543920979,same with |G| = 1 (mvp_global)
+mvpConstC,306,305.9519441159282,"c = sqrt(4 K_eps |G| m ln(|G| m)), natural log"
+mvpBoundAtTenFour,28.18,28.181236226601847,"c f(n)/n at n = 1e+04, f(n) = sqrt((n+1) ln^(1+eps)(n+2)), natural log"
+mvpBoundAtTenSix,4.23,4.226885039507513,"c f(n)/n at n = 1e+06, f(n) = sqrt((n+1) ln^(1+eps)(n+2)), natural log"
+mvpBoundAtTenSeven,1.56,1.5594339073163879,"c f(n)/n at n = 1e+07, f(n) = sqrt((n+1) ln^(1+eps)(n+2)), natural log"
+ablUnifNoCapRatioFirst,1.80,1.801981084200364,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=unif_nocap; mean over test segments of cost_over_oracle | commit 73e3519"
+ablUnifNoCapRatioSecond,2.05,2.046007696724656,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=unif_nocap; mean over test segments of cost_over_oracle | commit 73e3519"
+ablUnifNoCapRatioMean,1.92,1.92399439046251,mean of the two exploratory-period values above
+ablUnifCapRatioFirst,1.47,1.4739725304749929,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=unif_cap002; mean over test segments of cost_over_oracle | commit 73e3519"
+ablUnifCapRatioSecond,1.83,1.8331961201111258,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=unif_cap002; mean over test segments of cost_over_oracle | commit 73e3519"
+ablUnifCapRatioMean,1.65,1.6535843252930593,mean of the two exploratory-period values above
+ablLogCapRatioFirst,1.15,1.1477750639665945,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=mvp_log; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogCapRatioSecond,1.22,1.2201236695767321,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=mvp_log; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogCapRatioMean,1.18,1.1839493667716634,mean of the two exploratory-period values above
+ablLogNoCapRatioFirst,1.16,1.1646706154012842,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap1e6; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogNoCapRatioSecond,1.24,1.2352701426493,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap1e6; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogNoCapRatioMean,1.20,1.199970379025292,mean of the two exploratory-period values above
+ablLogNoCapMatchedRatioFirst,1.15,1.1503565130408795,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap1e6_m89; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogNoCapMatchedRatioSecond,1.22,1.2222601915325495,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap1e6_m89; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogNoCapMatchedRatioMean,1.19,1.1863083522867144,mean of the two exploratory-period values above
+ablLogCapLowRatioFirst,1.14,1.141853935144868,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap001; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogCapLowRatioSecond,1.22,1.2206928982736365,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap001; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogCapLowRatioMean,1.18,1.1812734167092522,mean of the two exploratory-period values above
+ablLogCapHighRatioFirst,1.14,1.1441423413713188,"results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap005; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogCapHighRatioSecond,1.20,1.2004355946349288,"results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv: mode=normal, method=log_cap005; mean over test segments of cost_over_oracle | commit 73e3519"
+ablLogCapHighRatioMean,1.17,1.1722889680031239,mean of the two exploratory-period values above
+ablCapSharePctFirst,50.1,0.5013841872139342,"(unif_nocap - unif_cap002) / (unif_nocap - mvp_log), cost_over_oracle, mode=normal, results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv"
+ablResolutionSharePctFirst,49.9,0.49861581278606576,"(unif_cap002 - mvp_log) / (unif_nocap - mvp_log), cost_over_oracle, mode=normal, results/porto_cctv_posthoc/scale_ablation/scale_ablation_summary.csv"
+ablCapSharePctSecond,25.8,0.2576773125743158,"(unif_nocap - unif_cap002) / (unif_nocap - mvp_log), cost_over_oracle, mode=normal, results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv"
+ablResolutionSharePctSecond,74.2,0.7423226874256842,"(unif_cap002 - mvp_log) / (unif_nocap - mvp_log), cost_over_oracle, mode=normal, results/porto_cctv_rep_posthoc/scale_ablation/scale_ablation_summary.csv"
+ablCapSharePctMean,36.5,0.3653967752135232,"(unif_nocap - unif_cap002) / (unif_nocap - mvp_log), cost_over_oracle, mode=normal, mean of the period means"
+ablResolutionSharePctMean,63.5,0.6346032247864768,"(unif_cap002 - mvp_log) / (unif_nocap - mvp_log), cost_over_oracle, mode=normal, mean of the period means"
+tauMinBelowZeroPct,99.3,0.9934688679555994,"results/porto_cctv_confirm_posthoc/taumin_nature/taumin_nature.csv: scenario=none, a_min=0.002; A_zero_given_below (cells below tau_min never observed at any level) | commit d46cfd2"
+tauMinZeroBelowPct,88.2,0.8822450868016944,"results/porto_cctv_confirm_posthoc/taumin_nature/taumin_nature.csv: scenario=none, a_min=0.002; B_below_given_zero (never-observed cells below tau_min) | commit d46cfd2"
+reacqSharePct,0.4,0.0037390092806146146,"results/porto_cctv_confirm/conditional_coverage.csv: predictor=src_zone_hour_speed, method=static, dim=hopkind; sum n(group 2) / sum n over test_jun_a and test_jun_b (= share of test hops with hopkind 2) | commit e77fb0a"
+seedCOnePassMvpLog,3,3.0,results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_criteria.csv: label=mvp_log; sum of C1 over seeds | commit 221ae36
+seedCOnePassQrOgd,2,2.0,results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_criteria.csv: label=qr_ogd; sum of C1 over seeds | commit 221ae36
+seedCount,5,5.0,results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_criteria.csv: number of evaluation seeds | commit 221ae36
+gpsInterval,15,15.0,configs/porto_cctv_confirm.yaml: porto.gps_interval_s (seconds) | commit 729b651
+maxSpeed,50,50.0,"configs/porto_cctv_confirm.yaml: porto.max_speed_mps (trips with a faster step are dropped whole, ccpilot/porto.py) | commit 729b651"
+interpStep,1,1.0,configs/porto_cctv_confirm.yaml: events.interp_step_s (seconds) | commit 729b651
+numCamerasRaw,239,239.0,"data/porto/porto_cctv.json (SHA-256 a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1; Porto Open Data dataset 9320b636-ef46-4200-9138-f7bf162d249b, Internet Archive snapshot 2025-07-09: https://web.archive.org/web/20250709151743/https://opendata.porto.digital/dataset/9320b636-ef46-4200-9138-f7bf162d249b/resource/17b0bdd2-fd58-4b81-a8e7-a4e6fb222154/download/ext-sistema-de-gestao-de-trafego-cctv-geojson.geojson): number of features | commit 729b651"
+numTunnelCameras,1,1.0,"data/porto/porto_cctv.json (SHA-256 a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1; Porto Open Data dataset 9320b636-ef46-4200-9138-f7bf162d249b, Internet Archive snapshot 2025-07-09: https://web.archive.org/web/20250709151743/https://opendata.porto.digital/dataset/9320b636-ef46-4200-9138-f7bf162d249b/resource/17b0bdd2-fd58-4b81-a8e7-a4e6fb222154/download/ext-sistema-de-gestao-de-trafego-cctv-geojson.geojson): features with em_tunel == 'Sim' | commit 729b651"
+numTunnelCamerasWord,one,1.0,"data/porto/porto_cctv.json (SHA-256 a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1; Porto Open Data dataset 9320b636-ef46-4200-9138-f7bf162d249b, Internet Archive snapshot 2025-07-09: https://web.archive.org/web/20250709151743/https://opendata.porto.digital/dataset/9320b636-ef46-4200-9138-f7bf162d249b/resource/17b0bdd2-fd58-4b81-a8e7-a4e6fb222154/download/ext-sistema-de-gestao-de-trafego-cctv-geojson.geojson): features with em_tunel == 'Sim', spelled out | commit 729b651"
+numNonTunnelCameras,114,114.0,"data/porto/porto_cctv.json (SHA-256 a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1; Porto Open Data dataset 9320b636-ef46-4200-9138-f7bf162d249b, Internet Archive snapshot 2025-07-09: https://web.archive.org/web/20250709151743/https://opendata.porto.digital/dataset/9320b636-ef46-4200-9138-f7bf162d249b/resource/17b0bdd2-fd58-4b81-a8e7-a4e6fb222154/download/ext-sistema-de-gestao-de-trafego-cctv-geojson.geojson): features with em_tunel == 'Não' | commit 729b651"
+numTunnelUnknownCameras,124,124.0,"data/porto/porto_cctv.json (SHA-256 a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1; Porto Open Data dataset 9320b636-ef46-4200-9138-f7bf162d249b, Internet Archive snapshot 2025-07-09: https://web.archive.org/web/20250709151743/https://opendata.porto.digital/dataset/9320b636-ef46-4200-9138-f7bf162d249b/resource/17b0bdd2-fd58-4b81-a8e7-a4e6fb222154/download/ext-sistema-de-gestao-de-trafego-cctv-geojson.geojson): features without an em_tunel value (null); ccpilot/cameras.py keeps them (only 'Sim' is excluded) | commit 729b651"
+mergeRadius,50,50.0,configs/porto_cctv_confirm.yaml: cameras.merge_radius_m (complete linkage) | commit 729b651
+numSites,176,176.0,"work/porto_cctv_confirm/cameras.csv rows (= load_cctv_geojson output of data/porto/porto_cctv.json (SHA-256 a0bd2e31799fd9542bfd6069b56bda66b0b85eac313a591971261f3c2b5b88d1; Porto Open Data dataset 9320b636-ef46-4200-9138-f7bf162d249b, Internet Archive snapshot 2025-07-09: https://web.archive.org/web/20250709151743/https://opendata.porto.digital/dataset/9320b636-ef46-4200-9138-f7bf162d249b/resource/17b0bdd2-fd58-4b81-a8e7-a4e6fb222154/download/ext-sistema-de-gestao-de-trafego-cctv-geojson.geojson); work/ is not tracked)"
+cameraRadius,50,50.0,configs/porto_cctv_confirm.yaml: events.camera_radius_m | commit 729b651
+numBins,120,120.0,ceil(events.t_max_s / events.bin_s) | commit 729b651
+feedbackPct,30,30.0,configs/porto_cctv_confirm.yaml: 100 * eval.aci.feedback_fraction | commit 729b651
+groupBar,0.94,0.94,configs/porto_cctv_confirm.yaml: eval.group_bar | commit 729b651
+costFactor,1.20,1.2,select_primary.py: COST_FACTOR (selection rule 2 / criterion C2) | commit 8590244
+minGroupHops,200,200.0,configs/porto_cctv_confirm.yaml: eval.min_group_n (groups reported / judged) | commit 729b651
+spatulaSharePct,5,5.0,configs/porto_cctv_confirm.yaml: 100 * eval.spatula.s_thresh | commit 729b651
+spatulaPercentileOrd,98th,98.0,configs/porto_cctv_confirm.yaml: 100 * eval.spatula.t_quantile (ordinal) | commit 729b651
+citytracMinN,30,30.0,ccpilot/posthoc.py: reduce_cfg citytrac min_n (confirmation config has no citytrac entry) | commit f484051
+citytracTargetLow,0.95,0.95,ccpilot/posthoc.py: reduce_cfg citytrac targets[0] | commit f484051
+citytracTargetHigh,0.99,0.99,ccpilot/posthoc.py: reduce_cfg citytrac targets[1] | commit f484051
+sensFeedbackMinPct,10,10.0,posthoc_sensitivity.py: SCENARIOS min feedback_fraction x 100 | commit e17fbb0
+sensFeedbackMaxPct,100,100.0,posthoc_sensitivity.py: SCENARIOS max feedback_fraction x 100 | commit e17fbb0
+sensDetLow,0.90,0.9,posthoc_sensitivity.py: SCENARIOS min p_det | commit e17fbb0
+sensDetHigh,0.95,0.95,posthoc_sensitivity.py: SCENARIOS max p_det | commit e17fbb0
+outageRandLowPct,10,10.0,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: scenario rand10 (share of sites, %) | commit 2bfbd9f"
+outageRandMidPct,20,20.0,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: scenario rand20 (share of sites, %) | commit 2bfbd9f"
+outageRandHighPct,30,30.0,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: scenario rand30 (share of sites, %) | commit 2bfbd9f"
+regionSites,20,20.0,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: scenario=region_fixed, n_offline | commit 2bfbd9f"
+outageSiteSeeds,5,5.0,results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: distinct site_seed of rand scenarios | commit 2bfbd9f
+hopsExplOneTrain,"595{,}486",595486.0,"work/porto_cctv/transitions.parquet: non-exit hops with t_exit in ['2013-11-04', '2013-12-02'] (configs/porto_cctv.yaml splits)"
+hopsExplOneCal,"150{,}646",150646.0,"work/porto_cctv/transitions.parquet: non-exit hops with t_exit in ['2013-12-02', '2013-12-09'] (configs/porto_cctv.yaml splits)"
+hopsExplOneSame,"314{,}736",314736.0,"work/porto_cctv/transitions.parquet: non-exit hops with t_exit in ['2013-12-09', '2013-12-23'] (configs/porto_cctv.yaml splits)"
+hopsExplOneHoliday,"287{,}167",287167.0,"work/porto_cctv/transitions.parquet: non-exit hops with t_exit in ['2013-12-23', '2014-01-06'] (configs/porto_cctv.yaml splits)"
+hopsExplTwoTrain,"611{,}775",611775.0,"work/porto_cctv_rep/transitions.parquet: non-exit hops with t_exit in ['2014-02-03', '2014-03-03'] (configs/porto_cctv_replication.yaml splits)"
+hopsExplTwoCal,"153{,}782",153782.0,"work/porto_cctv_rep/transitions.parquet: non-exit hops with t_exit in ['2014-03-03', '2014-03-10'] (configs/porto_cctv_replication.yaml splits)"
+hopsExplTwoMar,"282{,}857",282857.0,"work/porto_cctv_rep/transitions.parquet: non-exit hops with t_exit in ['2014-03-10', '2014-03-24'] (configs/porto_cctv_replication.yaml splits)"
+hopsExplTwoApr,"458{,}954",458954.0,"work/porto_cctv_rep/transitions.parquet: non-exit hops with t_exit in ['2014-03-24', '2014-04-14'] (configs/porto_cctv_replication.yaml splits)"
+hopsExplTwoEaster,"292{,}510",292510.0,"work/porto_cctv_rep/transitions.parquet: non-exit hops with t_exit in ['2014-04-14', '2014-04-28'] (configs/porto_cctv_replication.yaml splits)"
+hopsHeldTrain,"706{,}619",706619.0,"work/porto_cctv_confirm/transitions.parquet: non-exit hops with t_exit in ['2014-05-05', '2014-06-02'] (configs/porto_cctv_confirm.yaml splits)"
+hopsHeldCal,"198{,}919",198919.0,"work/porto_cctv_confirm/transitions.parquet: non-exit hops with t_exit in ['2014-06-02', '2014-06-09'] (configs/porto_cctv_confirm.yaml splits)"
+hopsHeldA,"264{,}918",264918.0,"work/porto_cctv_confirm/transitions.parquet: non-exit hops with t_exit in ['2014-06-09', '2014-06-21'] (configs/porto_cctv_confirm.yaml splits)"
+hopsHeldB,"243{,}238",243238.0,"work/porto_cctv_confirm/transitions.parquet: non-exit hops with t_exit in ['2014-06-21', '2014-07-01'] (configs/porto_cctv_confirm.yaml splits)"
+heldMvpLogWorstA,0.942,0.9421252371916508,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mvp_log, test_jun_a; worst_cov | commit ee92655"
+heldMvpLogBelowBarA,0,0.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mvp_log, test_jun_a; n_sig_below_0.94 | commit ee92655"
+heldMvpLogBelowTargetA,7,7.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mvp_log, test_jun_a; n_sig_below_0.95 | commit ee92655"
+heldMvpLogWorstB,0.927,0.9267139479905436,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mvp_log, test_jun_b; worst_cov | commit ee92655"
+heldMvpLogBelowBarB,0,0.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mvp_log, test_jun_b; n_sig_below_0.94 | commit ee92655"
+heldMvpLogBelowTargetB,7,7.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mvp_log, test_jun_b; n_sig_below_0.95 | commit ee92655"
+heldQrOgdWorstA,0.943,0.9430740037950665,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_ogd, test_jun_a; worst_cov | commit ee92655"
+heldQrOgdBelowBarA,0,0.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_ogd, test_jun_a; n_sig_below_0.94 | commit ee92655"
+heldQrOgdBelowTargetA,3,3.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_ogd, test_jun_a; n_sig_below_0.95 | commit ee92655"
+heldQrOgdWorstB,0.921,0.9208037825059102,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_ogd, test_jun_b; worst_cov | commit ee92655"
+heldQrOgdBelowBarB,1,1.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_ogd, test_jun_b; n_sig_below_0.94 | commit ee92655"
+heldQrOgdBelowTargetB,4,4.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_ogd, test_jun_b; n_sig_below_0.95 | commit ee92655"
+heldStaticWorstA,0.907,0.9070208728652752,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, static, test_jun_a; worst_cov | commit ee92655"
+heldStaticBelowBarA,6,6.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, static, test_jun_a; n_sig_below_0.94 | commit ee92655"
+heldStaticBelowTargetA,12,12.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, static, test_jun_a; n_sig_below_0.95 | commit ee92655"
+heldStaticWorstB,0.870,0.8699763593380615,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, static, test_jun_b; worst_cov | commit ee92655"
+heldStaticBelowBarB,8,8.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, static, test_jun_b; n_sig_below_0.94 | commit ee92655"
+heldStaticBelowTargetB,19,19.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, static, test_jun_b; n_sig_below_0.95 | commit ee92655"
+heldAciWorstA,0.904,0.9041745730550284,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, aci_g0005, test_jun_a; worst_cov | commit ee92655"
+heldAciBelowBarA,4,4.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, aci_g0005, test_jun_a; n_sig_below_0.94 | commit ee92655"
+heldAciBelowTargetA,10,10.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, aci_g0005, test_jun_a; n_sig_below_0.95 | commit ee92655"
+heldAciWorstB,0.881,0.8806146572104019,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, aci_g0005, test_jun_b; worst_cov | commit ee92655"
+heldAciBelowBarB,5,5.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, aci_g0005, test_jun_b; n_sig_below_0.94 | commit ee92655"
+heldAciBelowTargetB,8,8.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, aci_g0005, test_jun_b; n_sig_below_0.95 | commit ee92655"
+heldMondrianWorstA,0.919,0.918702958296548,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mondrian_hour_hop_speed, test_jun_a; worst_cov | commit ee92655"
+heldMondrianBelowBarA,3,3.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mondrian_hour_hop_speed, test_jun_a; n_sig_below_0.94 | commit ee92655"
+heldMondrianBelowTargetA,10,10.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mondrian_hour_hop_speed, test_jun_a; n_sig_below_0.95 | commit ee92655"
+heldMondrianWorstB,0.885,0.8853427895981087,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mondrian_hour_hop_speed, test_jun_b; worst_cov | commit ee92655"
+heldMondrianBelowBarB,6,6.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mondrian_hour_hop_speed, test_jun_b; n_sig_below_0.94 | commit ee92655"
+heldMondrianBelowTargetB,20,20.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, mondrian_hour_hop_speed, test_jun_b; n_sig_below_0.95 | commit ee92655"
+heldQrGroupsWorstA,0.942,0.9421252371916508,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_groups, test_jun_a; worst_cov | commit ee92655"
+heldQrGroupsBelowBarA,0,0.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_groups, test_jun_a; n_sig_below_0.94 | commit ee92655"
+heldQrGroupsBelowTargetA,13,13.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_groups, test_jun_a; n_sig_below_0.95 | commit ee92655"
+heldQrGroupsWorstB,0.915,0.9148936170212766,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_groups, test_jun_b; worst_cov | commit ee92655"
+heldQrGroupsBelowBarB,3,3.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_groups, test_jun_b; n_sig_below_0.94 | commit ee92655"
+heldQrGroupsBelowTargetB,24,24.0,"results/porto_cctv_confirm_regrade/regrade_summary.csv: prereg_25, qr_groups, test_jun_b; n_sig_below_0.95 | commit ee92655"
+heldMvpLogCostRatioA,1.183,1.18301109103177,"results/porto_cctv_confirm/summary.csv: mvp_log cost_mean_cam_s / oracle(post-hoc), test_jun_a | commit e77fb0a"
+heldMvpLogCostRatioB,1.171,1.1709741741902335,"results/porto_cctv_confirm/summary.csv: mvp_log cost / oracle, test_jun_b | commit e77fb0a"
+heldMvpLogCostRatioMean,1.177,1.1769926326110016,"results/porto_cctv_confirm/summary.csv: mvp_log mean over test_jun_a, test_jun_b of cost / oracle (criterion C2) | commit e77fb0a"
+heldMvpLogCostRatioMeanShort,1.18,1.1769926326110016,"results/porto_cctv_confirm/summary.csv: mvp_log mean over test_jun_a, test_jun_b of cost / oracle (criterion C2), 2 decimals | commit e77fb0a"
+heldQrOgdCostRatioA,1.196,1.1964802707165527,"results/porto_cctv_confirm/summary.csv: qr_ogd cost_mean_cam_s / oracle(post-hoc), test_jun_a | commit e77fb0a"
+heldQrOgdCostRatioB,1.181,1.1809121783045573,"results/porto_cctv_confirm/summary.csv: qr_ogd cost / oracle, test_jun_b | commit e77fb0a"
+heldQrOgdCostRatioMean,1.189,1.188696224510555,"results/porto_cctv_confirm/summary.csv: qr_ogd mean over test_jun_a, test_jun_b of cost / oracle (criterion C2) | commit e77fb0a"
+explMvpLogCostRatioMean,1.19,1.1911842437434068,results/porto_cctv/summary.csv + results/porto_cctv_rep/summary.csv: mvp_log mean over the five exploratory segments of cost_mean_cam_s / oracle(post-hoc) (select_primary.py rule 2) | commit 729b651
+seedCTwoPassMvpLog,5,5.0,results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_all.csv: label=mvp_log; seeds with mean cost_over_oracle <= costFactor | commit 221ae36
+seedCTwoPassQrOgd,5,5.0,results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_all.csv: label=qr_ogd; seeds with mean cost_over_oracle <= costFactor | commit 221ae36
+seedReacqMvpLogMin,0.909,0.9089834515366431,"results/porto_cctv_confirm_posthoc/seeds_prereg25/seed_{k}/hits.parquet: mvp_log recall of hopkind=2 in test_jun_b, min over seeds 0-4 (hits.parquet untracked; from posthoc_seeds.py --groups prereg_25)"
+seedReacqMvpLogMax,0.928,0.9278959810874704,"results/porto_cctv_confirm_posthoc/seeds_prereg25/seed_{k}/hits.parquet: same, max over seeds"
+frontierRefRatioA,1.18,1.18301109103177,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_a, mvp_log ref cost ratio | commit 221ae36"
+frontierStaticWorstAtRefA,0.917,0.9171625442076994,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_a, static, worst_group_at_ref_cost | commit 221ae36"
+frontierStaticCostNoSigA,1.69,1.6858274238812685,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_a, static, min_cost_ratio_no_sig_group | commit 221ae36"
+frontierCitytracWorstAtRefA,0.888,0.8882434190922778,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_a, citytrac, worst_group_at_ref_cost | commit 221ae36"
+frontierCitytracCostNoSigA,2.59,2.5881500746863075,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_a, citytrac, min_cost_ratio_no_sig_group | commit 221ae36"
+frontierRefRatioB,1.17,1.1709741741902335,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_b, mvp_log ref cost ratio | commit 221ae36"
+frontierStaticWorstAtRefB,0.884,0.8842110383940841,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_b, static, worst_group_at_ref_cost | commit 221ae36"
+frontierStaticCostNoSigB,2.29,2.2925113889448028,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_b, static, min_cost_ratio_no_sig_group | commit 221ae36"
+frontierCitytracWorstAtRefB,0.874,0.8737737092807938,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_b, citytrac, worst_group_at_ref_cost | commit 221ae36"
+frontierCitytracCostNoSigB,2.41,2.41080014452451,"results/porto_cctv_confirm_posthoc/frontier_prereg25/cost_matched.csv: test_jun_b, citytrac, min_cost_ratio_no_sig_group | commit 221ae36"
+frontierStaticRecallGainPpA,0.7,0.007059535975632358,"results/porto_cctv_confirm_posthoc/frontier_prereg25/frontier.csv: test_jun_a; static coverage interpolated (linear in cost_over_oracle) at mvp_log@0.95 cost minus mvp_log coverage, pp | commit 221ae36"
+frontierStaticRecallGainPpB,0.6,0.006074858804608785,"results/porto_cctv_confirm_posthoc/frontier_prereg25/frontier.csv: test_jun_b; static coverage interpolated (linear in cost_over_oracle) at mvp_log@0.95 cost minus mvp_log coverage, pp | commit 221ae36"
+ablUnifNoCapRatioSegMean,1.95,1.9483970517149392,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+ablUnifCapRatioSegMean,1.69,1.6895066842566728,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+ablLogCapRatioSegMean,1.19,1.1911842273326771,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+ablLogNoCapRatioSegMean,1.21,1.2070303317500937,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+ablLogNoCapMatchedRatioSegMean,1.19,1.1934987201358815,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+ablLogCapLowRatioSegMean,1.19,1.1891573130221291,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+ablLogCapHighRatioSegMean,1.18,1.1779182933294847,"mean over all five exploratory test segments (both scale_ablation_summary.csv, mode=normal) of cost_over_oracle"
+numTripsFile,"1,710,670",1710670.0,data/porto/train.csv: number of rows (trips) (data file not tracked; ECML/PKDD 2015 / UCI 339)
+numTaxisFile,448,448.0,data/porto/train.csv: distinct TAXI_ID
+numTaxisDescribed,442,442.0,"UCI Machine Learning Repository dataset 339 description, 'all the 442 taxis' (https://archive.ics.uci.edu/dataset/339, retrieved 2026-09-30); not computed from files"
+minTripPoints,3,3.0,ccpilot/porto.py: trips with len(pts) < this are dropped | commit ddae528
+minTripPointsWord,three,3.0,"same as minTripPoints, spelled out | commit ddae528"
+aMinLow,0.001,0.001,posthoc_scale_ablation.py: VARIANTS log_cap001 a_min | commit 73e3519
+aMinHigh,0.005,0.005,posthoc_scale_ablation.py: VARIANTS log_cap005 a_min | commit 73e3519
+selQrOgdMinWorst,0.920,0.9202412868632708,"results/porto_cctv_regrade/regrade_summary.csv + results/porto_cctv_rep_regrade/regrade_summary.csv: prereg_25, qr_ogd; min of worst_cov over the five exploratory segments (identical to the as-run value in results/porto_cctv*/summary.csv) | commit 71036b0"
+selQrGroupsMinWorst,0.910,0.9099249374478732,"results/porto_cctv_regrade/regrade_summary.csv + results/porto_cctv_rep_regrade/regrade_summary.csv: prereg_25, qr_groups; min of worst_cov over the five exploratory segments (identical to the as-run value in results/porto_cctv*/summary.csv) | commit 71036b0"
+initOutageRandLowPct,10,10.0,"results/porto_cctv_confirm_posthoc/outage/outage_scenarios.csv: scenario rand10 (initial outage, held-out only) | commit 750165d"
+initOutageRandMidPct,20,20.0,"results/porto_cctv_confirm_posthoc/outage/outage_scenarios.csv: scenario rand20 (initial outage, held-out only) | commit 750165d"
+initOutageRandHighPct,30,30.0,"results/porto_cctv_confirm_posthoc/outage/outage_scenarios.csv: scenario rand30 (initial outage, held-out only) | commit 750165d"
+initRegionSitesWord,six,6.0,"results/porto_cctv_confirm_posthoc/outage/outage_scenarios.csv: scenario=region, n_offline, spelled out | commit 750165d"
+outageSiteSeedsWord,five,5.0,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: distinct site_seed of rand scenarios, spelled out | commit 2bfbd9f"
+clipBaseRandMinGroups,1,1.0,"paper generated/checks/qrogd_*.csv (excl. qrogd_all.csv; scripts/verify_todos.py, paper commit d396738); per run x predictor: number of groups with reached_clip; kind=random, base predictor; min over runs"
+clipBaseRandMaxGroups,20,20.0,"paper generated/checks/qrogd_*.csv (excl. qrogd_all.csv; scripts/verify_todos.py, paper commit d396738); per run x predictor: number of groups with reached_clip; kind=random, base predictor; max over runs"
+clipBaseRandMedianGroups,10.5,10.5,"paper generated/checks/qrogd_*.csv (excl. qrogd_all.csv; scripts/verify_todos.py, paper commit d396738); per run x predictor: number of groups with reached_clip; kind=random, base predictor; median over runs"
+clipOtherMinGroupsWord,one,1.0,"paper generated/checks/qrogd_*.csv (excl. qrogd_all.csv; scripts/verify_todos.py, paper commit d396738); per run x predictor: number of groups with reached_clip; outage-aware predictor (all outage kinds) and base predictor under region / region_fixed; min over runs with reached_clip > 0, spelled out"
+clipOtherMaxGroupsWord,two,2.0,"paper generated/checks/qrogd_*.csv (excl. qrogd_all.csv; scripts/verify_todos.py, paper commit d396738); per run x predictor: number of groups with reached_clip; same runs; max over runs with reached_clip > 0, spelled out"
+heldOracleCostA,278.9,278.9381619972973,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=oracle, segment A; cost_cam_s = frozen summary oracle(post-hoc) cost_mean_cam_s (camera-seconds per hop)"
+heldOracleCostB,301.4,301.3609921147189,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=oracle, segment B; cost_cam_s = frozen summary oracle(post-hoc) cost_mean_cam_s (camera-seconds per hop)"
+heldCityTracNinetyFiveCostRatioA,2.59,2.5881500746863075,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac095, segment A; cost_ratio"
+heldCityTracNinetyFiveWorstA,0.945,0.9448820142974632,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac095, segment A; worst (25 groups, n >= 200)"
+heldCityTracNinetyFiveCostRatioB,2.41,2.41080014452451,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac095, segment B; cost_ratio"
+heldCityTracNinetyFiveWorstB,0.933,0.9326241134751772,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac095, segment B; worst (25 groups, n >= 200)"
+heldMvpGroupsCostRatioA,1.45,1.4491539701747354,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=mvp_groups, segment A; cost_ratio"
+heldMvpGroupsWorstA,0.942,0.9421252371916508,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=mvp_groups, segment A; worst (25 groups, n >= 200)"
+heldMvpGroupsCostRatioB,1.93,1.9310932261536435,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=mvp_groups, segment B; cost_ratio"
+heldMvpGroupsWorstB,0.931,0.9314420803782506,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=mvp_groups, segment B; worst (25 groups, n >= 200)"
+heldSpatulaCostRatioA,1.66,1.6585791684337958,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=spatula, segment A; cost_ratio"
+heldSpatulaWorstA,0.825,0.825426944971537,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=spatula, segment A; worst (25 groups, n >= 200)"
+heldSpatulaCostRatioB,1.55,1.5487264442543494,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=spatula, segment B; cost_ratio"
+heldSpatulaWorstB,0.824,0.8238770685579196,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=spatula, segment B; worst (25 groups, n >= 200)"
+sensFbTenWorstA,0.937,0.937381404174573,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb010, mvp_log; worst_A"
+sensFbTenBelowBarA,0,0.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb010, mvp_log; below94_A"
+sensFbTenWorstB,0.920,0.9196217494089834,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb010, mvp_log; worst_B"
+sensFbTenBelowBarB,1,1.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb010, mvp_log; below94_B"
+sensFbFullWorstA,0.943,0.9430740037950665,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100, mvp_log; worst_A"
+sensFbFullBelowBarA,0,0.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100, mvp_log; below94_A"
+sensFbFullWorstB,0.923,0.9231678486997636,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100, mvp_log; worst_B"
+sensFbFullBelowBarB,1,1.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100, mvp_log; below94_B"
+sensFbFullImmediateWorstA,0.936,0.9364326375711576,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100_nodelay, mvp_log; worst_A"
+sensFbFullImmediateBelowBarA,0,0.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100_nodelay, mvp_log; below94_A"
+sensFbFullImmediateWorstB,0.930,0.9302600472813238,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100_nodelay, mvp_log; worst_B"
+sensFbFullImmediateBelowBarB,0,0.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=fb100_nodelay, mvp_log; below94_B"
+sensDetNinetyFiveUnadjCostRatio,86.22,86.22377755921674,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det095, mvp_log; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyFiveAdjCostRatio,1.17,1.1693302832529209,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det095_adj, mvp_log; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyFiveStaticUnadjCostRatio,27.78,27.78106036941857,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det095, static; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyFiveStaticAdjCostRatio,0.89,0.8898642397490188,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det095_adj, static; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyFiveAdjRecallA,0.948,0.9480292014887624,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det095_adj, mvp_log; true-location recall_A"
+sensDetNinetyFiveAdjRecallB,0.948,0.9476233154359104,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det095_adj, mvp_log; true-location recall_B"
+sensDetNinetyUnadjCostRatio,136.98,136.98448954635694,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090, mvp_log; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyAdjCostRatio,1.17,1.1673671747499657,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090_adj, mvp_log; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyStaticUnadjCostRatio,136.98,136.98448954635694,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090, static; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyStaticAdjCostRatio,0.85,0.8485266125699031,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090_adj, static; mean over A, B of cost / hindsight oracle of the run without detection errors (Table 3 cost)"
+sensDetNinetyAdjRecallA,0.944,0.9438807480050432,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090_adj, mvp_log; true-location recall_A"
+sensDetNinetyAdjRecallB,0.944,0.9444083572468116,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090_adj, mvp_log; true-location recall_B"
+sensDetNinetyAdjBelowBarMaxWord,two,2.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090_adj, mvp_log; max over segments of below94 (2 A, 0 B), spelled out"
+sensDetNinetyAdjSegmentsBelowWord,one,1.0,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): scenario=det090_adj, mvp_log; number of segments with below94 > 0, spelled out"
+outTenBaseMvpLogRecall,0.932,0.9318588926623256,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, mvp_log; recall (B_late, site-seed mean)"
+outTenBaseMvpLogBelowBar,14.4,14.4,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, mvp_log; below94 (site-seed mean)"
+outTenBaseMvpLogCostRatio,14.87,14.867441558837893,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, mvp_log; cost / no-outage oracle"
+outTenBaseQrOgdRecall,0.934,0.9342258795939088,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, qr_ogd; recall (B_late, site-seed mean)"
+outTenBaseQrOgdBelowBar,12.0,12.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, qr_ogd; below94 (site-seed mean)"
+outTenBaseQrOgdCostRatio,9.90,9.900416278839112,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, qr_ogd; cost / no-outage oracle"
+outTenBaseAciRecall,0.949,0.9494590662481406,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, aci; recall (B_late, site-seed mean)"
+outTenBaseAciBelowBar,5.4,5.4,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, aci; below94 (site-seed mean)"
+outTenBaseAciCostRatio,34.19,34.18685607910156,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, aci; cost / no-outage oracle"
+outTenBaseStaticRecall,0.862,0.8621424343849533,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, static; recall (B_late, site-seed mean)"
+outTenBaseStaticBelowBar,25.0,25.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, static; below94 (site-seed mean)"
+outTenBaseStaticCostRatio,0.80,0.7951308369636536,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=base, static; cost / no-outage oracle"
+outTenAwareMvpLogRecall,0.945,0.945176655315476,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, mvp_log; recall (B_late, site-seed mean)"
+outTenAwareMvpLogBelowBar,2.4,2.4,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, mvp_log; below94 (site-seed mean)"
+outTenAwareMvpLogCostRatio,2.30,2.300402355194092,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, mvp_log; cost / no-outage oracle"
+outTenAwareQrOgdRecall,0.949,0.949170592363718,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, qr_ogd; recall (B_late, site-seed mean)"
+outTenAwareQrOgdBelowBar,2.4,2.4,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, qr_ogd; below94 (site-seed mean)"
+outTenAwareQrOgdCostRatio,2.05,2.0493704795837404,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, qr_ogd; cost / no-outage oracle"
+outTenAwareAciRecall,0.950,0.9498389899245542,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, aci; recall (B_late, site-seed mean)"
+outTenAwareAciBelowBar,4.0,4.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, aci; below94 (site-seed mean)"
+outTenAwareAciCostRatio,1.87,1.8732100486755368,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, aci; cost / no-outage oracle"
+outTenAwareStaticRecall,0.918,0.9184450546718034,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, static; recall (B_late, site-seed mean)"
+outTenAwareStaticBelowBar,22.4,22.4,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, static; below94 (site-seed mean)"
+outTenAwareStaticCostRatio,0.90,0.8967934131622314,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand10, predictor=outage-aware, static; cost / no-outage oracle"
+outTwentyBaseMvpLogRecall,0.923,0.9232688347632672,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, mvp_log; recall (B_late, site-seed mean)"
+outTwentyBaseMvpLogBelowBar,19.2,19.2,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, mvp_log; below94 (site-seed mean)"
+outTwentyBaseMvpLogCostRatio,19.80,19.80010032653809,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, mvp_log; cost / no-outage oracle"
+outTwentyBaseQrOgdRecall,0.922,0.9217599852569786,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, qr_ogd; recall (B_late, site-seed mean)"
+outTwentyBaseQrOgdBelowBar,21.6,21.6,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, qr_ogd; below94 (site-seed mean)"
+outTwentyBaseQrOgdCostRatio,17.07,17.069522857666016,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, qr_ogd; cost / no-outage oracle"
+outTwentyBaseAciRecall,0.950,0.9502299019602478,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, aci; recall (B_late, site-seed mean)"
+outTwentyBaseAciBelowBar,4.2,4.2,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, aci; below94 (site-seed mean)"
+outTwentyBaseAciCostRatio,45.49,45.490966796875,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, aci; cost / no-outage oracle"
+outTwentyBaseStaticRecall,0.820,0.8197626823364647,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, static; recall (B_late, site-seed mean)"
+outTwentyBaseStaticBelowBar,25.0,25.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, static; below94 (site-seed mean)"
+outTwentyBaseStaticCostRatio,0.72,0.7171661496162414,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=base, static; cost / no-outage oracle"
+outTwentyAwareMvpLogRecall,0.944,0.944418715168682,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, mvp_log; recall (B_late, site-seed mean)"
+outTwentyAwareMvpLogBelowBar,3.6,3.6,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, mvp_log; below94 (site-seed mean)"
+outTwentyAwareMvpLogCostRatio,3.30,3.3028810024261475,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, mvp_log; cost / no-outage oracle"
+outTwentyAwareQrOgdRecall,0.949,0.9490754926991956,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, qr_ogd; recall (B_late, site-seed mean)"
+outTwentyAwareQrOgdBelowBar,2.0,2.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, qr_ogd; below94 (site-seed mean)"
+outTwentyAwareQrOgdCostRatio,2.86,2.8591683864593507,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, qr_ogd; cost / no-outage oracle"
+outTwentyAwareAciRecall,0.950,0.9502605238393136,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, aci; recall (B_late, site-seed mean)"
+outTwentyAwareAciBelowBar,4.0,4.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, aci; below94 (site-seed mean)"
+outTwentyAwareAciCostRatio,2.83,2.826274037361145,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, aci; cost / no-outage oracle"
+outTwentyAwareStaticRecall,0.898,0.8980034796762062,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, static; recall (B_late, site-seed mean)"
+outTwentyAwareStaticBelowBar,24.6,24.6,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, static; below94 (site-seed mean)"
+outTwentyAwareStaticCostRatio,0.87,0.8695868015289306,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand20, predictor=outage-aware, static; cost / no-outage oracle"
+outThirtyBaseMvpLogRecall,0.885,0.885218566322149,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, mvp_log; recall (B_late, site-seed mean)"
+outThirtyBaseMvpLogBelowBar,22.8,22.8,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, mvp_log; below94 (site-seed mean)"
+outThirtyBaseMvpLogCostRatio,21.49,21.487093734741208,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, mvp_log; cost / no-outage oracle"
+outThirtyBaseQrOgdRecall,0.903,0.90296252562945,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, qr_ogd; recall (B_late, site-seed mean)"
+outThirtyBaseQrOgdBelowBar,23.6,23.6,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, qr_ogd; below94 (site-seed mean)"
+outThirtyBaseQrOgdCostRatio,29.67,29.670253372192384,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, qr_ogd; cost / no-outage oracle"
+outThirtyBaseAciRecall,0.950,0.9500546688821568,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, aci; recall (B_late, site-seed mean)"
+outThirtyBaseAciBelowBar,4.6,4.6,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, aci; below94 (site-seed mean)"
+outThirtyBaseAciCostRatio,67.47,67.47262878417969,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, aci; cost / no-outage oracle"
+outThirtyBaseStaticRecall,0.757,0.7573221826585032,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, static; recall (B_late, site-seed mean)"
+outThirtyBaseStaticBelowBar,25.0,25.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, static; below94 (site-seed mean)"
+outThirtyBaseStaticCostRatio,0.66,0.6623414754867553,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=base, static; cost / no-outage oracle"
+outThirtyAwareMvpLogRecall,0.944,0.9439433356221956,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, mvp_log; recall (B_late, site-seed mean)"
+outThirtyAwareMvpLogBelowBar,4.6,4.6,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, mvp_log; below94 (site-seed mean)"
+outThirtyAwareMvpLogCostRatio,4.22,4.224047756195068,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, mvp_log; cost / no-outage oracle"
+outThirtyAwareQrOgdRecall,0.948,0.9483768954718964,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, qr_ogd; recall (B_late, site-seed mean)"
+outThirtyAwareQrOgdBelowBar,1.8,1.8,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, qr_ogd; below94 (site-seed mean)"
+outThirtyAwareQrOgdCostRatio,3.85,3.849153518676758,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, qr_ogd; cost / no-outage oracle"
+outThirtyAwareAciRecall,0.950,0.9499463877819312,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, aci; recall (B_late, site-seed mean)"
+outThirtyAwareAciBelowBar,2.8,2.8,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, aci; below94 (site-seed mean)"
+outThirtyAwareAciCostRatio,4.02,4.018322134017945,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, aci; cost / no-outage oracle"
+outThirtyAwareStaticRecall,0.873,0.873294517598213,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, static; recall (B_late, site-seed mean)"
+outThirtyAwareStaticBelowBar,24.8,24.8,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, static; below94 (site-seed mean)"
+outThirtyAwareStaticCostRatio,0.87,0.8747873425483703,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=rand30, predictor=outage-aware, static; cost / no-outage oracle"
+outRegionBaseMvpLogRecall,0.942,0.9419356415677744,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, mvp_log; recall (B_late, site-seed mean)"
+outRegionBaseMvpLogBelowBar,6,6.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, mvp_log; below94 (site-seed mean)"
+outRegionBaseMvpLogCostRatio,3.07,3.0661284923553467,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, mvp_log; cost / no-outage oracle"
+outRegionBaseQrOgdRecall,0.948,0.94833970888381,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, qr_ogd; recall (B_late, site-seed mean)"
+outRegionBaseQrOgdBelowBar,4,4.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, qr_ogd; below94 (site-seed mean)"
+outRegionBaseQrOgdCostRatio,1.70,1.6984423398971558,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, qr_ogd; cost / no-outage oracle"
+outRegionBaseAciRecall,0.950,0.9503195922906762,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, aci; recall (B_late, site-seed mean)"
+outRegionBaseAciBelowBar,5,5.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, aci; below94 (site-seed mean)"
+outRegionBaseAciCostRatio,1.67,1.6652065515518188,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, aci; cost / no-outage oracle"
+outRegionBaseStaticRecall,0.929,0.9286203145814746,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, static; recall (B_late, site-seed mean)"
+outRegionBaseStaticBelowBar,19,19.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, static; below94 (site-seed mean)"
+outRegionBaseStaticCostRatio,0.85,0.8544398546218872,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=base, static; cost / no-outage oracle"
+outRegionAwareMvpLogRecall,0.946,0.9461948351930386,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, mvp_log; recall (B_late, site-seed mean)"
+outRegionAwareMvpLogBelowBar,2,2.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, mvp_log; below94 (site-seed mean)"
+outRegionAwareMvpLogCostRatio,2.59,2.5860984325408936,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, mvp_log; cost / no-outage oracle"
+outRegionAwareQrOgdRecall,0.949,0.9489385625068744,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, qr_ogd; recall (B_late, site-seed mean)"
+outRegionAwareQrOgdBelowBar,4,4.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, qr_ogd; below94 (site-seed mean)"
+outRegionAwareQrOgdCostRatio,1.78,1.7811589241027832,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, qr_ogd; cost / no-outage oracle"
+outRegionAwareAciRecall,0.950,0.9503929213057452,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, aci; recall (B_late, site-seed mean)"
+outRegionAwareAciBelowBar,4,4.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, aci; below94 (site-seed mean)"
+outRegionAwareAciCostRatio,1.63,1.6344114542007446,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, aci; cost / no-outage oracle"
+outRegionAwareStaticRecall,0.930,0.9296591422949536,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, static; recall (B_late, site-seed mean)"
+outRegionAwareStaticBelowBar,18,18.0,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, static; below94 (site-seed mean)"
+outRegionAwareStaticCostRatio,0.86,0.8624067306518554,"paper generated/data/tab_outage.csv (paper commit 84c9e2b): scenario=region_fixed, predictor=outage-aware, static; cost / no-outage oracle"
+ceilTenBaseAll,0.050,0.0498527392251649,"paper generated/data/tab_ceiling.csv (paper commit ebc0ca2): scenario=rand10, predictor=base, all hops; p_below_mean"
+ceilTenAwareAll,0.001,0.0012628079941233,"paper generated/data/tab_ceiling.csv (paper commit ebc0ca2): scenario=rand10, predictor=outage-aware, all hops; p_below_mean"
+ceilThirtyBaseAll,0.109,0.1094067119517203,"paper generated/data/tab_ceiling.csv (paper commit ebc0ca2): scenario=rand30, predictor=base, all hops; p_below_mean"
+ceilThirtyAwareAll,0.001,0.0012340233253902,"paper generated/data/tab_ceiling.csv (paper commit ebc0ca2): scenario=rand30, predictor=outage-aware, all hops; p_below_mean"
+lostTenSrcOffPct,11.7,11.665529234741282,paper generated/data/tab_lost_hops.csv (paper commit 882e56f): rand10; pct_src_offline
+lostTenRelinkedRecallBase,0.275,0.2751832675449838,paper generated/data/tab_lost_hops.csv (paper commit 882e56f): rand10; recall_rerouted_mvp_log_base
+lostTenRelinkedRecallAware,0.793,0.7929461219049571,paper generated/data/tab_lost_hops.csv (paper commit 882e56f): rand10; recall_rerouted_mvp_log_outage-aware
+oracleGroupsAllCostRatio,1.54,1.5411341415649913,paper generated/data/tab_oracle_groups.csv (paper commit ebc0ca2): group=all; cost_ratio_mvp_over_oracle (site seed 7)
+heldStaticBranchHighRecallB,0.914,0.9141484631114284,"paper generated/data/fig_group_recall_B.csv (paper commit 039fc5d): method=static, group entropy_bin=3; recall (segment B)"
+heldStaticIsoHighRecallB,0.912,0.9121026018559776,"paper generated/data/fig_group_recall_B.csv (paper commit 039fc5d): method=static, group nn_bin=3; recall (segment B)"
+heldStaticInitiatedRecallB,0.924,0.924200826031943,"paper generated/data/fig_group_recall_B.csv (paper commit 039fc5d): method=static, group hopkind=1; recall (segment B)"
+heldStaticSlowRecallB,0.926,0.9261168384879724,"paper generated/data/fig_group_recall_B.csv (paper commit 039fc5d): method=static, group speed_bin=0; recall (segment B)"
+heldStaticEasyRecallApproxB,0.97,0.9706327398204482,"paper generated/data/fig_group_recall_B.csv (paper commit 039fc5d): static, groups entropy_bin=0 (0.9727) and nn_bin=0 (0.9686); both round to this value"
+heldStaticRecallB,0.944,0.9438821236813328,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=static, segment B; recall (all hops)"
+heldOracleBelowBarA,6,6.0,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=oracle, segment A; below94"
+heldOracleBelowBarB,5,5.0,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=oracle, segment B; below94"
+heldMarginalBelowBarMin,4,4.0,"paper generated/data/tab_main.csv (paper commit 2df4cab): methods static, aci, mvp_global, oracle, both segments; min of below94"
+heldMarginalBelowBarMax,8,8.0,paper generated/data/tab_main.csv (paper commit 2df4cab): same; max of below94
+heldCityTracNinetyFiveRecallApprox,0.97,0.9683414041402376,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac095, segments A and B (0.9687, 0.9679); both round to this value"
+heldSpatulaBelowBar,23,23.0,paper generated/data/tab_main.csv (paper commit 2df4cab): method=spatula; below94 (same in A and B)
+heldCityTracNinetyNineCostRatioA,7.9,7.909131703667898,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac099, segment A; cost_ratio, one decimal (text)"
+heldCityTracNinetyNineCostRatioB,7.3,7.347698838694946,"paper generated/data/tab_main.csv (paper commit 2df4cab): method=citytrac099, segment B; cost_ratio, one decimal (text)"
+heldMvpLogMaxShortfallPpA,0.6,0.643650620779801,"paper generated/data/fig_group_recall_A.csv (paper commit 039fc5d): mvp_log, groups with n >= 200 and Wilson upper bound < 0.95; max of (0.95 - recall) in pp"
+heldMvpLogMaxShortfallPpExReacqB,0.5,0.5018244942785133,"paper generated/data/fig_group_recall_B.csv (paper commit 039fc5d): mvp_log, groups with n >= 200 and Wilson upper bound < 0.95 except hopkind=2; max of (0.95 - recall) in pp"
+layoutSpeedSpreadVirtual,8,8.123879987184601,"paper generated/data/tab_layout_factors.csv (paper commit 2e4fca3): attribute=speed_bin, layout=virtual; mean over the two exploratory periods of spread_pp, rounded ('about')"
+layoutSpeedSpreadReal,3,2.9196931320872146,"paper generated/data/tab_layout_factors.csv (paper commit 2e4fca3): attribute=speed_bin, layout=real; mean over the two exploratory periods of spread_pp, rounded ('about')"
+layoutIsoSpreadVirtual,2,1.9593035360664424,"paper generated/data/tab_layout_factors.csv (paper commit 2e4fca3): attribute=nn_bin, layout=virtual; mean over the two exploratory periods of spread_pp, rounded ('about')"
+layoutIsoSpreadReal,5,4.955182532224573,"paper generated/data/tab_layout_factors.csv (paper commit 2e4fca3): attribute=nn_bin, layout=real; mean over the two exploratory periods of spread_pp, rounded ('about')"
+sensFbCostRatioMin,1.14,1.1351529061007488,paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): feedback rows (mvp_log); min of cost_ratio_mean
+sensFbCostRatioMax,1.18,1.1769926326110016,paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): feedback rows (mvp_log); max of cost_ratio_mean
+sensDetStaticAdjWorstApproxB,0.87,0.8670212765957447,"paper generated/data/tab_sensitivity.csv (paper commit 2ce6f64): static, det095_adj and det090_adj, worst_B (0.8688, 0.8652); both round to this value"
+lostTenOtherRecallBase,0.98,0.9845227679873348,"paper generated/data/tab_lost_hops.csv (paper commit 882e56f): rand10; recall of all non-rerouted hops (unchanged + new), mvp_log, base predictor"
+explAwareMvpLogBelowBarMax,1.4,1.4,"paper generated/data/tab_outage_expl{1,2}.csv: outage-aware rows, random outages only (rand10/20/30 site-seed means); max of below94_mvp_log"
+explAwareQrOgdBelowBarMax,2.2,2.2,"paper generated/data/tab_outage_expl{1,2}.csv: outage-aware rows, random outages only; max of below94_qr_ogd"
+earlyAwareMvpLogBelowBarMin,16.0,16.0,"paper generated/data/tab_outage_early.csv (paper commit 84c9e2b): outage-aware, random outages (rand10/20/30 seed means; region excluded); min of below94_mvp_log, one decimal (table rule for seed means)"
+earlyAwareMvpLogBelowBarMax,23.4,23.4,"paper generated/data/tab_outage_early.csv (paper commit 84c9e2b): outage-aware, random outages (rand10/20/30 seed means; region excluded); max of below94_mvp_log, one decimal (table rule for seed means)"
+earlyAwareQrOgdBelowBarMin,3.6,3.6,"paper generated/data/tab_outage_early.csv (paper commit 84c9e2b): outage-aware, random outages (rand10/20/30 seed means; region excluded); min of below94_qr_ogd, one decimal (table rule for seed means)"
+earlyAwareQrOgdBelowBarMax,12.0,12.0,"paper generated/data/tab_outage_early.csv (paper commit 84c9e2b): outage-aware, random outages (rand10/20/30 seed means; region excluded); max of below94_qr_ogd, one decimal (table rule for seed means)"
+earlyAwareAciBelowBarMin,1.4,1.4,"paper generated/data/tab_outage_early.csv (paper commit 84c9e2b): outage-aware, random outages (rand10/20/30 seed means; region excluded); min of below94_aci, one decimal (table rule for seed means)"
+earlyAwareAciBelowBarMax,3.0,3.0,"paper generated/data/tab_outage_early.csv (paper commit 84c9e2b): outage-aware, random outages (rand10/20/30 seed means; region excluded); max of below94_aci, one decimal (table rule for seed means)"
+outTenBaseMvpLogAMinLowRecall,0.937,0.9366964950416564,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: held-out, B_late, base predictor, method mvp_log_a001 (a_min 0.001), rand10; mean over site seeds of coverage | commit 2bfbd9f"
+outRandBaseMvpLogAMinLowCostMin,21,21.315512275695802,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: same, rand10/20/30; min over scenarios of the site-seed mean of cost_over_oracle_none, integer | commit 2bfbd9f"
+outRandBaseMvpLogAMinLowCostMax,38,38.09094390869141,"results/porto_cctv_confirm_posthoc/outage_suite/all_periods_summary.csv: same; max over scenarios, integer | commit 2bfbd9f"
+lostRegionSkipTwoPct,55,54.87728130899937,"results/porto_cctv_confirm_posthoc/exit_split/hop_loss_split.csv: start 2014-06-21, window all_post, scenario region (6 sites); rerouted_skip2plus / (skip1 + skip2plus), % | commit c04b69a"
+lostRandSkipTwoPctMin,12,11.703435557680486,"results/porto_cctv_confirm_posthoc/exit_split/hop_loss_split.csv: same, rand10/20/30; min, % | commit c04b69a"
+lostRandSkipTwoPctMax,33,32.939052959023,"results/porto_cctv_confirm_posthoc/exit_split/hop_loss_split.csv: same; max, % | commit c04b69a"
+recovAwareFastHours,6,6.0,"paper generated/data/fig_outage_timeseries.csv (paper commit 92c6b1e): outage-aware, rand10, mean over site seeds of 6-h recall; first bin start (h) from which recall >= 0.94 for 24 h (4 bins); ACI and qr_ogd (equal)"
+recovAwareMvpLogHours,78,78.0,"paper generated/data/fig_outage_timeseries.csv (paper commit 92c6b1e): same, mvp_log"
+warmMvpGlobalRecoverHours,30,30.0,"results/porto_cctv_confirm_posthoc/outage_diag/recovery_48h.csv: start 2014-06-21, rand10, original predictor, mvp_global (warm start on); recover_h | commit 0b3321a"
+warmZeroMvpGlobalRecoverHours,12,12.0,"results/porto_cctv_confirm_posthoc/outage_diag/recovery_48h.csv: same, mvp_global_w000 (warm start removed); recover_h | commit 0b3321a"
+outRandBaseMvpLogSatShareMin,0.49,0.4894089154539058,"results/porto_cctv_confirm_posthoc/outage_diag/saturation_6h.csv: mvp_log, all hops, original predictor, scenario rand10 (site seed 7; region = 6 sites), mean over 6-h bins after the outage start of sat_share; min over the two starts (2014-06-12 0.4894, 2014-06-21 0.6022) | commit 0b3321a"
+outRandBaseMvpLogSatShareMax,0.60,0.602161627580635,results/porto_cctv_confirm_posthoc/outage_diag/saturation_6h.csv: same; max over the two starts | commit 0b3321a
+outRegionBaseMvpLogSatShareMin,0.02,0.02110445103513673,"results/porto_cctv_confirm_posthoc/outage_diag/saturation_6h.csv: mvp_log, all hops, original predictor, scenario region (site seed 7; region = 6 sites), mean over 6-h bins after the outage start of sat_share; min over the two starts (2014-06-12 0.0293, 2014-06-21 0.0211) | commit 0b3321a"
+outRegionBaseMvpLogSatShareMax,0.03,0.029273507091077188,results/porto_cctv_confirm_posthoc/outage_diag/saturation_6h.csv: same; max over the two starts | commit 0b3321a
+goGroupMinRecall,0.964,0.9643285846941316,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: method=group_min, recall_mean, test_jun_a (0.9643) and test_jun_b (0.9639) equal to 3 decimals | commit 906c800"
+goGroupMinCostRatioA,1.44,1.435036715242313,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: method=group_min, test_jun_a, ratio_vs_oracle | commit 906c800"
+goMvpLogOverQrA,1.00,0.9994440014486392,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: test_jun_a, cost_cam_s of mvp_log / cost_cam_s of hindsight_qr | commit 906c800"
+goGroupMinCostRatioB,1.45,1.4473979005748034,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: method=group_min, test_jun_b, ratio_vs_oracle | commit 906c800"
+goMvpLogOverQrB,0.99,0.9891488307798695,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: test_jun_b, cost_cam_s of mvp_log / cost_cam_s of hindsight_qr | commit 906c800"
+goQrCostRatio,1.18,1.183669315714275,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: method=hindsight_qr, ratio_vs_oracle, A (1.1837) and B (1.1838) equal to 2 decimals | commit 906c800"
+goQrWorst,0.950,0.9499747432227648,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_summary.csv: method=hindsight_qr, worst (25 groups, n >= 200), A (0.9500) and B (0.9499) equal to 3 decimals | commit 906c800"
+heldWorstBPairedP,0.18,0.1796875,"results/porto_cctv_confirm_posthoc/outage_suite/none_s7/hits.parquet: test_jun_b, hopkind=2; exact McNemar (binomial) test of hit|mvp_log vs hit|qr_ogd; discordant 7 vs 2 | commit untracked"
+custFiveMinPct,80,0.8027738793032279,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=all, k=5, min over methods and segments of custody, percent"
+custFiveMaxPct,82,0.824444811359696,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=all, k=5, max over methods and segments of custody, percent"
+custIndepGapMin,0.8,0.8090559593827762,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=all, k=5, min of 100 (custody - indep), percentage points"
+custIndepGapMax,1.3,1.2571870415845732,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=all, k=5, max of 100 (custody - indep), percentage points"
+custFiveMultiMin,0.815,0.8151159910839593,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=all, k=5, methods mvp_log and qr_ogd, both segments; min"
+custFiveMultiMax,0.819,0.8191207525436744,paper generated/data/tab_custody.csv (paper commit 50f9f6f): same; max
+custFiveRefMin,0.822,0.8217316183528508,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=all, k=5, methods oracle and aci, both segments; min"
+custFiveRefMax,0.824,0.824444811359696,paper generated/data/tab_custody.csv (paper commit 50f9f6f): same; max
+custReacqMvpLogAKFive,0.741,0.7406593406593406,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=re-acquired, method=mvp_log, segment A, k=5, custody"
+custReacqMvpLogBKOne,0.927,0.9267139479905436,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=re-acquired, method=mvp_log, segment B, k=1, custody"
+custReacqMvpLogBKFive,0.737,0.7365591397849462,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=re-acquired, method=mvp_log, segment B, k=5, custody"
+custReacqOracleAKFive,0.769,0.7692307692307692,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=re-acquired, method=oracle, segment A, k=5, custody"
+custReacqOracleBKOne,0.876,0.875886524822695,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=re-acquired, method=oracle, segment B, k=1, custody"
+custReacqOracleBKFive,0.707,0.706989247311828,"paper generated/data/tab_custody.csv (paper commit 50f9f6f): start=re-acquired, method=oracle, segment B, k=5, custody"
+custLaterRecallGapMin,0.4,0.39051395227052144,"results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_groups.csv: key=hopkind=0 (later hops), 100 (recall of oracle - recall of mvp_log or qr_ogd), segments A and B; min (cost of both methods > oracle there, asserted) | commit f969e99"
+custLaterRecallGapMax,0.5,0.4748708443066074,results/porto_cctv_confirm_posthoc/group_oracle/group_oracle_groups.csv: same; max | commit f969e99
+geomRadiusSmall,30,30.0,configs/porto_cctv_confirm_geom_r30.yaml: events.camera_radius_m (= cameras.merge_radius_m) | commit 28aeead
+geomRadiusLarge,75,75.0,configs/porto_cctv_confirm_geom_r75.yaml: events.camera_radius_m (= cameras.merge_radius_m) | commit 28aeead
+geomTmaxShort,300,300.0,configs/porto_cctv_confirm_geom_tmax300.yaml: events.t_max_s | commit 28aeead
+geomTmaxLong,900,900.0,configs/porto_cctv_confirm_geom_tmax900.yaml: events.t_max_s | commit 28aeead
+geomMultiCostSeedMeanMin,1.06,1.058636670861952,"results/porto_cctv_confirm_posthoc/geometry/geometry_seeds.csv: settings r30, r75, tmax300, tmax900; mvp_log and qr_ogd; per evaluation seed 0-4 the mean over A and B of cost / hindsight oracle; min | commit f748f9e"
+geomMultiCostSeedMeanMax,1.23,1.2269390555092192,results/porto_cctv_confirm_posthoc/geometry/geometry_seeds.csv: same; max | commit f748f9e
+geomMarginalBelowMin,4,4.0,"results/porto_cctv_confirm_posthoc/geometry/geometry_seeds.csv: methods static, aci, oracle; all settings (base and four) and evaluation seeds 0-4; min of below94 (25 groups) | commit f748f9e"
+geomMarginalBelowMax,8,8.0,results/porto_cctv_confirm_posthoc/geometry/geometry_seeds.csv: same; max of below94 | commit f748f9e
+geomTmaxLongMvpLogWorstB,0.90,0.8985436893203884,"results/porto_cctv_confirm_posthoc/geometry/geometry_seeds.csv: setting=tmax900, mvp_log, test_jun_b, worst (re-acquisition group in every seed); mean over seeds 0-4 to 2 decimals (range 0.8956-0.9005) | commit f748f9e"
+geomSeedCountWord,five,5.0,"results/porto_cctv_confirm_posthoc/geometry/geometry_seed_pass.csv: n_seeds (evaluation seeds per setting), spelled out | commit f748f9e"
+geomTmaxLongQrOgdPassWord,four,4.0,"results/porto_cctv_confirm_posthoc/geometry/geometry_seed_pass.csv: setting=tmax900, method=qr_ogd, n_pass (of 5 seeds), spelled out | commit f748f9e"
+geomTmaxLongQrOgdCostMin,1.19,1.1870542244855615,"results/porto_cctv_confirm_posthoc/geometry/geometry_seed_pass.csv: setting=tmax900, qr_ogd, cost_ratio_mean_min (per seed: mean over A and B of cost / hindsight oracle; min over seeds) | commit f748f9e"
+geomTmaxLongQrOgdCostMax,1.23,1.2269390555092192,results/porto_cctv_confirm_posthoc/geometry/geometry_seed_pass.csv: same; max over seeds | commit f748f9e
+outPreCostDiffMinPct,0.01,0.005745733993413657,"results/porto_cctv_confirm_posthoc/outage_suite/<run>/hits.parquet: held-out period, hops with t_exit < outage start (2014-06-21) - 1 h; |mean cost of mvp_log - same for none_s7| / none_s7, percent; min over 16 outage runs | commit 2bfbd9f"
+outPreCostDiffMaxPct,2.8,2.801300751520202,same; max over the 16 outage runs | commit 2bfbd9f
+barGapPointsWord,one,1.0,"configs/porto_cctv_confirm.yaml: eval.target_recall - eval.group_bar, in percentage points, spelled out | commit 729b651"
+portalCamerasCurrent,243,243.0,"JD confirmation (2026-09, current open-data portal of the Municipality of Porto); not from a result file. The study uses the July 2025 version (239 cameras)"
+portalCamerasAdded,four,4.0,"work/cctv_check12/current.geojson (current portal GeoJSON, SHA-256 eacf3aaa4f5018e50f83423afd99a22acf967000b077f33950451ce981764394; not tracked) against data/porto/porto_cctv.json: objectids not in the snapshot (5814, 6214, 6614, 7415); removed 0, moved (> 1e-7 degrees) 0; spelled out; = portalCamerasCurrent - numCamerasRaw | commit 729b651"
+repoURL,\url{https://github.com/[snapshot-repository]},placeholder,placeholder for the snapshot repository URL (verdict 16 C(b)); not a result
+repoDOI,\url{https://doi.org/10.5281/zenodo.23934654},10.5281/zenodo.23934654,"Zenodo DOI reserved by JD on 2026-11-03 (verdict 35, instruction 28 §1); resolves only after publication; not a result"
+bundleTabGeometry,R16,R16,"supplementary_tables/supplementary_tables.aux (paper repository; bundle PDF SHA-256 f644eaef2620700feb1abd00e34ad092c7256b9149114e404b2999979393584e): \newlabel{tab:geometry}, float number (bundle page 15; caption 'Sensitivity to the observation radius and the horizon ...')"
+bundleTabFeedbackShare,R18,R18,"supplementary_tables/supplementary_tables.aux (paper repository; bundle PDF SHA-256 f644eaef2620700feb1abd00e34ad092c7256b9149114e404b2999979393584e): \newlabel{tab:sensitivity}, float number (bundle page 16; caption 'Sensitivity on the held-out period ...')"
+heldMvpLogSeedsPass,3,3.0,"results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_all.csv: label=mvp_log, predictor=src_zone_hour_speed, seeds 0-4 (POST HOC), segments test_jun_a, test_jun_b; seeds with n_groups_sig_below_bar == 0 (prereg_25, Wilson upper bound < groupBar) in both segments and mean cost_over_oracle <= costFactor (passing seeds: [0, 1, 3]) | commit 221ae36"
+heldMvpLogSeedsPassWord,three,3.0,"same as heldMvpLogSeedsPass, spelled out | commit 221ae36"
+heldQrOgdSeedsPass,2,2.0,"results/porto_cctv_confirm_posthoc/seeds_prereg25/seeds_all.csv: label=qr_ogd, predictor=src_zone_hour_speed, seeds 0-4 (POST HOC), segments test_jun_a, test_jun_b; seeds with n_groups_sig_below_bar == 0 (prereg_25, Wilson upper bound < groupBar) in both segments and mean cost_over_oracle <= costFactor (passing seeds: [1, 3]) | commit 221ae36"
+heldQrOgdSeedsPassWord,two,2.0,"same as heldQrOgdSeedsPass, spelled out | commit 221ae36"

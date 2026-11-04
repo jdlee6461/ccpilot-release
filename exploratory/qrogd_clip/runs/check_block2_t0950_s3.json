@@ -1,0 +1,15 @@
+{
+ "block": "block2",
+ "target": 0.95,
+ "seed": 3,
+ "predictor": "src_zone_hour_speed",
+ "gamma": 0.005,
+ "clip": 3.0,
+ "n_hops": 667972,
+ "hits_bitwise_stored": true,
+ "n_diff_stored": 0,
+ "replay_tau_bitwise": true,
+ "sha256_hits_recomputed": "f1d8d04e55fb11071be2dfefa834d4efc84f8a137a3abf30e70c1c37cae70994",
+ "sha256_hits_stored": "f1d8d04e55fb11071be2dfefa834d4efc84f8a137a3abf30e70c1c37cae70994",
+ "seconds": 316.0
+}

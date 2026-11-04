@@ -1,0 +1,24 @@
+0 322.3650406421768 {'block1': 0.2614383434633999, 'block2': 0.2813563554697933} 406
+	Command being timed: "python exploratory/h3_tau_check/replicates/h3_tau_replicates.py run --start 0 --end 1"
+	User time (seconds): 416.48
+	System time (seconds): 3.64
+	Percent of CPU this job got: 101%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:53.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6247404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 289
+	Minor (reclaiming a frame) page faults: 950041
+	Voluntary context switches: 3524
+	Involuntary context switches: 1476
+	Swaps: 0
+	File system inputs: 2107640
+	File system outputs: 18808
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
